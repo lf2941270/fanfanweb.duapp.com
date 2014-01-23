@@ -1,5 +1,7 @@
 module.exports = {
     cookieSecret: 'microblogbyvoid',
-    db: 'microblog',
-    host: 'localhost'
+    db: 'JvEuaGkClPYVBLWXarTh',
+    host: 'mongo.duapp.com',
+    port:'8908'
+
 };
