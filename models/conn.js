@@ -1,14 +1,14 @@
 var settings = require('../settings');
 var mongodb = require('./db');
-module.exports=function(callback){
+module.exports=function(callback2){
     mongodb.open(function(err, db) {
         db.authenticate(settings.user, settings.password, function(err, result) {
             if (err) {
                 db.close();
-                callback(err)
+                callback2(err)
                 return;
             }
-            callack(null,db);
+            callack2(null,db);
         });
     });
 }
