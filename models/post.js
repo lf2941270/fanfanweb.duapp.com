@@ -1,4 +1,4 @@
-var mongodb = require('./db');
+var conn=require('./conn')
 function Post(username, post, time) {
     this.user = username;
     this.post = post;
@@ -16,7 +16,7 @@ Post.prototype.save = function save(callback) {
         post: this.post,
         time: this.time
     };
-    mongodb.open(function(err, db) {
+    conn(function(err, db) {
         if (err) {
             return callback(err);
         }
@@ -37,7 +37,7 @@ Post.prototype.save = function save(callback) {
     });
 };
 Post.get = function get(username, callback) {
-    mongodb.open(function(err, db) {
+    conn(function(err, db) {
         if (err) {
             return callback(err);
         }
