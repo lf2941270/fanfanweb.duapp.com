@@ -11,7 +11,7 @@ User.prototype.save = function save(callback) {
         name: this.name,
         password: this.password
     };
-    conn(function(err, db) {
+    conn(function(err, db,mongodb) {
         if (err) {
             return callback(err);
         }
@@ -32,7 +32,7 @@ User.prototype.save = function save(callback) {
         });});
 };
 User.get = function get(username, callback) {
-    conn(function(err, db) {
+    conn(function(err, db,mongodb) {
         if (err) {
             return callback(err);
         }
