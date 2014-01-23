@@ -39,12 +39,12 @@ User.get = function get(username, callback) {
 // 读取 users 集合
         db.collection('users', function(err, collection) {
             if (err) {
-                mongodb.close();
+                db.close();
                 return callback(err);
             }
 // 查找 name 属性为 username 的文档
             collection.findOne({name: username}, function(err, doc) {
-                mongodb.close();
+                db.close();
                 if (doc) {
 // 封装文档为 User 对象
                     var user = new User(doc);
