@@ -18,12 +18,13 @@ Post.prototype.save = function save(callback) {
     };
     conn(function(err, db) {
         if (err) {
+            db.close();
             return callback(err);
         }
 // 读取 posts 集合
         db.collection('posts', function(err, collection) {
             if (err) {
-                mongodb.close();
+                db.close();
                 return callback(err);
             }
 // 为 user 属性添加索引
@@ -44,7 +45,7 @@ Post.get = function get(username, callback) {
 // 读取 posts 集合
         db.collection('posts', function(err, collection) {
             if (err) {
-                mongodb.close();
+                db.close();
                 return callback(err);
             }
 
@@ -54,7 +55,7 @@ Post.get = function get(username, callback) {
                 query.user = username;
             }
             collection.find(query).sort({time: -1}).toArray(function(err, docs) {
-                mongodb.close();
+                db.close();
                 if (err) {
                     callback(err, null);
                 }
