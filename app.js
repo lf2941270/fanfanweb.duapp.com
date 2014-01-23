@@ -17,7 +17,7 @@ var MongoStore = require('connect-mongo')(express);//增加(express)
 var settings = require('./settings');
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 18080);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
