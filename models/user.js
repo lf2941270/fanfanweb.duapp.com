@@ -1,5 +1,5 @@
 var mongodb = require('./db');
-var coon=require('./coon')
+var coon=require('./conn')
 function User(user) {
     this.name = user.name;
     this.password = user.password;
@@ -11,7 +11,7 @@ User.prototype.save = function save(callback) {
         name: this.name,
         password: this.password
     };
-    coon(function(err, db) {
+    conn(function(err, db) {
         if (err) {
             return callback(err);
         }
@@ -32,7 +32,7 @@ User.prototype.save = function save(callback) {
         });});
 };
 User.get = function get(username, callback) {
-    coon(function(err, db) {
+    conn(function(err, db) {
         if (err) {
             return callback(err);
         }
