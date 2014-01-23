@@ -1,5 +1,5 @@
 var mongodb = require('./db');
-var coon=require('./conn')
+var conn=require('./conn')
 function User(user) {
     this.name = user.name;
     this.password = user.password;
