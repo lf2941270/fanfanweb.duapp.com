@@ -15,6 +15,7 @@ User.prototype.save = function save(callback) {
             return callback(err);
         }
 // 读取 users 集合
+
         db.collection('users', function(err, collection) {
             if (err) {
                 mongodb.close();
