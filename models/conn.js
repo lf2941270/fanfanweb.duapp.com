@@ -8,7 +8,7 @@ module.exports=function(callback2){
                 callback2(err)
                 return;
             }
-            callack2(null,mongodb);
+            callback2(null,mongodb);
         });
     });
 }
