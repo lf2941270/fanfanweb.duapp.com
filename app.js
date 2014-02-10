@@ -66,7 +66,6 @@ app.use(function(req, res, next){
     res.locals.success =req.session.success? req.session.success : null;
     req.session.error=null;
     req.session.success=null;
-    console.log(process.env.SERVER_SORTWARE);
     next();
 });//locals
 

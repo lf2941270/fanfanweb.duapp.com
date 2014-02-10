@@ -10,7 +10,8 @@ module.exports = function(app) {
             }
             res.render('index', {
                 title: '首页',
-                posts: posts
+                posts: posts,
+                test : process.env.SERVER_SORTWARE
             });
         });
     });
