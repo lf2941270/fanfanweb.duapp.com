@@ -13,9 +13,8 @@ var serverConf={
     user:'',
     password:''
 };
-module.exports =serverConf;
-    /*(
-    (process.env.SERVER_SORTWARE&&process.env.SERVER_SORTWARE.toLowerCase()=='bae/3.0') ?
+module.exports =(
+    (process.env.BAE_ENV_APPID=='appid4wxmfatc0t') ?
     serverConf :
     localConf
-    );*/
+    );
