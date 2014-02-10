@@ -66,6 +66,7 @@ app.use(function(req, res, next){
     res.locals.success =req.session.success? req.session.success : null;
     req.session.error=null;
     req.session.success=null;
+    console.log(process.env.SERVER_SORTWARE);
     next();
 });//locals
 
@@ -74,7 +75,7 @@ app.use(app.router); //改为(app.router)
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
-console.log(process.env.SERVER_SORTWARE);
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port')+' in '+process.env.NODE_ENV+' mode');
 });
