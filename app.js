@@ -74,6 +74,7 @@ app.use(app.router); //改为(app.router)
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
+console.log(app.get('env'));
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port')+' in '+process.env.NODE_ENV+' mode');
 });

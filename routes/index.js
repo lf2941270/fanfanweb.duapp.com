@@ -1,7 +1,7 @@
-var crypto = require('crypto');
+var crypto = require('crypto');//生成散列值用的
 var User = require('../models/user');
 var Post = require('../models/post');
-var util=require('util')
+var util=require('util');
 module.exports = function(app) {
     app.get('/', function(req, res) {
         Post.get(null, function(err, posts) {

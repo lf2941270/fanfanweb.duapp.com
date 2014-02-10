@@ -69,6 +69,7 @@ Post.get = function get(username, callback) {
             });
         });
     });
-};/**
+};
+/**
  * Created by Administrator on 14-1-21.
  */
