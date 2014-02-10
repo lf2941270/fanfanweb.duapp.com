@@ -14,7 +14,7 @@ var serverConf={
     password:''
 };
 module.exports =(
-    process.env.SERVER_SORTWARE ?
+    (process.env.SERVER_SORTWARE&&process.env.SERVER_SORTWARE.toLowerCase()=='bae/3.0') ?
     serverConf :
     localConf
     );
