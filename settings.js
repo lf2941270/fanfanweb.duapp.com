@@ -1,4 +1,3 @@
-module.exports =serverConf;
 var serverConf={
     cookieSecret: 'microblogbyvoid',
     db: 'JvEuaGkClPYVBLWXarTh',
@@ -10,4 +9,5 @@ var serverConf={
     cookieSecret: 'microblogbyvoid',
     db: 'microblog',
     host: 'localhost'
-}
+};
+module.exports =serverConf;
