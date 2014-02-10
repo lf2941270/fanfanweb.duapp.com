@@ -8,10 +8,13 @@ var serverConf={
 },localConf={
     cookieSecret: 'microblogbyvoid',
     db: 'microblog',
-    host: 'localhost'
+    host: 'localhost',
+    port:'27017',
+    user:'',
+    password:''
 };
 module.exports =(
-    process.env.SERVER_SORTWARE == 'bae/3.0' ?
+    process.env.SERVER_SORTWARE ?
     serverConf :
     localConf
     );
