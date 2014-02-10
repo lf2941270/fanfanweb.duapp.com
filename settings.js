@@ -10,4 +10,8 @@ var serverConf={
     db: 'microblog',
     host: 'localhost'
 };
-module.exports =serverConf;
+module.exports =(
+    SERVER_SORTWARE == 'bae/3.0' ?
+    serverConf :
+    localConf
+    );
