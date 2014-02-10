@@ -11,7 +11,7 @@ var serverConf={
     host: 'localhost'
 };
 module.exports =(
-    SERVER_SORTWARE == 'bae/3.0' ?
+    process.env.SERVER_SORTWARE == 'bae/3.0' ?
     serverConf :
     localConf
     );
