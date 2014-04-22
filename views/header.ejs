@@ -12,6 +12,7 @@
                 <ul class="nav">
                     <li class="active"><a href="/">首页</a></li>
                     <% if (!user) { %>
+	                  <li><a href="/oauth/baidu" title="使用百度账号登陆">用百度登陆</a> </li>
                     <li><a href="/login">登陆</a></li>
                     <li><a href="/reg">注册</a></li>
                     <% } else { %>

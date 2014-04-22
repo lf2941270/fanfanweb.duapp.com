@@ -2,6 +2,7 @@ var crypto = require('crypto');//生成散列值用的
 var User = require('../models/user');
 var Post = require('../models/post');
 var util=require('util');
+var httpRequest = require('request');
 module.exports = function(app) {
 //    app.get('/test',function(req,res){
 //        res.end(util.inspect(process.env));
@@ -123,9 +124,35 @@ module.exports = function(app) {
             });
         });
     });
+//  测试页
     app.get('/test',function(req,res){
       res.end("This is a test page")
-    })
+    });
+//  百度OAuth认证
+    app.get('/oauth/baidu',function(req,res){
+      res.redirect("https://openapi.baidu.com/oauth/2.0/authorize?"+
+        "response_type=code&" +
+        "client_id=YdQqkHD83AqKIxPxRoOVd0wN&" +
+        "redirect_uri=http://fanfanweb.duapp.com/oauth/baidu/login_success&" +
+//        "scope=email&" +
+        "display=popup");
+    });
+//  通过Authorization Code获取Access Token
+  app.get('/oauth/baidu/login_success',function(req,res){
+    var code=req.params.code;
+    var url="https://openapi.baidu.com/oauth/2.0/token?" +
+        "grant_type=authorization_code&" +
+        "code=" +code+"&"+
+        "client_id=YdQqkHD83AqKIxPxRoOVd0wN&"+
+        "client_secret=dyp6Ur2X7L5LFpyxGEc4IkOUeLGEbNeF&" +
+        "redirect_uri=http://fanfanweb.duapp.com/oauth/baidu/login_success";
+    httpRequest.post({
+        url: url
+    }, function(err, response, body) {
+
+      res.end(util.inspect(response))
+    });
+  })
 };
 
 
