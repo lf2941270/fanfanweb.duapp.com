@@ -150,7 +150,7 @@ module.exports = function(app) {
       method:'post',
         url: url
     }, function(err, response, body) {
-
+      res.write('code:'+code+'\n'+'认证成功')
       res.end(util.inspect(response))
     });
   })
