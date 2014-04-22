@@ -142,13 +142,15 @@ module.exports = function(app) {
     });
 //  通过Authorization Code获取Access Token
   app.get('/oauth/baidu/login_success',function(req,res){
-    var code=req.params.code;
+//    console.log(util.inspect(req.query))
+    var code=req.query.code;
     var url="https://openapi.baidu.com/oauth/2.0/token?" +
         "grant_type=authorization_code&" +
         "code=" +code+"&"+
         "client_id=YdQqkHD83AqKIxPxRoOVd0wN&"+
         "client_secret=dyp6Ur2X7L5LFpyxGEc4IkOUeLGEbNeF&" +
         "redirect_uri=http://fanfanweb.duapp.com/oauth/baidu/login_success";
+    console.log(url)
     var options=require('url').parse(url);
     options.method='POST';
 
