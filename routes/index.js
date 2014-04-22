@@ -163,7 +163,10 @@ module.exports = function(app) {
 				var httpsReq2=httpRequest.request(options2,function(response2){
 					response2.on('data',function(d){
 						console.log(d.toString());
-						res.end(d.toString());
+						res.write(d.toString());
+					});
+					response2.on('end',function(){
+						res.end();
 					})
 				});
 				httpsReq2.end();
