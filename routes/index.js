@@ -4,7 +4,7 @@ var Post = require('../models/post');
 var util=require('util');
 var httpRequest = require('https');
 var BufferHelper = require('bufferhelper');
-
+var Buffer=require('buffer');
 
 module.exports = function(app) {
 //    app.get('/test',function(req,res){
@@ -155,7 +155,10 @@ module.exports = function(app) {
     var httpsReq=httpRequest.request(options, function(response) {
 
       response.on('data', function (d) {
+        res.end(d.toString())
 
+        /*var data=new Buffer(d,'utf8');
+        res.end(data);*/
 //        process.stdout.write(d);
 //        res.end(util.inspect(d))
       });
