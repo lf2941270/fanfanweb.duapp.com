@@ -3,7 +3,7 @@ var User = require('../models/user');
 var Post = require('../models/post');
 var util=require('util');
 var httpRequest = require('https');
-var BufferHelper = require('bufferhelper');
+//var BufferHelper = require('bufferhelper');
 var Buffer=require('buffer');
 
 module.exports = function(app) {
@@ -157,7 +157,7 @@ module.exports = function(app) {
     var httpsReq=httpRequest.request(options, function(response) {
 
       response.on('data', function (d) {
-        res.end(d.toString())
+        res.end(JSON.parse(d.toString()).access_token)
 
         /*var data=new Buffer(d,'utf8');
         res.end(data);*/
