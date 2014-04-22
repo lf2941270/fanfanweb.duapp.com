@@ -2,7 +2,10 @@ var crypto = require('crypto');//生成散列值用的
 var User = require('../models/user');
 var Post = require('../models/post');
 var util=require('util');
-var httpRequest = require('http');
+var httpRequest = require('https');
+var BufferHelper = require('bufferhelper');
+
+
 module.exports = function(app) {
 //    app.get('/test',function(req,res){
 //        res.end(util.inspect(process.env));
@@ -146,14 +149,28 @@ module.exports = function(app) {
         "client_id=YdQqkHD83AqKIxPxRoOVd0wN&"+
         "client_secret=dyp6Ur2X7L5LFpyxGEc4IkOUeLGEbNeF&" +
         "redirect_uri=http://fanfanweb.duapp.com/oauth/baidu/login_success";
-    httpRequest.request({
-      method:'post',
-        url: url
-    }, function(err, response, body) {
-      res.write('code:'+code+'\n'+'认证成功')
-      res.end(util.inspect(response))
+    var options=require('url').parse(url);
+    options.method='POST';
+
+    var httpsReq=httpRequest.request(options, function(response) {
+
+      response.on('data', function (d) {
+
+//        process.stdout.write(d);
+//        res.end(util.inspect(d))
+      });
+      response.on('end',function(d){
+//        res.write('code:'+code+'\n'+'认证成功')
+        res.end('看起来像是登陆成功的样纸。。。')
+
+      })
+
+      });
+    httpsReq.end();
+
+
     });
-  })
+
 };
 
 
