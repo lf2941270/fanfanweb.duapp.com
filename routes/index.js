@@ -146,7 +146,8 @@ module.exports = function(app) {
         "client_id=YdQqkHD83AqKIxPxRoOVd0wN&"+
         "client_secret=dyp6Ur2X7L5LFpyxGEc4IkOUeLGEbNeF&" +
         "redirect_uri=http://fanfanweb.duapp.com/oauth/baidu/login_success";
-    httpRequest.post({
+    httpRequest.request({
+      method:'post',
         url: url
     }, function(err, response, body) {
 
