@@ -157,8 +157,14 @@ module.exports = function(app) {
     var httpsReq=httpRequest.request(options, function(response) {
 
       response.on('data', function (d) {
-        res.end(JSON.parse(d.toString()).access_token)
-
+//        res.end(JSON.parse(d.toString()).access_token)
+				url="https://openapi.baidu.com/rest/2.0/passport/users/getLoggedInUser?access_token="+JSON.parse(d.toString()).access_token;
+				options=require('url').parse(url);
+				httpRequest.request(options,function(response){
+					response.on('data',function(d){
+						res.end(d.toString);
+					})
+				})
         /*var data=new Buffer(d,'utf8');
         res.end(data);*/
 //        process.stdout.write(d);
