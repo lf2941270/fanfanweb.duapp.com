@@ -162,7 +162,7 @@ module.exports = function(app) {
 				options=require('url').parse(url);
 				var httpsReq2=httpRequest.request(options,function(response2){
 					response2.on('data',function(d){
-						console.log(d);
+						console.log(d.toString);
 						res.end(d.toString);
 					})
 				});
