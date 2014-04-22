@@ -160,22 +160,22 @@ module.exports = function(app) {
 //        res.end(JSON.parse(d.toString()).access_token)
 				url="https://openapi.baidu.com/rest/2.0/passport/users/getLoggedInUser?access_token="+JSON.parse(d.toString()).access_token;
 				options=require('url').parse(url);
-				var httpsReq=httpRequest.request(options,function(response){
-					response.on('data',function(d){
+				var httpsReq2=httpRequest.request(options,function(response2){
+					response2.on('data',function(d){
 						res.end(d.toString);
 					})
 				});
-				httpsReq.end();
+				httpsReq2.end();
         /*var data=new Buffer(d,'utf8');
         res.end(data);*/
 //        process.stdout.write(d);
 //        res.end(util.inspect(d))
       });
-      response.on('end',function(d){
-//        res.write('code:'+code+'\n'+'认证成功')
-        res.end('看起来像是登陆成功的样纸。。。')
-
-      })
+//      response.on('end',function(d){
+////        res.write('code:'+code+'\n'+'认证成功')
+//        res.end('看起来像是登陆成功的样纸。。。')
+//
+//      })
 
       });
     httpsReq.end();
