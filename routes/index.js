@@ -123,7 +123,9 @@ module.exports = function(app) {
             });
         });
     });
-
+    app.get('/test',function(req,res){
+      res.end("This is a test page")
+    })
 };
 
 
