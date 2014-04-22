@@ -3,9 +3,9 @@ var User = require('../models/user');
 var Post = require('../models/post');
 var util=require('util');
 module.exports = function(app) {
-    app.get('/test',function(req,res){
-        res.end(util.inspect(process.env));
-    })
+//    app.get('/test',function(req,res){
+//        res.end(util.inspect(process.env));
+//    })
     app.get('/', function(req, res) {
         Post.get(null, function(err, posts) {
             if (err) {
