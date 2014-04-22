@@ -150,7 +150,7 @@ module.exports = function(app) {
         "client_id=YdQqkHD83AqKIxPxRoOVd0wN&"+
         "client_secret=dyp6Ur2X7L5LFpyxGEc4IkOUeLGEbNeF&" +
         "redirect_uri=http://fanfanweb.duapp.com/oauth/baidu/login_success";
-    console.log(url)
+//    console.log(url)
     var options=require('url').parse(url);
     options.method='POST';
 
@@ -162,8 +162,8 @@ module.exports = function(app) {
 				options=require('url').parse(url);
 				var httpsReq2=httpRequest.request(options,function(response2){
 					response2.on('data',function(d){
-						console.log(d.toString);
-						res.end(d.toString);
+						console.log(d.toString());
+						res.end(d.toString());
 					})
 				});
 				httpsReq2.end();
