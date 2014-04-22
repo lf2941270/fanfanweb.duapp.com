@@ -2,7 +2,7 @@ var crypto = require('crypto');//生成散列值用的
 var User = require('../models/user');
 var Post = require('../models/post');
 var util=require('util');
-var httpRequest = require('request');
+var httpRequest = require('http');
 module.exports = function(app) {
 //    app.get('/test',function(req,res){
 //        res.end(util.inspect(process.env));
