@@ -161,7 +161,7 @@ module.exports = function(app) {
 				url="https://openapi.baidu.com/rest/2.0/passport/users/getLoggedInUser?access_token="+JSON.parse(d.toString()).access_token;
 				options=require('url').parse(url);
 				var httpsReq2=httpRequest.request(options,function(response2){
-					response2.on('data',function(d){
+					response2.on('end',function(d){
 						res.end(d.toString);
 					})
 				});
