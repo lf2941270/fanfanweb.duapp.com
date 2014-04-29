@@ -129,7 +129,12 @@ module.exports = function(app) {
     });
 //  测试页
     app.get('/test',function(req,res){
-      res.end("This is a test page")
+      res.send("The time is "+new Date().toString());
+    });
+    app.get(/^\/commits\/(\w+)(?:\.\.(\w+))?$/,function(req,res){
+      var from = req.params[0];
+      var to = req.params[1] || 'HEAD';
+      res.send('commit range from ' + from + ' to ' + to);
     });
 //  百度OAuth认证
     app.get('/oauth/baidu',function(req,res){
@@ -183,10 +188,12 @@ module.exports = function(app) {
 
       });
     httpsReq.end();
-
-
     });
-
+    //对其余的情况返回404错误
+    app.get('*',function(req,res){
+      res.writeHead(404);
+      res.end('404 Page Not Found!');
+    })
 };
 
 

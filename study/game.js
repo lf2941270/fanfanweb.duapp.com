@@ -6,6 +6,8 @@ var app=express();
 var routes = require('./routes');
 
 app.set('port', process.env.PORT || 18080);
+app.set('test','测试');
+console.log(app.get('test'));
 app.use(app.router); //改为(app.router)
 // development only
 if ('development' == app.get('env')) {
