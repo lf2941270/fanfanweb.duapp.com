@@ -5,11 +5,13 @@ var util=require('util');
 var httpRequest = require('https');
 //var BufferHelper = require('bufferhelper');
 var Buffer=require('buffer');
+var ipWhiteList=['192.168.1.104','127.0.0.1','192.168.1.109'];
 
 module.exports = function(app) {
 //    app.get('/test',function(req,res){
 //        res.end(util.inspect(process.env));
 //    })
+    app.get('*',beforeAll)
     app.get('/', function(req, res) {
         Post.get(null, function(err, posts) {
             if (err) {
@@ -181,11 +183,9 @@ module.exports = function(app) {
 //        res.end(util.inspect(d))
       });
 //      response.on('end',function(d){
-////        res.write('code:'+code+'\n'+'认证成功')
-//        res.end('看起来像是登陆成功的样纸。。。')
-//
+//        res.write('code:'+code+'\n'+'认证成功')
+//        res.end('看起来像是登陆成功的样纸。。。')//
 //      })
-
       });
     httpsReq.end();
     });
@@ -195,7 +195,6 @@ module.exports = function(app) {
       res.end('404 Page Not Found!');
     })
 };
-
 
 function checkLogin(req, res, next) {
     if (!req.session.user) {
@@ -210,4 +209,12 @@ function checkNotLogin(req, res, next) {
         return res.redirect('/');
     }
     next();
+}
+function beforeAll(req,res,next){
+  console.log(new Date() + ' IP: '+req._remoteAddress+ ' Request url: ' +req.url);
+  if(ipWhiteList.indexOf(req._remoteAddress)===-1){
+      res.send('<script type="text/javascript">alert("你好，来自'+req._remoteAddress+'的逗比！你暂时没有访问权限哦！")</script>');
+  }else{
+    next();
+  }
 }
