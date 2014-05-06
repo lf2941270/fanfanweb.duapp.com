@@ -1,9 +1,9 @@
 
-var conn=require('./conn')
+var conn=require('./conn');
 function User(user) {
     this.name = user.name;
     this.password = user.password;
-};
+}
 module.exports = User;
 User.prototype.save = function save(callback) {
     // 存入 Mongodb 的文档

@@ -5,13 +5,14 @@ var server=new http.Server();
 var num1= 0,num2=0;
 server.on('request',function(req,res){
 //	console.log('收到客户端请求数 : '+(++num1));
+  console.log(req.headers)
 	var time1=new Date(),time2;
 	var linkUrl=req.url;
 	var options=url.parse(linkUrl);
 	options.headers=req.headers;
 	var request=http.request(options,function(response){
 		time2=new Date();
-		console.log(++num2 + ':获取 '+linkUrl+ ' 的响应，'+'用时' +(time2-time1) +'ms\n');
+//		console.log(++num2 + ':获取 '+linkUrl+ ' 的响应，'+'用时' +(time2-time1) +'ms\n');
 
 		res.writeHead(response.statusCode,response.headers);
 		response.on('data',function(data){
