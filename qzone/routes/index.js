@@ -1,5 +1,5 @@
 var util=require('util');
-var httpGet=require('../httpGet');
+var request=require('../request');
 var mainPath='http://www.ibaiyu.cn';
 var querystring=require('querystring');
 
@@ -8,7 +8,7 @@ module.exports=function(app){
 		var query=req.query;
     var path=req.path;
     console.log(req);
-    httpGet((mainPath+path+'?'+querystring.stringify(query)),function(response){
+    request((mainPath+path+'?'+querystring.stringify(query)),function(response){
       res.send(response);
     });
 	});
