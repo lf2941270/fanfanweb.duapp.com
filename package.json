@@ -9,6 +9,7 @@
     "express": "3.4.7",
     "ejs": "*",
     "mongodb": ">= 0.9.9",
-    "connect-mongo": ">= 0.1.7"
+    "connect-mongo": ">= 0.1.7",
+    "jsdom":"*"
   }
 }

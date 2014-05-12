@@ -30,17 +30,21 @@ function camelCaseParse(name){
 }
 
 function _Callback(res){
-	var data=res.data.data;
-	myUtil.eachArray(data,function(index,value){//返回 true 时可以结束对数组的遍历
-		if(value!==undefined){
-			if(value.abstime<=lastReplyTime){
-				return true;
-			}
-			console.log('第%d条说说的key：%s',index,value.key);
+  if (res.data!==undefined){
+    var data=res.data.data;
+    myUtil.eachArray(data,function(index,value){//返回 true 时可以结束对数组的遍历
+      if(value!==undefined){
+        if(value.abstime<=lastReplyTime){
+          return true;
+        }
+        console.log('第%d条说说的key：%s',index,value.key);
 //			dealWith(value);
 
-		}
-	});
+      }
+    });
+  }else{
+    console.log(res);
+  }
 }
 function timer(){
   request(options,function(response){

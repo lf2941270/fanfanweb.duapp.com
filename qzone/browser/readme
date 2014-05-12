@@ -1,0 +1,5 @@
+模拟浏览器的模块browser
+
+接口使用方法
+var Browser=require('browser');
+var browser=new Browser();
