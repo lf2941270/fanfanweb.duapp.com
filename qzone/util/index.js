@@ -1,4 +1,7 @@
 function eachArray(arr,callback){
+	if (arr===undefined){
+		return;
+	}
 	for(var i= 0,len=arr.length;i<len;i++){
 		if(callback(i,arr[i])){
 			break;

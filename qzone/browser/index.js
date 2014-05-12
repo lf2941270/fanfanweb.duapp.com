@@ -1,5 +1,4 @@
 var util=require('../util');/*自定义的工具集*/
-var http=require('http');
 var url=require('url');
 var request=require('./request');
 
@@ -18,18 +17,10 @@ Browser.prototype.init=function(options){
   if(options===undefined){
     var options={};
   }
-  this.headers=util.extend(ops,options);
+	this.headers=util.extend(ops,options);
+	this.cookie=parseCookie(this.headers.cookie);
 }
-Browser.prototype.get=function(href,callback){
-  var options=url.parse(href);
-  options.method='get';
-  var headers=util.extend(this.headers,options);
-  var _=this;
-  request(headers,function(headers,body){
-    Browser.prototype.dealResponseHeaders.bind(_)(headers);
-    callback(body);
-  });
-}
+
 function eachCookie(arr,callback){
   util.eachArray(arr,function(index,value){
     util.eachArray(value.split(';'),function(deepIndex,deepValue){
@@ -38,17 +29,24 @@ function eachCookie(arr,callback){
   });
 }
 function parseCookie(string){
-
+	if(string===''){
+		return {};
+	}
+	var obj={}
+	util.eachArray(string.split(';'),function(key,value){
+		obj[value.split('=')[0].trim()]=value.split('=')[1].trim();
+	});
+	return obj;
 }
 function stringifyCookie(obj){
-
+	var arr=[];
+	for(var i in obj){
+		arr.push(i+'='+obj[i]);
+	}
+	return arr.join(';');
 }
 Browser.prototype.setCookie =function(value){
-  eachCookie(this.headers.cookie,function(deepIndex,deepValue){
-    if(value.split('=')[0].trim()==deepIndex){
-
-    }
-  });
+ this.cookie[value.split('=')[0].trim()]=value.split('=')[1].trim();
 }
 /*对响应头进行处理*/
 Browser.prototype.dealResponseHeaders =function(headers){
@@ -64,11 +62,37 @@ Browser.prototype.dealSetCookie=function(setArr){
     }
     _.setCookie(deepValue);
   });
+	this.headers.cookie=stringifyCookie(this.cookie);
 }
+
+
+Browser.prototype.get=function(href,callback){
+	var _=this;
+	var options=url.parse(href);
+	options.method='get';
+	var headers=util.extend(this.headers,options);
+	request(headers,function(headers,body){
+		Browser.prototype.dealResponseHeaders.bind(_)(headers);
+		callback(body);
+	});
+}
+Browser.prototype.post=function(href,data,callback){
+	var _=this;
+	var options=url.parse(href);
+	options.method='post';
+	var headers=util.extend(this.headers,options);
+	request(headers,data,function(headers,body){
+		Browser.prototype.dealResponseHeaders.bind(_)(headers);
+		callback(body);
+	});
+}
+module.exports=Browser;
+
 var browser=new Browser();
 browser.init();
-browser.get('http://www.baidu.com',function(body){
-  console.log("================Content===================");
+browser.get('http://qzone.qq.com',function(body){
+	console.log(browser.headers)
+	console.log("================Content===================");
+
 //  console.log(body);
-})
-module.exports=Browser;
+});
