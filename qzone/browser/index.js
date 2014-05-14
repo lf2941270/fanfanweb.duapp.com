@@ -47,8 +47,8 @@ function stringifyCookie(obj){
 }
 Browser.prototype.setCookie =function(value){
   var arr=value.split('=');
-  if(arr.length===2){
-    this.cookie[arr[0].trim()]=arr[1].trim();
+  if(arr.length>=2){
+    this.cookie[arr.shift().trim()]=arr.join('=').trim();
   }
   this.headers.cookie=stringifyCookie(this.cookie);
 }

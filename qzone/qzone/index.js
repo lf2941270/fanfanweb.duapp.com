@@ -33,16 +33,29 @@ function firstLogin(){
   proxy.on('iframeLoaded',function(src,verifycode,ptui){
     browser.setCookie('ptui_loginuin='+querystring.escape(user.u));
     var loginUrl=getLoginUrl.getLoginUrl(verifycode,ptui);
-    var checkUrl=getLoginUrl.getCheckUrl();
-    browser.get(checkUrl,function(headers,body){
-      function ptui_checkVC(A,B,C){
-        var loginUrl=getLoginUrl.getLoginUrl(B,ptui);
-        proxy.emit('ready',loginUrl)
-      }
-      eval(body)
-    })
+		browser.get('http://ptlogin2.qq.com/ptqrshow?appid='+ptui.appid+'&e=2&l=M&s=3&d=72&v=4&t=0.8360795713961124',function(){
+			var checkUrl=getLoginUrl.getCheckUrl();
+			console.log('check:'+checkUrl)
+			browser.get(checkUrl,function(headers,body){
+				function ptui_checkVC(A,B,C){
+					setCookieWork();
 
-  })
+
+					var loginUrl=getLoginUrl.getLoginUrl(B,ptui);
+					proxy.emit('ready',loginUrl);
+
+				}
+				eval(body);
+			})
+		});
+  });
+	function setCookieWork(){
+		var d = (Math.round(Math.random() * 2147483647) * (new Date().getUTCMilliseconds())) % 10000000000;
+		browser.setCookie("pgv_pvid=" + d);
+		var f = (Math.round(Math.random() * 2147483647) * (new Date().getUTCMilliseconds())) % 10000000000;
+		browser.setCookie("pgv_info=ssid=s" + f);
+//		browser.setCookie('qrsig=dfTEsX6Pxz5KSr4-u8AsRnmgfPcah-nYKL051Hkl6M-ZDEQ4WIP3M8C9E3QftGlC');
+	}
   proxy.on('ready',function(loginUrl){
 //    console.log(browser.headers.cookie)
     browser.get(loginUrl,function(headers,body){
