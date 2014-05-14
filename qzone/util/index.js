@@ -1,6 +1,8 @@
+/*自定义工具集util*/
+
 function eachArray(arr,callback){
 	if (arr===undefined){
-		return;
+		arr=[];
 	}
 	for(var i= 0,len=arr.length;i<len;i++){
 		if(callback(i,arr[i])){

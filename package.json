@@ -10,6 +10,7 @@
     "ejs": "*",
     "mongodb": ">= 0.9.9",
     "connect-mongo": ">= 0.1.7",
-    "jsdom":"*"
+    "jsdom":"*",
+    "eventproxy": "0.2.6"
   }
 }

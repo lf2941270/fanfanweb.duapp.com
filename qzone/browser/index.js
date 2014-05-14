@@ -15,7 +15,7 @@ Browser.prototype.init=function(options){
     'cookie':''
   }
   if(options===undefined){
-    var options={};
+    options={};
   }
 	this.headers=util.extend(ops,options);
 	this.cookie=parseCookie(this.headers.cookie);
@@ -46,7 +46,11 @@ function stringifyCookie(obj){
 	return arr.join(';');
 }
 Browser.prototype.setCookie =function(value){
- this.cookie[value.split('=')[0].trim()]=value.split('=')[1].trim();
+  var arr=value.split('=');
+  if(arr.length===2){
+    this.cookie[arr[0].trim()]=arr[1].trim();
+  }
+  this.headers.cookie=stringifyCookie(this.cookie);
 }
 /*对响应头进行处理*/
 Browser.prototype.dealResponseHeaders =function(headers){
@@ -58,7 +62,7 @@ Browser.prototype.dealSetCookie=function(setArr){
   var whiteList=['expires','max-age','path','domain'];//一些直接忽视的cookie设置项
   eachCookie(setArr,function(deepIndex,deepValue){
     if(whiteList.indexOf(deepValue.split('=')[0].toLowerCase().trim())!==-1){
-      return true;
+      return;
     }
     _.setCookie(deepValue);
   });
@@ -73,7 +77,11 @@ Browser.prototype.get=function(href,callback){
 	var headers=util.extend(this.headers,options);
 	request(headers,function(headers,body){
 		Browser.prototype.dealResponseHeaders.bind(_)(headers);
-		callback(body);
+    if(headers.location!==undefined){
+      _.get(headers.location,callback);
+    }else{
+      callback(headers,body);
+    }
 	});
 }
 Browser.prototype.post=function(href,data,callback){
@@ -83,11 +91,16 @@ Browser.prototype.post=function(href,data,callback){
 	var headers=util.extend(this.headers,options);
 	request(headers,data,function(headers,body){
 		Browser.prototype.dealResponseHeaders.bind(_)(headers);
-		callback(body);
+    if(headers.location!==undefined){
+      _.get(headers.location,callback);
+    }else{
+      callback(headers,body);
+    }
 	});
 }
 module.exports=Browser;
 
+/*
 var browser=new Browser();
 browser.init();
 browser.get('http://qzone.qq.com',function(body){
@@ -96,3 +109,4 @@ browser.get('http://qzone.qq.com',function(body){
 
 //  console.log(body);
 });
+*/

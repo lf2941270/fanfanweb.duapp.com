@@ -11,6 +11,10 @@ var options={
 var config={
   interval:5000
 }
-
+var user={
+  u:'454730788',
+  p:'daohaosiquanjia'
+}
 exports.options=options;
 exports.config=config;
+exports.user=user;
