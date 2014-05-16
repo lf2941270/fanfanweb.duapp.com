@@ -91,6 +91,7 @@ Browser.prototype.post=function(href,data,callback){
 	var headers=util.extend(this.headers,options);
 	request(headers,data,function(headers,body){
 		Browser.prototype.dealResponseHeaders.bind(_)(headers);
+    //遇到跳转的响应头则进行跳转
     if(headers.location!==undefined){
       _.get(headers.location,callback);
     }else{

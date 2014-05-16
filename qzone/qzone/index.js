@@ -11,7 +11,6 @@ var getLoginUrl=require('./getloginurl');
 var interval=conf.config.interval;
 var lastReplyTime='0';//最近评论的一条说说的发布时间
 
-
 var browser=new Browser();
 browser.init();
 function firstLogin(){
@@ -39,14 +38,11 @@ function firstLogin(){
 			browser.get(checkUrl,function(headers,body){
 				function ptui_checkVC(A,B,C){
 					setCookieWork();
-
-
 					var loginUrl=getLoginUrl.getLoginUrl(B,ptui);
 					proxy.emit('ready',loginUrl);
-
 				}
 				eval(body);
-			})
+			});
 		});
   });
 	function setCookieWork(){
@@ -57,12 +53,13 @@ function firstLogin(){
 //		browser.setCookie('qrsig=dfTEsX6Pxz5KSr4-u8AsRnmgfPcah-nYKL051Hkl6M-ZDEQ4WIP3M8C9E3QftGlC');
 	}
   proxy.on('ready',function(loginUrl){
-//    console.log(browser.headers.cookie)
+    //console.log(browser.headers.cookie)
+    browser.headers.cookies=browser.headers.cookie;
     browser.get(loginUrl,function(headers,body){
      console.log(browser.headers);
      console.log('===============================body===================================');
      console.log(body);
-     })
+    });
   })
   proxy.on('body',function(body){
     jsdom.env(
@@ -75,11 +72,10 @@ function firstLogin(){
     );
   })
   browser.get('http://qzone.qq.com',function(headers,body){
-
     proxy.emit('body',body);
-  })
+  });
 }
-firstLogin()
+firstLogin();
 
 function _Callback(res){
   if (res.data!==undefined){
@@ -91,7 +87,6 @@ function _Callback(res){
         }
         console.log('第%d条说说的key：%s',index,value.key);
 //			dealWith(value);
-
       }
     });
   }else{
@@ -99,7 +94,6 @@ function _Callback(res){
   }
 }
 function timer(){
-
  /* request(options,function(response){
 		console.log(new Date())
     eval(response);//会调用上面定义的 _Callback 函数
