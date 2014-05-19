@@ -6,6 +6,7 @@ var getLoginUrl=require('./getloginurl');
 var conf=require('../conf');
 var user=conf.user;
 var browser=require('./browser');
+var utils=require('util');
 
 function login(cb){
   var proxy=new EventProxy();
@@ -56,10 +57,38 @@ function login(cb){
     });
   });
   proxy.on('ready',function(loginUrl){
+		browser.setCookie('_qz_referrer=qzone.qq.com');
     browser.get(loginUrl,function(headers,body){
-      cb();
+			function ptuiCB(a,b,c,d,e,f){
+				var ptsig= c.substring(c.indexOf('ptsig='));
+				proxy.emitLater('ptsig',ptsig);
+			}
+			console.log(body)
+			eval(body);
     });
-  })
+  });
+	proxy.on('ptsig',function(ptsig){
+		var url1='http://qzs.qq.com/qzone/v5/loginsucc.html?para=izone&'+ptsig;
+		browser.get(url1,function(headers,body){
+//			console.log(body)
+			browser.setHeader({
+				'Proxy-Connection': 'keep-alive',
+				Referer:'',
+				'Avail-Dictionary':'',
+				Accept: '',
+				'Accept-Encoding': '',
+				'Accept-Language': '',
+				'Accept-Charset': ''
+			})
+			var url='http://user.qzone.qq.com/'+user.u+'?'+ptsig;
+//			browser.setCookie('fnc=2');
+
+			browser.get(url,function(headers,body){
+				console.log(headers)
+				cb();
+			});
+		});
+	});
   function setCookieWork(){
     var d = (Math.round(Math.random() * 2147483647) * (new Date().getUTCMilliseconds())) % 10000000000;
     browser.setCookie("pgv_pvid=" + d);

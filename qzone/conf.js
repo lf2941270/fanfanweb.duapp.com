@@ -18,4 +18,4 @@ var user={
 exports.options=options;
 exports.config=config;
 exports.user=user;
-exports.refreshUrl='http://ic2.s21.qzone.qq.com/cgi-bin/feeds/feeds2_html_more?uin=454730788&scope=0&view=1&daylist=&uinlist=&gid=&flag=1&filter=all&applist=all&refresh=0&aisortEndTime=0&aisortOffset=0&getAisort=0&aisortBeginTime=0&pagenum=1&externparam=&firstGetGroup=0&icServerTime=0&mixnocache=0&scene=0&begintime=0&count=10&dayspac=0&sidomain=ctc.qzonestyle.gtimg.cn&useutf8=1&outputhtmlfeed=1&rd=0.8763095736503601&getob=1&g_tk=1172016311';
+exports.refreshUrl='http://ic2.s2.qzone.qq.com/cgi-bin/feeds/feeds2_html_more?uin=454730788&scope=0&view=1&daylist=&uinlist=&gid=&flag=1&filter=all&applist=all&refresh=0&aisortEndTime=0&aisortOffset=0&getAisort=0&aisortBeginTime=0&pagenum=1&externparam=&firstGetGroup=0&icServerTime=0&mixnocache=0&scene=0&begintime=0&count=10&dayspac=0&sidomain=ctc.qzonestyle.gtimg.cn&useutf8=1&outputhtmlfeed=1&getob=1&';
