@@ -88,7 +88,9 @@ Browser.prototype.get=function(href,callback){
   options.headers=this.headers;
   options=util.extend(options,this.headers);
 //  console.log(options)
+	console.log('Begin to request url: %s',href);
 	request(options,function(headers,body){
+		console.log('Response from url: %s',href)
 		Browser.prototype.dealResponseHeaders.bind(_)(headers);
     if(headers.location!==undefined){
       _.get(headers.location,callback);

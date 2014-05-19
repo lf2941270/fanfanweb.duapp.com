@@ -1,5 +1,7 @@
 var EventProxy = require('eventproxy');
 var jsdom=require('jsdom');
+var fs = require("fs");
+var jquery = fs.readFileSync("./qzone/jquery.min.js", "utf-8");
 var querystring=require('querystring');
 var encryption=require('./encryption');
 var getLoginUrl=require('./getloginurl');
@@ -15,12 +17,13 @@ function login(cb){
   });
   proxy.on('body',function(body){
     jsdom.env(
-        body,
-        ["http://code.jquery.com/jquery.js"],
-        function (errors, window) {
-          var src=window.$("#login_frame").attr("src");
-          proxy.emitLater('iFrameSrc',src);
-        }
+        body,{
+				src:[jquery],
+			done:function (errors, window) {
+				var src=window.$("#login_frame").attr("src");
+				proxy.emitLater('iFrameSrc',src);
+			}
+			}
     );
   })
   proxy.on('iFrameSrc',function(src,verifycode){
@@ -30,13 +33,15 @@ function login(cb){
      });*/
     browser.get(src,function(headers,body){
       jsdom.env(
-          body,
-          ["http://code.jquery.com/jquery.js"],
-          function (errors, window) {
-            var verifycode=window.$("#verifycode").val();
-            eval(window.$(window.$('script')[0]).text());
-            proxy.emitLater('iframeLoaded',src,verifycode,pt.ptui);
-          }
+          body,{
+					src:[jquery],
+				done:function (errors, window) {
+					var verifycode=window.$("#verifycode").val();
+					eval(window.$(window.$('script')[0]).text());
+					proxy.emitLater('iframeLoaded',src,verifycode,pt.ptui);
+				}
+				}
+
       );
     });
   });
