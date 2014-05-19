@@ -6,7 +6,7 @@ var login=require('./login');
 var shuoshuo=require('./shuoshuo');
 
 var interval=conf.config.interval;
-var lastReplyTime='0';//最近评论的一条说说的发布时间
+
 
 
 var proxy=new EventProxy();
@@ -29,16 +29,18 @@ function timer(callback){
 	function _Callback(res){
 		console.log('========================第%d次刷新，时间：%s==========================',++n,new Date());
 		console.log(callback)
+		var refreshTime=parseInt(new Date().getTime());
 		if (res.data!==undefined){
 			callback();
 			var data=res.data.data;
 			myUtil.eachArray(data,function(index,value){//返回 true 时可以结束对数组的遍历
+				var lastFlag=false;
+				if(index===data.length-1){
+					lastFlag=true;
+				}
 				if(value!==undefined){
-					if(value.abstime<=lastReplyTime){
-						return true;
-					}
 					console.log('第%d条说说的key：%s',index,value.key);
-					shuoshuo(value);
+					return shuoshuo(value,refreshTime,lastFlag);
 				}
 			});
 		}else{
