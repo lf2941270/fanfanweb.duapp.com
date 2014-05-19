@@ -13,30 +13,23 @@ function getCheckUrl(){
   checkUrl+=('r='+Math.random()+"&");
   return checkUrl;
 }
-function getloginUrl(verifycode,ptui){
+function getCheckUrl(b,ptui) {
+  var pt={};
+  pt.plogin={};
+  pt.ptui=ptui;
+  pt.plogin.checkUrl = (pt.ptui.isHttps ? "https://ssl." : "http://check.") + "ptlogin2." + pt.ptui.domain + "/check";
+  var a = pt.plogin.checkUrl + "?regmaster=" + pt.ptui.regmaster + "&";
+  a += "uin=" + b + "&appid=" + pt.ptui.appid + "&js_ver=" + pt.ptui.ptui_version + "&js_type=" + "1" + "&login_sig=" + pt.ptui.login_sig + "&u1=" + encodeURIComponent(pt.ptui.s_url) + "&r=" + Math.random();
+  return a;
+}
+function getloginUrl(verifycode,ptui,saltUin){
   var A='http://ptlogin2.qq.com/login?';
   D.u = encodeURIComponent(user.u);
   D.verifycode=verifycode;
-  function uin2hex(str) {
-    var maxLength = 16;
-    str = parseInt(str);
-    var hex = str.toString(16);
-    var len = hex.length;
-    for (var i = len; i < maxLength; i++) {
-      hex = "0" + hex
-    }
-    var arr = [];
-    for (var j = 0; j < maxLength; j += 2) {
-      arr.push("\\x" + hex.substr(j, 2))
-    }
-    var result = arr.join("");
-    eval('result="' + result + '"');
-    return result
-  }
-  D.p = encryption.getEncryption(user.p, uin2hex(user.u), D.verifycode);
+  D.p = encryption.getEncryption(user.p, saltUin, D.verifycode);
   D.pt_rsa = 0;
-  D.ptredirect=0;
   D.u1 = encodeURIComponent('http://qzs.qq.com/qzone/v5/loginsucc.html?para=izone');
+  D.ptredirect=0;
   D.h = 1;
   D.t = 1;
   D.g = 1;

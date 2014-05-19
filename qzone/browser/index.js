@@ -7,20 +7,23 @@ Browser.prototype.init=function(options){
   /*默认设置*/
   var ops={
     'User-Agent':'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36',
-    'Accept-Encoding':'gzip,deflate,sdch',
-    'Accept-Language':'zh-CN,zh;q=0.8,en;q=0.6',
-    'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+//    'Accept-Encoding':'gzip,deflate,sdch',
+//    'Accept-Language':'zh-CN,zh;q=0.8,en;q=0.6',
+//    'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
     'Cache-Control':'max-age=0',
     'Proxy-Connection':'keep-alive',
-    'cookie':''
+    'Cookie':''
   }
   if(options===undefined){
     options={};
   }
 	this.headers=util.extend(ops,options);
-	this.cookie=parseCookie(this.headers.cookie);
+	this.Cookie=parseCookie(this.headers.Cookie);
 }
-
+/*传入一个键值对格式的object来设置请求头*/
+Browser.prototype.setHeader=function(obj){
+  this.headers=util.extend(this.headers,obj);
+}
 function eachCookie(arr,callback){
   util.eachArray(arr,function(index,value){
     util.eachArray(value.split(';'),function(deepIndex,deepValue){
@@ -29,12 +32,14 @@ function eachCookie(arr,callback){
   });
 }
 function parseCookie(string){
-	if(string===''){
+    if(string===''){
 		return {};
 	}
 	var obj={}
 	util.eachArray(string.split(';'),function(key,value){
-		obj[value.split('=')[0].trim()]=value.split('=')[1].trim();
+    if(value){
+      obj[value.split('=')[0].trim()]=value.split('=')[1].trim();
+    }
 	});
 	return obj;
 }
@@ -48,9 +53,9 @@ function stringifyCookie(obj){
 Browser.prototype.setCookie =function(value){
   var arr=value.split('=');
   if(arr.length>=2){
-    this.cookie[arr.shift().trim()]=arr.join('=').trim();
+    this.Cookie[arr.shift().trim()]=arr.join('=').trim();
   }
-  this.headers.cookie=stringifyCookie(this.cookie);
+  this.headers.Cookie=stringifyCookie(this.Cookie);
 }
 /*对响应头进行处理*/
 Browser.prototype.dealResponseHeaders =function(headers){
@@ -59,14 +64,14 @@ Browser.prototype.dealResponseHeaders =function(headers){
 }
 Browser.prototype.dealSetCookie=function(setArr){
   var _=this;
-  var whiteList=['expires','max-age','path','domain'];//一些直接忽视的cookie设置项
+  var whiteList=['expires','max-age','path','domain'];//一些直接忽视的Cookie设置项
   eachCookie(setArr,function(deepIndex,deepValue){
     if(whiteList.indexOf(deepValue.split('=')[0].toLowerCase().trim())!==-1){
       return;
     }
     _.setCookie(deepValue);
   });
-	this.headers.cookie=stringifyCookie(this.cookie);
+	this.headers.Cookie=stringifyCookie(this.Cookie);
 }
 
 
@@ -74,8 +79,10 @@ Browser.prototype.get=function(href,callback){
 	var _=this;
 	var options=url.parse(href);
 	options.method='get';
-	var headers=util.extend(this.headers,options);
-	request(headers,function(headers,body){
+  options.headers=this.headers;
+  options=util.extend(options,this.headers);
+//  console.log(options)
+	request(options,function(headers,body){
 		Browser.prototype.dealResponseHeaders.bind(_)(headers);
     if(headers.location!==undefined){
       _.get(headers.location,callback);
@@ -88,8 +95,10 @@ Browser.prototype.post=function(href,data,callback){
 	var _=this;
 	var options=url.parse(href);
 	options.method='post';
-	var headers=util.extend(this.headers,options);
-	request(headers,data,function(headers,body){
+  options.headers=this.headers;
+  options=util.extend(options,this.headers);
+
+  request(options,data,function(headers,body){
 		Browser.prototype.dealResponseHeaders.bind(_)(headers);
     //遇到跳转的响应头则进行跳转
     if(headers.location!==undefined){
