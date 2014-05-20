@@ -24,7 +24,9 @@ function getg_tk(browser) {
 //周期性调用的函数，调用完成后执行传入的回调函数进行下一次调用
 function timer(callback){
 	function _Callback(res){
+
 		console.log('========================第%d次刷新，时间：%s==========================',++n,new Date());
+		console.log(res)
 		if (res.data!==undefined){
 			callback();
 			var data=res.data.data;
