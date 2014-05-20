@@ -64,6 +64,7 @@ function login(cb){
       }
       eval(body);
 			console.log(checkUrl)
+			console.log(browser)
 			console.log(body)
     });
   });
