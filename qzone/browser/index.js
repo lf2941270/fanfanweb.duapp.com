@@ -79,18 +79,17 @@ Browser.prototype.dealSetCookie=function(setArr){
   });
 	this.headers.cookie=stringifyCookie(this.cookie);
 }
-
-
 Browser.prototype.get=function(href,callback){
 	var _=this;
 	var options=url.parse(href);
 	options.method='get';
   options.headers=this.headers;
-  options=util.extend(options,this.headers);
+//  options=util.extend(options,this.headers);
 //  console.log(options)
-	console.log('Begin to request url: %s',href);
-	request(options,function(headers,body){
-		console.log('Response from url: %s',href)
+	request(options,function(err,headers,body){
+    if(err){
+      console.log('艾玛，出错鸟：\n',err)
+    }
 		Browser.prototype.dealResponseHeaders.bind(_)(headers);
     if(headers.location!==undefined){
       _.get(headers.location,callback);
@@ -99,14 +98,21 @@ Browser.prototype.get=function(href,callback){
     }
 	});
 }
+Browser.prototype.postForm=function(href,data,callback){
+  this.headers['Content-Type']='application/x-www-form-urlencoded';
+  this.post(href,data,callback);
+}
 Browser.prototype.post=function(href,data,callback){
 	var _=this;
 	var options=url.parse(href);
 	options.method='post';
-  options.headers=this.headers;
-  options=util.extend(options,this.headers);
+  options.headers=util.clone(this.headers);
+  if(data){
+    options.headers['Content-Length']=data.length;
+  }
+//  options=util.extend(options,this.headers);
 
-  request(options,data,function(headers,body){
+  request(options,data,function(err,headers,body){
 		Browser.prototype.dealResponseHeaders.bind(_)(headers);
     //遇到跳转的响应头则进行跳转
     if(headers.location!==undefined){

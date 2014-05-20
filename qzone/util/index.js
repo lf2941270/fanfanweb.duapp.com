@@ -46,3 +46,10 @@ function camelCaseParse(name){
 exports.eachArray=eachArray; /*遍历数组的函数*/
 exports.extend=extend;
 exports.camelCaseParse=camelCaseParse;/*将驼峰法命名转换为‘-’形式的命名*/
+exports.clone=function(obj){
+  var object={};
+  for(var i in obj){
+    object[i]=obj[i];
+  }
+  return object;
+}

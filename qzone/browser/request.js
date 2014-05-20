@@ -16,11 +16,17 @@ module.exports=function(options,data,callback){
       body+=data;
     });
     res.on('end',function(){
-      callback(headers,body);
+      callback(null,headers,body);
     });
+    res.on('error',function(err){
+      callback(err);
+    })
   });
   if(data!==undefined){
     request.write(data);
   }
+  request.on('error',function(err){
+    callback(err);
+  })
   request.end();
 }

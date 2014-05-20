@@ -7,11 +7,8 @@ var shuoshuo=require('./shuoshuo');
 
 var interval=conf.config.interval;
 
-
-
 var proxy=new EventProxy();
 var timeout;
-
 var n=0;
 
 function getg_tk(browser) {
@@ -28,19 +25,20 @@ function getg_tk(browser) {
 function timer(callback){
 	function _Callback(res){
 		console.log('========================第%d次刷新，时间：%s==========================',++n,new Date());
-		console.log(callback)
-		var refreshTime=parseInt(new Date().getTime());
 		if (res.data!==undefined){
 			callback();
 			var data=res.data.data;
 			myUtil.eachArray(data,function(index,value){//返回 true 时可以结束对数组的遍历
-				var lastFlag=false;
-				if(index===data.length-1){
+				var lastFlag=false,
+          firstFlag=false;
+        if(index===0){
+          firstFlag=true;
+        }
+				if(index===data.length-2){
 					lastFlag=true;
 				}
 				if(value!==undefined){
-					console.log('第%d条说说的key：%s',index,value.key);
-					return shuoshuo(value,refreshTime,lastFlag);
+					return shuoshuo(value,firstFlag,lastFlag);
 				}
 			});
 		}else{
@@ -49,6 +47,7 @@ function timer(callback){
 		}
 	}
 	var refUrl=conf.refreshUrl+"rd="+Math.random()+"&g_tk="+getg_tk(browser);
+  browser.setCookie('g_tk='+getg_tk(browser));//设置g_tk到cookie中，供点赞和评论时使用
 	browser.get(refUrl,function(headers,body){
     eval(body);
   });

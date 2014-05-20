@@ -68,7 +68,6 @@ function login(cb){
 				var ptsig= c.substring(c.indexOf('ptsig='));
 				proxy.emitLater('ptsig',ptsig);
 			}
-			console.log(body)
 			eval(body);
     });
   });
@@ -78,18 +77,18 @@ function login(cb){
 //			console.log(body)
 			browser.setHeader({
 				'Proxy-Connection': 'keep-alive',
-				Referer:'',
+				referer:'',
 				'Avail-Dictionary':'',
 				Accept: '',
 				'Accept-Encoding': '',
 				'Accept-Language': '',
 				'Accept-Charset': ''
-			})
+			});
+      browser.setCookie('ptsig='+ptsig);
 			var url='http://user.qzone.qq.com/'+user.u+'?'+ptsig;
 //			browser.setCookie('fnc=2');
 
 			browser.get(url,function(headers,body){
-				console.log(headers)
 				cb();
 			});
 		});
