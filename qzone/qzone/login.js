@@ -50,6 +50,9 @@ function login(cb){
     /*browser.get('http://ptlogin2.qq.com/ptqrshow?appid='+ptui.appid+'&e=2&l=M&s=3&d=72&v=4&t=0.8360795713961124',function(){
 
      });*/
+		browser.setHeader({
+			referer:src
+		})
     var checkUrl=getLoginUrl.getCheckUrl(user.u,ptui);
     setCookieWork();
     browser.get(checkUrl,function(headers,body){
@@ -79,7 +82,7 @@ function login(cb){
 //			console.log(body)
 			browser.setHeader({
 				'Proxy-Connection': 'keep-alive',
-				referrer:url1,
+				referer:url1,
 				'Avail-Dictionary':'',
 				Accept: '',
 				'Accept-Encoding': '',
