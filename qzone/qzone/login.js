@@ -63,6 +63,7 @@ function login(cb){
   });
   proxy.on('ready',function(loginUrl){
 		browser.setCookie('_qz_referrer=qzone.qq.com');
+		console.log(browser);
     browser.get(loginUrl,function(headers,body){
 			function ptuiCB(a,b,c,d,e,f){
 				console.log(headers)
@@ -90,7 +91,7 @@ function login(cb){
 //			browser.setCookie('fnc=2');
 
 			browser.get(url,function(headers,body){
-				console.log(browser)
+
 				cb();
 			});
 		});
