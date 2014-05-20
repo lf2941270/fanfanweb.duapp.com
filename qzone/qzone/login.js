@@ -57,11 +57,13 @@ function login(cb){
     setCookieWork();
     browser.get(checkUrl,function(headers,body){
       /*返回JSONP的处理函数*/
+
       function ptui_checkVC(A,B,C){
         var loginUrl=getLoginUrl.getLoginUrl(B,ptui,C);
         proxy.emitLater('ready',loginUrl);
       }
       eval(body);
+			console.log(checkUrl)
 			console.log(body)
     });
   });
