@@ -54,21 +54,19 @@ function login(cb){
 		})
     var checkUrl=getLoginUrl.getCheckUrl(user.u,ptui);
     setCookieWork();
-		setTimeout(function(){
-			browser.get(checkUrl,function(headers,body){
-				/*返回JSONP的处理函数*/
+		console.log(browser)
+    browser.get(checkUrl,function(headers,body){
+      /*返回JSONP的处理函数*/
 
-				function ptui_checkVC(A,B,C){
-					var loginUrl=getLoginUrl.getLoginUrl(B,ptui,C);
-					proxy.emitLater('ready',loginUrl);
-				}
-				eval(body);
-				console.log(checkUrl)
-				console.log(browser)
-				console.log(body)
-			});
-		},10000);
+      function ptui_checkVC(A,B,C){
+        var loginUrl=getLoginUrl.getLoginUrl(B,ptui,C);
+        proxy.emitLater('ready',loginUrl);
+      }
+      eval(body);
+			console.log(checkUrl)
 
+			console.log(body)
+    });
   });
   proxy.on('ready',function(loginUrl){
 		browser.setCookie('_qz_referrer=qzone.qq.com');
