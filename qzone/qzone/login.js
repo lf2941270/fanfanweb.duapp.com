@@ -62,14 +62,15 @@ function login(cb){
         proxy.emitLater('ready',loginUrl);
       }
       eval(body);
+			console.log(body)
     });
   });
   proxy.on('ready',function(loginUrl){
 		browser.setCookie('_qz_referrer=qzone.qq.com');
-		console.log(browser);
+
     browser.get(loginUrl,function(headers,body){
 			console.log(loginUrl)
-			console.log(body)
+
 			function ptuiCB(a,b,c,d,e,f){
 				var ptsig= c.substring(c.indexOf('ptsig='));
 				proxy.emitLater('ptsig',ptsig);
