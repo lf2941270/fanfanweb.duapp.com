@@ -37,7 +37,6 @@ function login(cb){
 					src:[jquery],
 				done:function (errors, window) {
 					eval(window.$(window.$('script')[0]).text());
-					console.log(pt.ptui)
 					proxy.emitLater('iframeLoaded',src,pt.ptui);
 				}
 				}
@@ -55,18 +54,21 @@ function login(cb){
 		})
     var checkUrl=getLoginUrl.getCheckUrl(user.u,ptui);
     setCookieWork();
-    browser.get(checkUrl,function(headers,body){
-      /*返回JSONP的处理函数*/
+		setTimeout(function(){
+			browser.get(checkUrl,function(headers,body){
+				/*返回JSONP的处理函数*/
 
-      function ptui_checkVC(A,B,C){
-        var loginUrl=getLoginUrl.getLoginUrl(B,ptui,C);
-        proxy.emitLater('ready',loginUrl);
-      }
-      eval(body);
-			console.log(checkUrl)
-			console.log(browser)
-			console.log(body)
-    });
+				function ptui_checkVC(A,B,C){
+					var loginUrl=getLoginUrl.getLoginUrl(B,ptui,C);
+					proxy.emitLater('ready',loginUrl);
+				}
+				eval(body);
+				console.log(checkUrl)
+				console.log(browser)
+				console.log(body)
+			});
+		},2000);
+
   });
   proxy.on('ready',function(loginUrl){
 		browser.setCookie('_qz_referrer=qzone.qq.com');
