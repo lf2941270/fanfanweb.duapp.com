@@ -36,16 +36,16 @@ function login(cb){
           body,{
 					src:[jquery],
 				done:function (errors, window) {
-					var verifycode=window.$("#verifycode").val();
 					eval(window.$(window.$('script')[0]).text());
-					proxy.emitLater('iframeLoaded',src,verifycode,pt.ptui);
+					console.log(pt.ptui)
+					proxy.emitLater('iframeLoaded',src,pt.ptui);
 				}
 				}
 
       );
     });
   });
-  proxy.on('iframeLoaded',function(src,verifycode,ptui){
+  proxy.on('iframeLoaded',function(src,ptui){
     browser.setCookie('ptui_loginuin='+querystring.escape(user.u));
     /*browser.get('http://ptlogin2.qq.com/ptqrshow?appid='+ptui.appid+'&e=2&l=M&s=3&d=72&v=4&t=0.8360795713961124',function(){
 
