@@ -89,6 +89,7 @@ function login(cb){
 //			browser.setCookie('fnc=2');
 
 			browser.get(url,function(headers,body){
+				console.log(browser)
 				cb();
 			});
 		});

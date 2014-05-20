@@ -26,7 +26,6 @@ function timer(callback){
 	function _Callback(res){
 
 		console.log('========================第%d次刷新，时间：%s==========================',++n,new Date());
-		console.log(res)
 		if (res.data!==undefined){
 			callback();
 			var data=res.data.data;
