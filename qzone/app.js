@@ -1,7 +1,6 @@
 
-var express=require('express');
-var app=express();
-var routes = require('./routes');
+
+
 var qzone=require('./qzone');
 
 /*app.set('port', process.env.PORT || 18080);
