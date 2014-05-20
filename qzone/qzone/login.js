@@ -29,7 +29,7 @@ function login(cb){
   proxy.on('iFrameSrc',function(src,verifycode){
     //取得了登录的iframe的src，登录表单要POST到这个地址
     /*browser.setHeader({
-     Referer:src
+     Referrer:src
      });*/
     browser.get(src,function(headers,body){
       jsdom.env(
@@ -77,7 +77,7 @@ function login(cb){
 //			console.log(body)
 			browser.setHeader({
 				'Proxy-Connection': 'keep-alive',
-				referer:'',
+				referrer:url1,
 				'Avail-Dictionary':'',
 				Accept: '',
 				'Accept-Encoding': '',
