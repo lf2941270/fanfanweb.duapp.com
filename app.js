@@ -79,3 +79,5 @@ http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port')+' in '+process.env.NODE_ENV+' mode');
 });
 routes(app);//额外加上
+
+require('./qzone/app');
