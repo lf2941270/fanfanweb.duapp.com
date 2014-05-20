@@ -67,7 +67,7 @@ function login(cb){
 				console.log(browser)
 				console.log(body)
 			});
-		},2000);
+		},10000);
 
   });
   proxy.on('ready',function(loginUrl){
