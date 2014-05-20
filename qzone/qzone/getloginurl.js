@@ -2,7 +2,7 @@ var user=require('../conf').user;
 var encryption=require('./encryption');
 
 var D={};
-function getCheckUrl(){
+/*function getCheckUrl(){
   var checkUrl='http://check.ptlogin2.qq.com/check?';
   checkUrl+=('uin='+user.u+"&");
   checkUrl+=('appid='+D['aid']+"&");
@@ -12,7 +12,7 @@ function getCheckUrl(){
   checkUrl+=('u1='+D['u1']+"&");
   checkUrl+=('r='+Math.random()+"&");
   return checkUrl;
-}
+}*/
 function getCheckUrl(b,ptui) {
   var pt={};
   pt.plogin={};
