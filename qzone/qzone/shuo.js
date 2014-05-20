@@ -6,7 +6,6 @@ var EventProxy=require('eventproxy');
 var jsdom=require('jsdom');
 var fs = require("fs");
 var jquery = fs.readFileSync("./qzone/qzone/jquery.min.js", "utf-8");
-var test=require('test')
 
 var url='http://user.qzone.com/';
 function Shuo(me){
