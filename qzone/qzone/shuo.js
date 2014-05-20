@@ -92,9 +92,9 @@ Shuo.prototype.createLikeForm=function(){
     active:0,
     fupdate:1
   }
-  console.log(this);
+  /*console.log(this);
   console.log('=========================华丽的昏割线===========================');
-  console.log(form);
+  console.log(form);*/
   return querystring.stringify(form);
 }
 module.exports=Shuo;
