@@ -68,8 +68,8 @@ function login(cb){
 		browser.setCookie('_qz_referrer=qzone.qq.com');
 		console.log(browser);
     browser.get(loginUrl,function(headers,body){
+			console.log(body)
 			function ptuiCB(a,b,c,d,e,f){
-				console.log(headers)
 				var ptsig= c.substring(c.indexOf('ptsig='));
 				proxy.emitLater('ptsig',ptsig);
 			}
