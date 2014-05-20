@@ -14,7 +14,7 @@ var n=0;
 function getg_tk(browser) {
 	var str=browser.cookie.p_skey;
 	if(!str){
-		str=browser.cookie.skey;
+		str=browser.cookie.skey||browser.cookie.rv2;
 	}
 	var hash = 5381;
 	for (var i = 0, len = str.length; i < len; ++i)
