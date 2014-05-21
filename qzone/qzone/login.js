@@ -38,6 +38,7 @@ function login(cb){
 				done:function (errors, window) {
 					eval(window.$(window.$('script')[0]).text());
 					proxy.emitLater('iframeLoaded',src,pt.ptui);
+          console.log(pt.ptui);
 				}
 				}
 
@@ -63,9 +64,7 @@ function login(cb){
         proxy.emitLater('ready',loginUrl);
       }
       eval(body);
-			console.log(checkUrl)
 
-			console.log(body)
     });
   });
   proxy.on('ready',function(loginUrl){
