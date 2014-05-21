@@ -35,11 +35,11 @@ function login(cb){
       jsdom.env(
           body,{
 					src:[jquery],
-				done:function (errors, window) {
-					eval(window.$(window.$('script')[0]).text());
-					proxy.emitLater('iframeLoaded',src,pt.ptui);
-          console.log(pt.ptui);
-				}
+          done:function (errors, window) {
+            eval(window.$(window.$('script')[0]).text());
+            proxy.emitLater('iframeLoaded',src,pt.ptui);
+            console.log(pt.ptui);
+          }
 				}
 
       );
