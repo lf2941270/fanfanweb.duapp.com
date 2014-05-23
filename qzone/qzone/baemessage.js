@@ -43,11 +43,21 @@ Body.prototype.create=function(op){
   this.client_secret=op.options.secret;
   this.initTime();
   this.data.method='create'
-  this.createSign(op);
+  this.createSign(op.restUrl);
 	return this.dataArr.join('&');
 }
+Body.prototype.mail=function(args,restUrl){
+	this.initTime();
+	this.data.method='mail';
+	this.data.from=args[0];
+	this.data.address=args[1];
+	this.data.mail_subject=args[2];
+	this.data.message=args[3];
+	this.createSign(restUrl);
+	return this.dataArr.join('&')
+}
 /*生成签名*/
-Body.prototype.createSign=function(op){
+Body.prototype.createSign=function(restUrl){
   this.dataArr=[]
 	var sign;
   for(var i in this.data){
@@ -56,24 +66,38 @@ Body.prototype.createSign=function(op){
     }
   };
 	this.dataArr.sort();
-  sign='POST'+op.restUrl+this.dataArr.join('')+this.client_secret;
+  sign='POST'+restUrl+this.dataArr.join('')+this.client_secret;
 	this.data.sign=util.crypto.md5(encodeURIComponent(sign));
 	this.dataArr.push('sign='+this.data.sign);
 }
 
 function BaeMessage(op){
-  var proxy=new EventProxy();
-  this.restBaseUrl='http://bcms.api.duapp.com/rest/2.0/bcms/';
-  var body=new Body();//消息体
-  this.options=op
-  this.restUrl=this.restBaseUrl+'queue'
-  /*create queue*/
-  browser.post(this.restUrl,body.create(this),function(headers,body){
+	this.options=op;
+}
+BaeMessage.prototype.init=function(){
+	var self=this;
+	this.proxy=new EventProxy();
+	this.restBaseUrl='http://bcms.api.duapp.com/rest/2.0/bcms/';
+	this.body=new Body();//消息体
+
+	this.restUrl=this.restBaseUrl+'queue'
+	/*create queue*/
+	browser.post(this.restUrl,this.body.create(this),function(headers,body){
 		var body=JSON.parse(body);
-		console.log(body.response_params.queue_name);
+		console.log(body)
+		self.queueName=body.response_params.queue_name;
+		self.restUrl=self.restBaseUrl+self.queueName;
+		self.proxy.emitLater('queueName');
 	})
 }
-BaeMessage.prototype.mail=function(){
-  console.log.apply(console,arguments)
+BaeMessage.prototype.mail=function(from,to,title,content){
+	this.init();
+	var args=arguments;
+	var self=this;
+  this.proxy.on('queueName',function(){
+		browser.post(self.restUrl,self.body.mail(args,self.restUrl),function(headers,body){
+			console.log(body)
+		})
+	})
 }
 module.exports=BaeMessage;

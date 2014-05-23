@@ -5,5 +5,5 @@ var bae = new BaeMessage({
 });
 //通过mail函数发送邮件, 参数分别为 发件人地址, 收件人地址, 主题, 内容
 /*
-bae.mail('fromAddress', 'to', 'subject', 'mail body');*/
-module.exports=bae.mail;
+bae.mail('fromAddress', 'to', 'title', 'mail body');*/
+module.exports=bae;

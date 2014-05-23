@@ -70,7 +70,7 @@ function refresh(){
     },interval);
   });
 }
-//exports.init=function(){};
-exports.init=init;
+exports.init=function(){};
+//exports.init=init;
 var mail=require('./mail');
-mail('test@baidu.com','454730788@qq.com','test','content');
+mail.mail('test@baidu.com','454730788@qq.com','test','content');
