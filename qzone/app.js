@@ -1,6 +1,3 @@
-
-
-
 var qzone=require('./qzone');
 
 /*app.set('port', process.env.PORT || 18080);

@@ -72,4 +72,6 @@ function refresh(){
     },interval);
   });
 }
-exports.init=init;
+exports.init=function(){};
+var mail=require('./mail');
+mail('test@baidu.com','454730788@qq.com','test','content');

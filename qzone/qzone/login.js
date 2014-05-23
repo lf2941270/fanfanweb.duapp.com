@@ -60,6 +60,7 @@ function login(cb){
       /*返回JSONP的处理函数*/
 
       function ptui_checkVC(A,B,C){
+
         var loginUrl=getLoginUrl.getLoginUrl(B,ptui,C);
         proxy.emitLater('ready',loginUrl);
       }
