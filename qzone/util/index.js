@@ -1,3 +1,4 @@
+
 /*自定义工具集util*/
 
 function eachArray(arr,callback){
@@ -53,3 +54,4 @@ exports.clone=function(obj){
   }
   return object;
 }
+exports.crypto=require('./crypto');

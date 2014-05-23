@@ -2,6 +2,7 @@ var Browser=require('../browser');
 var browser=new Browser();
 var EventProxy=require('eventproxy');
 var util=require('../util');
+var querystring=require('querystring');
 browser.init({
   'User-Agent':'curl/7.12.1',
   'Host':'bcms.api.duapp.com',
@@ -9,6 +10,16 @@ browser.init({
   'Accept':'*/*',
   'Content-Type':'application/x-www-form-urlencoded'
 })
+function stringify(obj){
+	var arr=[];
+	for(var i in obj){
+		if(obj.hasOwnProperty(i)&&obj[i]!==''){
+			arr.push([i,obj[i]].join('='));
+		}
+	};
+	arr.sort();
+	return arr.join('&');
+}
 
 /*消息体部分*/
 function Body(){
@@ -25,25 +36,31 @@ function Body(){
 }
 Body.prototype.initTime=function(){
   this.data.sign='';
-  this.data.timestamp=(new Date()).getTime();
+  this.data.timestamp=Math.round((new Date()).getTime()/1000);
 }
 Body.prototype.create=function(op){
-  this.data.client_id=op.key;
-  this.client_secret=op.secret;
+  this.data.client_id=op.options.key;
+  this.client_secret=op.options.secret;
   this.initTime();
   this.data.method='create'
-  this.createSign();
+  this.createSign(op);
+	console.log(this.dataArr.join('&'))
+	return this.dataArr.join('&');
 }
 /*生成签名*/
-Body.prototype.createSign=function(){
-  var data=[],sigh;
+Body.prototype.createSign=function(op){
+  this.dataArr=[]
+	var sign;
   for(var i in this.data){
     if(this.data.hasOwnProperty(i)&&this.data[i]!==''){
-      data.push([i,this.data[i]].join('='));
+      this.dataArr.push([i,this.data[i]].join('='));
     }
   };
-  data.sort();
-  sigh='POST http://bcms.api.duapp.com/rest/2.0/bcms/'+
+	this.dataArr.sort();
+  sign='POST '+op.restUrl+this.dataArr.join('')+this.client_secret;
+	console.log(encodeURIComponent(sign).replace('%20',' '))
+	this.data.sign=util.crypto.md5(encodeURIComponent(sign).replace('%20',' '));
+	this.dataArr.push('sign='+this.data.sign);
 }
 
 function BaeMessage(op){
@@ -53,7 +70,9 @@ function BaeMessage(op){
   this.options=op
   this.restUrl=this.restBaseUrl+'queue'
   /*create queue*/
-  browser.post(this.restUrl,body.create(this.options),function(headers,body){})
+  browser.post(this.restUrl,body.create(this),function(headers,body){
+		console.log(body)
+	})
 }
 BaeMessage.prototype.mail=function(){
   console.log.apply(console,arguments)

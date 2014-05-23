@@ -114,12 +114,9 @@ Browser.prototype.post=function(href,data,callback){
 
   request(options,data,function(err,headers,body){
 		Browser.prototype.dealResponseHeaders.bind(_)(headers);
-    //遇到跳转的响应头则进行跳转
-    if(headers.location!==undefined){
-      _.get(headers.location,callback);
-    }else{
-      callback(headers,body);
-    }
+
+    callback(headers,body);
+
 	});
 }
 module.exports=Browser;
