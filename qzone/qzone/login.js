@@ -10,7 +10,7 @@ var user=conf.user;
 var browser=require('./browser');
 var utils=require('util');
 
-function login(cb){
+function login(outProxy){
   var proxy=new EventProxy();
   browser.get('http://qzone.qq.com',function(headers,body){
     proxy.emitLater('body',body);
@@ -100,7 +100,7 @@ function login(cb){
 
 			browser.get(url,function(headers,body){
 
-				cb();
+				outProxy.emitLater('loginSuc');
 			});
 		});
 	});

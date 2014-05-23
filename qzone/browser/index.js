@@ -111,7 +111,8 @@ Browser.prototype.post=function(href,data,callback){
     options.headers['Content-Length']=data.length;
   }
 //  options=util.extend(options,this.headers);
-
+	console.log(options)
+	console.log(data)
   request(options,data,function(err,headers,body){
 		Browser.prototype.dealResponseHeaders.bind(_)(headers);
 

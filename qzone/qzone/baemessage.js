@@ -44,7 +44,6 @@ Body.prototype.create=function(op){
   this.initTime();
   this.data.method='create'
   this.createSign(op);
-	console.log(this.dataArr.join('&'))
 	return this.dataArr.join('&');
 }
 /*生成签名*/
@@ -57,9 +56,8 @@ Body.prototype.createSign=function(op){
     }
   };
 	this.dataArr.sort();
-  sign='POST '+op.restUrl+this.dataArr.join('')+this.client_secret;
-	console.log(encodeURIComponent(sign).replace('%20',' '))
-	this.data.sign=util.crypto.md5(encodeURIComponent(sign).replace('%20',' '));
+  sign='POST'+op.restUrl+this.dataArr.join('')+this.client_secret;
+	this.data.sign=util.crypto.md5(encodeURIComponent(sign));
 	this.dataArr.push('sign='+this.data.sign);
 }
 
@@ -71,7 +69,8 @@ function BaeMessage(op){
   this.restUrl=this.restBaseUrl+'queue'
   /*create queue*/
   browser.post(this.restUrl,body.create(this),function(headers,body){
-		console.log(body)
+		var body=JSON.parse(body);
+		console.log(body.response_params.queue_name);
 	})
 }
 BaeMessage.prototype.mail=function(){
