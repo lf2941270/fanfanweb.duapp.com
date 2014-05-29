@@ -56,6 +56,12 @@ Body.prototype.mail=function(args,restUrl){
 	this.createSign(restUrl);
 	return this.dataArr.join('&')
 }
+Body.prototype.drop=function(restUrl){
+  this.initTime();
+  this.data.method='drop';
+  this.createSign(restUrl);
+  return this.dataArr.join('&');
+}
 /*生成签名*/
 Body.prototype.createSign=function(restUrl){
   this.dataArr=[]
@@ -85,10 +91,22 @@ BaeMessage.prototype.init=function(){
 	browser.post(this.restUrl,this.body.create(this),function(headers,body){
 		var body=JSON.parse(body);
 		console.log(body)
-		self.queueName=body.response_params.queue_name;
+    if(body.response_params){
+      self.queueName=body.response_params.queue_name;
+    }else{
+      self.queueName='aaaaaaaaaa';
+      self.restUrl=self.restBaseUrl+self.queueName;
+      return self.drop()
+    }
 		self.restUrl=self.restBaseUrl+self.queueName;
 		self.proxy.emitLater('queueName');
 	})
+}
+BaeMessage.prototype.drop=function(){
+  var self=this;
+  browser.post(self.restUrl,self.body.drop(self.restUrl),function(headers,body){
+    console.log(body);
+  })
 }
 BaeMessage.prototype.mail=function(from,to,title,content){
 	this.init();
