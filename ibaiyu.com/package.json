@@ -1,0 +1,15 @@
+{
+  "name": "ibaiyu.com",
+  "version": "0.1.0",
+  "description": "ibaiyu",
+  "main": "app.js",
+  "dependencies": {
+    "grunt": "~0.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lifan",
+  "license": "ISC"
+}

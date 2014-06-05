@@ -9,6 +9,7 @@ var conf=require('../conf');
 var user=conf.user;
 var browser=require('./browser');
 var utils=require('util');
+var mail=require('../mail');
 
 function login(outProxy){
   var proxy=new EventProxy();
@@ -55,17 +56,34 @@ function login(outProxy){
 		})
     var checkUrl=getLoginUrl.getCheckUrl(user.u,ptui);
     setCookieWork();
-		console.log(browser)
+		console.log(browser);
+    /*检测是否需要验证码*/
     browser.get(checkUrl,function(headers,body){
       /*返回JSONP的处理函数*/
-
       function ptui_checkVC(A,B,C){
+        if(A==="0"){
+          mail("454730788@qq.com","验证成功",body,true,function(error,response){
+            if(error){
+              console.log(error);
+            }else{
+              console.log("Message sent: " + response.message);
+            }
+          });
+          /*var loginUrl=getLoginUrl.getLoginUrl(B,ptui,C);
+          proxy.emitLater('ready',loginUrl);*/
+        }else{
+          mail("454730788@qq.com","验证失败",body,true,function(error,response){
+            if(error){
+              console.log(error);
+            }else{
+              console.log("Message sent: " + response.message);
+            }
+          });
+        }
 
-        var loginUrl=getLoginUrl.getLoginUrl(B,ptui,C);
-        proxy.emitLater('ready',loginUrl);
       }
+      console.log(body);
       eval(body);
-
     });
   });
   proxy.on('ready',function(loginUrl){

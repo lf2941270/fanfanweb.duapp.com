@@ -1,0 +1,526 @@
+/*common.css为首页等大部分页面公用的样式*/
+#page{
+    background: url("../images/page_bg.jpg") no-repeat scroll center top #f2eade;
+    min-height: 800px;
+}
+#header{
+    height: 195px;
+    margin-bottom: 12px;
+}
+#header .logo{
+    width: 350px;
+    height: 125px;
+    margin-top: 32px;
+    background: url("../images/logo.png") no-repeat scroll 0 0;
+}
+#header .menu{
+    position: relative;
+    height: 38px;
+    background: url("../images/menu_bg.gif") repeat-x scroll 0 0;
+    border-radius: 4px 4px 4px 4px;
+    padding-left: 38px;
+}
+#header .menu li{
+    width: 116px;
+    height: 100%;
+    line-height:38px;
+    text-align: center;
+    float: left;
+    display: block;
+    background: url("../images/menu.gif") no-repeat scroll 0 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+#header .menu li a{
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#header .menu li.cur a,#header .menu li a:hover{
+    background: #252120 none;
+    color: #ff6600;
+    text-decoration: none;
+}
+#header .menu li.cur a,#header .menu li a:hover{
+
+}
+#header .menu .navLabel{
+    display: block;
+    position: absolute;
+    width: 117px;
+    height: 3px;
+    background: #ff6600;
+    overflow: hidden;
+}
+#content .left{
+    width: 220px;
+    float: left;
+}
+#content .login{
+    height: 200px;
+    background: url("../images/loginbox_bg.png");
+    margin-bottom: 10px;
+}
+
+#content .login form{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: #5b5b5b;
+}
+#content .login form input{
+    color: #5b5b5b;
+    font-size: 12px;
+}
+#content .login form .input{
+    width: 128px;
+    height: 28px;
+    padding-left: 5px;
+    border: 1px solid #e0d1ca;
+    position: absolute;
+    z-index: 0;
+    left: 14px;
+    line-height: 28px;
+
+}
+#content .login form .focus{
+    z-index: 1;
+    border-color:#ec8d03 ;
+}
+#content .login form .user{
+    top: 48px;
+}
+#content .login form .pwd{
+    top: 77px;
+}
+#content .login form .notice{
+
+    height: 28px;
+    padding-left: 5px;
+    position: absolute;
+    left: 14px;
+    line-height: 28px;
+    top: 78px;
+}
+#content .login form .submit{
+    position: absolute;
+    display: block;
+    width: 59px;
+    height: 59px;
+    background: url("../images/login_btn.gif") no-repeat scroll 0 0;
+    border: 0;
+    cursor: pointer;
+    top: 48px;
+    left: 148px;
+    z-index: 2;
+}
+#content .login form .r_box{
+    width: 193px;
+    height: 14px;
+    line-height: 14px;
+    position: absolute;
+    top: 115px;
+    left: 14px;
+    text-align: center;
+}
+#content .login form .r_box a{
+    color: #797979;
+}
+#content .login form .r_box a:hover{
+    color:#E2440C ;
+}
+#content .login form .reg{
+    position: absolute;
+    display: block;
+    width: 138px;
+    height: 36px;
+    background: url("../images/reg_btn.jpg") scroll 0 0 no-repeat;
+    left:41px;
+    top: 145px;
+}
+#content .haslogin{
+    width: 100%;
+    height: 200px;
+    background: url("../images/haslogin_bg.png");
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.info_box{
+    margin-left: 12px;
+    margin-top: 12px;
+}
+.info_box .face{
+    float: left;
+    width: 56px;
+    height: 56px;
+    padding: 3px;
+    border-radius: 3px 3px 3px 3px;
+    background: #3f3b37;
+    border: 1px solid #4f4c48;
+}
+.info_box .info{
+    float: left;
+    margin-left: 12px;
+}
+.info_box .info p{
+    margin-top: 5px;
+}
+.range i{
+    display: inline-block;
+    height: 13px;
+    background: url("../images/range.gif") no-repeat scroll;
+}
+.range .l{
+    width: 29px;
+    background-position: 0 -10px;
+}
+.range .r{
+    width: 3px;
+    background-position: right -23px;
+}
+.range .c{
+    background-position: 0 -23px;
+}
+.range .c i{
+    width: 10px;
+}
+.range .r0{
+    background-position: 0 2px;
+}
+.range .r1{
+    background-position: -10px 2px;
+}
+.range .r2{
+    background-position: -20px 2px;
+}
+.range .r3{
+    background-position: -30px 2px;
+}
+.range .r4{
+    background-position: -40px 2px;
+}
+.range .r5{
+    background-position: -50px 2px;
+}
+.range .r6{
+    background-position: -60px 2px;
+}
+.range .r7{
+    background-position: -70px 2px;
+}
+.range .r8{
+    background-position: -80px 2px;
+}
+.range .r9{
+    background-position: -90px 2px;
+}
+
+.info_box .info .msg{
+    padding-left:21px;
+    background: url("../images/msg.gif") 0 50% no-repeat scroll;
+    height: 12px;
+}
+.info_box .info .msg a{
+    position: absolute;
+    margin-top: 1px;
+}
+#content .haslogin .manage_box{
+    width: 194px;
+    height: 100px;
+    margin: 10px auto auto 12px;
+    border: 1px solid #b6b6b6;
+    background: #f7f7fa;
+}
+#content .haslogin .manage_box .switch{
+    height: 27px;
+    position: relative;
+}
+#content .haslogin .manage_box .switch .s{
+    float: left;
+    width: 50%;
+    text-align: center;
+    line-height:27px;
+    background: url("../images/s_bg_240.gif");
+    cursor: pointer;
+}
+#content .haslogin .manage_box .switch .cur{
+    background: none;
+
+}
+#content .haslogin .manage_box .switch .navLabel{
+    position: absolute;
+    width: 97px;
+    height: 3px;
+
+    overflow: hidden;
+    background: #e2440c;
+    top:-1px;
+    z-index: 2;
+}
+#content .haslogin .manage_box .lately{
+    margin-left: 13px;
+    margin-top: 8px;
+}
+#content .haslogin .manage_box .lately li{
+    margin-bottom: 5px;
+}
+#content .haslogin .manage_box .lately li a{
+    padding-left: 21px;
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    color: #767676;
+}
+
+#content .haslogin .manage_box .manage{
+    overflow:hidden;
+    margin-top:8px;
+}
+#content .haslogin .manage_box .manage li{
+    display: block;
+    width: 80px;
+    float: left;
+    margin-left: 13px;
+    margin-top: 6px;
+}
+#content .haslogin .manage_box .manage li a{
+    display: block;
+    padding-left: 21px;
+    height: 16px;
+    background: url("../images/leftlaimg.gif") no-repeat;
+    color: #767676;
+}
+#content .haslogin .manage_box .lately li a:hover,#content .haslogin .manage_box .manage li a:hover{
+    text-decoration: none;
+    color: #e2440c;
+}
+#content .haslogin .manage_box .manage li .i1{
+    background-position: 0 0;
+}
+#content .haslogin .manage_box .manage li .i2{
+    background-position: 0 -16px;
+}
+#content .haslogin .manage_box .manage li .i3{
+    background-position: 0 -34px;
+}
+#content .haslogin .manage_box .manage li .i4{
+    background-position: 0 -51px;
+}
+.open_ser_box ul{
+    margin: 10px 0 10px 0;
+}
+.open_ser_box ul li{
+    position: relative;
+    display: block;
+}
+
+.open_ser_box ul li .timeline{
+    position: absolute;
+    left: 3px;
+    top: 0;
+    width: 16px;
+    height: 100%;
+    background: url("../images/time.gif") no-repeat;
+
+}
+.open_ser_box ul li .underline{
+    border-bottom: 1px dotted #c8c8c8;
+    width: 190px;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+.open_ser_box ul li.cur .timeline{
+    background-position: 0 -31px;
+}
+.open_ser_box ul li .small,.open_ser_box ul li .big{
+    height: 100%;
+}
+.open_ser_box ul li .small{
+    margin-left: 12px;
+    height: 31px;
+    display: block;
+
+}
+.open_ser_box ul li .big{
+    margin-left: 12px;
+    overflow: hidden;
+    height: 136px;
+    display: none;
+}
+.open_ser_box ul li.cur .small{
+    display: none;
+}
+.open_ser_box ul li.cur .big{
+    display: block;
+}
+.open_ser_box ul li .big{
+    background-color: #f2f2f2;
+
+}
+.open_ser_box ul li .small span{
+    display: inline-block;
+    line-height: 30px;
+}
+.open_ser_box ul li .small .time{
+    margin-left: 10px;
+    width: 71px;
+}
+.open_ser_box ul li .small .game_icon{
+    width: 16px;
+    display: inline-block;
+    height: 16px;
+    position: relative;
+    top: 3px;
+
+}
+.open_ser_box ul li .big .gamebox{
+    margin: 10px auto 8px 13px;
+}
+.open_ser_box ul li .big .game_icon_b{
+    width: 64px;
+    height: 64px;
+    float: left;
+}
+.open_ser_box ul li .big .gamename{
+    float: left;
+    width: 110px;
+    margin:5px auto 5px 10px;
+    font-size: 14px;
+    font-weight:bold ;
+}
+.open_ser_box ul li .big .gametype{
+    float: left;
+    width: 110px;
+    margin: auto auto 5px 10px;
+}
+.open_ser_box ul li .big .gamebox a{
+    float: left;
+    margin-left: 10px;
+    width: 38px;
+    height: 17px;
+}
+.open_ser_box ul li .big a,.open_ser_box ul li .big i{
+    display: inline-block;
+}
+.open_ser_box ul li .big a{
+    color: #7f7f7f;
+}
+.open_ser_box ul li .big a:hover{
+    color:#ff6600 ;
+    text-decoration: none;
+}
+.open_ser_box ul li .big ul{
+    margin-left: 13px;
+}
+.open_ser_box ul li .big .gamebox .gift{
+     background: url("../images/gift.gif") no-repeat scroll;
+ }
+.open_ser_box ul li .big .gamebox .site{
+    background: url("../images/site.gif") no-repeat scroll;
+}
+.open_ser_box ul li .big li{
+
+    margin-bottom: 9px;
+}
+.open_ser_box ul li .big .new,.open_ser_box ul li .big .hot{
+    width: 13px;
+    height: 11px;
+    background: url("../images/hot_03.gif");
+}
+.open_ser_box ul li .big .new{
+    background-position: 0 0;
+}
+.open_ser_box ul li .big .hot{
+    background-position: 0 -11px;
+}
+.open_ser_box ul li .big .enter{
+    float: right;
+    width: 63px;
+    height: 17px;
+    background: url("../images/enter.gif");
+    margin:-2px 13px auto auto;
+}
+.usergate ul{
+    padding-left: 3px;
+    padding-bottom: 5px;
+
+}
+.usergate li{
+    display: block;
+    float: left;
+    width: 95px;
+    height: 26px;
+    margin: 9px auto auto 7px;
+}
+.usergate li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.usergate li .i_1{
+    background: url("../images/but_01.png") no-repeat scroll;
+}
+.usergate li .i_2{
+    background: url("../images/but_02.png") no-repeat scroll;
+}
+.usergate li .i_3{
+    background: url("../images/but_03.png") no-repeat scroll;
+}
+.usergate li .i_4{
+    background: url("../images/but_04.png") no-repeat scroll;
+}
+.usergate li .i_5{
+    background: url("../images/but_05.png") no-repeat scroll;
+}
+.usergate li .i_6{
+    background: url("../images/but_06.png") no-repeat scroll;
+}
+.usergate .phone{
+    height: 38px;
+    background: url("../images/phone_05.gif") scroll center 0 no-repeat;
+    margin: 10px auto;
+}
+#content .center{
+    float: right;
+    width: 770px;
+    margin-left: 10px;
+}
+
+.pages{
+    margin: 30px 0 40px 0;
+    text-align: center;
+    color: #5e5e5e;
+    font-size: 0;
+}
+.pages a{
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    display: inline-block;
+    padding: 2px 5px;
+    color: #5e5e5e;
+    margin-right: 8px;
+    background: #fff;
+}
+.pages em{
+    font-size: 12px;
+}
+.pages a:hover{
+    text-decoration: none;
+}
+.pages a.false{
+    border: none;
+    background: none;
+}
+.pages a.cur{
+    color: #e2440c;
+    border: none;
+    background: none;
+}
+.pages input{
+    width: 32px;
+    margin-right: 8px;
+}

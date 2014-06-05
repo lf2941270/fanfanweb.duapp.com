@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>会员注册</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8;">
+    <script src="js/lib/jquery-1.8.3.min.js">
+    </script>
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/reg.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="page" class="page-reg">
+    <div id="topbar">
+        <div class="layout layout-1000 clearfix">
+            <a class="slogo com" href="index.html" title="进入首页"></a>
+            <div class="border com"></div>
+            <!--用户已登录-->
+            <!--<div class="haslogin com">
+                您好!<span>forchenbinbin</span> [<a href="http://www.ibaiyu.cn/loginout.aspx">注销登录</a>]
+            </div>-->
+            <!--用户未登录-->
+            <div class="login com">
+                <span>[<a href="login.html" target="_blank">登录</a>]</span>
+                <div class="border com"></div>
+                <span>[<a href="reg.html" target="_blank">注册</a>]</span>
+            </div>
+            <dl class="rec com">
+                <dt>推荐</dt>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+            </dl>
+            <ul class="rside com">
+                <li><a onclick="SetHome(this,window.location)" style="cursor:pointer">设为首页</a> </li>
+                <div class="border com"></div>
+                <li><a id="bookmark" style="cursor:pointer">加入收藏</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="layout layout-924">
+            <div id="logo"></div>
+            <div class="main">
+                <div class="hd">
+                    <h2><i>注册账号</i><span>已有账号,<a href="login.html">直接登录》</a> </span></h2>
+                </div>
+                <div class="bd">
+                    <form class="reg-form" method="post" action="reg.php">
+                        <div class="item">
+                            <label for="username">输入账号:</label>
+                            <input type="text" name="username" id="username" placeholder="请输入账号" class="user input">
+                            <div class="info-box">
+                                <p class="error"></p>
+								<p class="correct"></p>
+                                <p class="notice">
+                                    账号长度为6～16位，由字母、数字组成，且只能以字母开头。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label for="password">设置密码:</label>
+                            <input type="password" name="password" id="password" placeholder="请输入密码" class="psw input">
+                            <!--给i添加class "low""medium""high"分别表示密码强度低中高-->
+                            <p class="intensity"><span>强度</span><i class=""></i></p>
+                            <div class="info-box">
+                                <p class="error"></p>
+						        <p class="correct"></p>
+                                <p class="notice">
+                                    密码长度为6～16位，由字母、数字组成。我们建议使用数字+字母组合以提升账号安全，友情提示：不要将账号密码设置为与账号或者邮箱密码相同！
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label for="confirm">确认密码:</label>
+                            <input type="password" name="confirm" id="confirm" placeholder="请再次输入密码" class="psw-cf input">
+                            <div class="info-box">
+                                <p class="error"></p>
+						        <p class="correct"></p>
+                                <p class="notice">
+                                    再一次输入密码进行确认，效验密码是否填写错误。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label for="email">认证邮箱:</label>
+                            <input type="email" name="email" id="email" placeholder="请输入认证邮箱" class="email input">
+                            <div class="info-box">
+                                <p class="error"></p>
+						        <p class="correct"></p>
+                                <p class="notice">
+                                    邮箱是取回密码和获取本站信息的重要途径，为了账号安全，请确认邮箱真实可靠。
+                                </p>
+                            </div>
+                        </div>
+                        <p class="line"></p>
+                        <p class="item rule">根据《网络游戏管理暂行办法》关于实名注册的规定，请正确填写您的真实姓名与身份证号码。</p>
+                        <div class="item">
+                            <label for="realname">真实姓名:</label>
+                            <input type="text" name="realname" id="realname" placeholder="请输入真实姓名" class="realname input">
+                            <div class="info-box">
+                                <p class="error"></p>
+						        <p class="correct"></p>
+                                <p class="notice">
+                                    请填写您的真实姓名，以保障您的用户权益。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label for="idcard">身份证号:</label>
+                            <input type="text" name="idcard" id="idcard" placeholder="请输入身份证号" class="idcard input">
+                            <div class="info-box">
+                                <p class="error"></p>
+						        <p class="correct"></p>
+                                <p class="notice">
+                                    身份证是账号所有权的最高凭证，正确填写身份证可享受本站多项贴心服务。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label for="identi">验 证 码:</label>
+                            <input type="text" name="identi" id="identi" placeholder="请输入验证码" class="identi input">
+                            <img class="identi-img" width="70" height="22" title="点击切换验证码" src="http://www.ibaiyu.cn/tools/verify_code.ashx"/>
+                            <div class="info-box">
+                                <p class="error"></p>
+						        <p class="correct"></p>
+                                <p class="notice">
+                                    请输入图片中的字符，帮助我们防止机器人的攻击。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" name="agree" id="agree">
+                            <label for="agree" class="agree">我已经阅读并接受<a href="#" target="_blank" title="爱百娱用户服务条款">《爱百娱用户服务条款》</a></label>
+                            <div class="info-box">
+                                <p class="error"></p>
+                            </div>
+                        </div>
+                        <a class="btn-reg btn-a" title="注册我的爱百娱通行证"><span class="l-span"><span class="r-span">注册我的爱百娱通行证</span></span></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div class="layout layout-1000">
+            <ul class="links">
+                <li><a href="about.html" target="_blank">关于我们</a></li>
+                <li><a href="about.html?tabNum=1" target="_blank">联系我们</a></li>
+                <li><a href="about.html?tabNum=2" target="_blank">商务合作</a></li>
+                <li><a href="about.html?tabNum=3" target="_blank">服务条款</a></li>
+                <li><a href="about.html?tabNum=4" target="_blank">人才招聘</a></li>
+                <li><a href="jzjh/1.html" target="_blank">家长监护</a></li>
+            </ul>
+            <div class="copyright">
+                <p>
+                    鄂ICP备12003812号 鄂ICP证B2-20120079 网络文化经营许可证 鄂网文【2012】0306-007号</p>
+                <p>
+                    Copyright &copy; 2012 All Rights Reserved
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--多页面公用js-->
+<script src="js/common.js"></script>
+<script src="js/reg.js"></script>
+</body>
+</html>

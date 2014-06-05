@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>会员登录</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8;">
+    <script src="js/lib/jquery-1.8.3.min.js">
+    </script>
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/reg.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="page">
+    <div id="topbar">
+        <div class="layout layout-1000 clearfix">
+            <a class="slogo com" href="index.html" title="进入首页"></a>
+            <div class="border com"></div>
+            <!--用户已登录-->
+            <!--<div class="haslogin com">
+                您好!<span>forchenbinbin</span> [<a href="http://www.ibaiyu.cn/loginout.aspx">注销登录</a>]
+            </div>-->
+            <!--用户未登录-->
+            <div class="login com">
+                <span>[<a href="login.html" target="_blank">登录</a>]</span>
+                <div class="border com"></div>
+                <span>[<a href="reg.html" target="_blank">注册</a>]</span>
+            </div>
+            <dl class="rec com">
+                <dt>推荐</dt>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+            </dl>
+            <ul class="rside com">
+                <li><a onclick="SetHome(this,window.location)" style="cursor:pointer">设为首页</a> </li>
+                <div class="border com"></div>
+                <li><a id="bookmark" style="cursor:pointer">加入收藏</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="layout layout-770">
+            <div id="logo"></div>
+            <div class="main">
+                <div class="slide">
+                    <div class="slide_box has-dots" style="overflow: hidden; width: 448px; height: 276px;">
+                        <ul style="width: 400%; position: relative; left: -300%; height: 276px;">
+                            <li style="width: 25%;">
+                                <a target="_blank" href="gamepage.html">
+                                    <!--轮播图片说明
+                                    <!--轮播可以由两张图片组成
+                                    <!--上面一张为png半透明格式，高度为0-16像素，超出的部分不会显示
+                                    <!--下面一张宽度为448，高度为232
+                                    <!--当然也可以只设置一张图片，不过那样就木有半透明效果，
+                                    <!--如果用整张的半透明图片，文件就会太大
+                                    <!---->
+                                    <img src="images/banner_05.png">
+                                    <img src="images/banner_08.jpg">
+                                </a>
+                            </li>
+                            <li style="width: 25%;">
+                                <a target="_blank" href="gamepage.html">
+                                    <img src="images/banner_05.png">
+                                    <img src="images/banner_08.jpg">
+                                </a>
+                            </li>
+                            <li style="width: 25%;">
+                                <a target="_blank" href="gamepage.html">
+                                    <img src="images/banner_05.png">
+                                    <img src="images/banner_08.jpg">
+                                </a>
+                            </li>
+                            <li style="width: 25%;">
+                                <a target="_blank" href="gamepage.html">
+                                    <img src="images/banner_05.png">
+                                    <img src="images/banner_08.jpg">
+                                </a>
+                            </li>
+                        </ul>
+                        <ol class="clearfix">
+                            <li class="dot">刀剑啸新服开启<i></i></li>
+                            <li class="dot">刀剑啸新服开启<i></i></li>
+                            <li class="dot">刀剑啸新服开启<i></i></li>
+                            <li class="dot active">刀剑啸新服开启<i></i></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="login">
+                    <div class="bg"></div>
+                    <form class="login-form login-box" action="http://lifanweb.tk/ibaiyu/ibaiyu.com/test.php" method="post">
+                        <h2>登录爱百娱通行证</h2>
+                        <p class="user inp"><input id="username" name="username" type="text" class="input" placeholder="请输入账号" /><label for="username"></label></p>
+                        <p class="pwd inp"><input id="password" name="password" type="password" class="input" placeholder="请输入密码" /><label for="password"></label></p>
+                        <p class="p-1"><input type="checkbox" name="save" id="save"><label for="save">下次自动登录</label>|<a href="#">忘记密码？</a></p>
+                        <a class="btn-login btn-a" title="立即登录"><span class="l-span"><span class="r-span">立即登录</span></span></a>
+                        <p class="p-2">还没有爱百娱通行证？<a href="reg.html">立即注册</a></p>
+                    </form>
+                </div>
+                <!--热门游戏模块-->
+                <div class="hotgame_box con">
+                    <div class="hd">
+                        <h2>热门游戏</h2>
+                        <div class="title_bar w768"></div>
+                    </div>
+                    <div class="bd clearfix">
+                        <div class="item_box">
+                            <div class="img">
+                                <img src="images/hotgame_image_540.jpg">
+                            </div>
+                            <div class="popup">
+                                <div class="bg"></div>
+                                <div class="fr">
+                                    <h3>炎黄传奇</h3>
+                                    <p class="type c1">角色扮演类</p>
+                                    <p class="intro c5">画面精致，并采用独创的全景动态技术，使得玩家在游戏内的行为…</p>
+                                    <a title="领取礼包" target="_blank" href="getgift.html" class="gift"></a>
+                                    <a title="进入官网" target="_blank" href="gamepage.html" class="site"></a>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <span class="c5">新服： </span><a class="c1" target="_blank" href="#">双线268服</a><i class="new"></i>
+                                            <a target="_blank" href="#" class="enter"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <span class="c5">火爆： </span><a class="c1" target="_blank" href="#">双线1服</a><i class="hot"></i>
+                                            <a target="_blank" href="#" class="enter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="play" href="#" target="_blank" title="进入游戏"></a>
+                        </div>
+                        <div class="item_box">
+                            <div class="img">
+                                <img src="images/hotgame_image_540.jpg">
+                            </div>
+                            <div class="popup">
+                                <div class="bg"></div>
+                                <div class="fr">
+                                    <h3>炎黄传奇</h3>
+                                    <p class="type c1">角色扮演类</p>
+                                    <p class="intro c5">画面精致，并采用独创的全景动态技术，使得玩家在游戏内的行为…</p>
+                                    <a title="领取礼包" target="_blank" href="#" class="gift"></a>
+                                    <a title="进入官网" target="_blank" href="gamepage.html" class="site"></a>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <span class="c5">新服： </span><a class="c1" target="_blank" href="#">双线268服</a><i class="new"></i>
+                                            <a target="_blank" href="#" class="enter"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <span class="c5">火爆： </span><a class="c1" target="_blank" href="#">双线1服</a><i class="hot"></i>
+                                            <a target="_blank" href="#" class="enter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="play" href="#" target="_blank" title="进入游戏"></a>
+                        </div>
+                        <div class="item_box">
+                            <div class="img">
+                                <img src="images/hotgame_image_540.jpg">
+                            </div>
+                            <div class="popup">
+                                <div class="bg"></div>
+                                <div class="fr">
+                                    <h3>炎黄传奇</h3>
+                                    <p class="type c1">角色扮演类</p>
+                                    <p class="intro c5">画面精致，并采用独创的全景动态技术，使得玩家在游戏内的行为…</p>
+                                    <a title="领取礼包" target="_blank" href="#" class="gift"></a>
+                                    <a title="进入官网" target="_blank" href="gamepage.html" class="site"></a>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <span class="c5">新服： </span><a class="c1" target="_blank" href="#">双线268服</a><i class="new"></i>
+                                            <a target="_blank" href="#" class="enter"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <span class="c5">火爆： </span><a class="c1" target="_blank" href="#">双线1服</a><i class="hot"></i>
+                                            <a target="_blank" href="#" class="enter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="play" href="#" target="_blank" title="进入游戏"></a>
+                        </div>
+                        <div class="item_box">
+                            <div class="img">
+                                <img src="images/hotgame_image_540.jpg">
+                            </div>
+                            <div class="popup">
+                                <div class="bg"></div>
+                                <div class="fr">
+                                    <h3>炎黄传奇</h3>
+                                    <p class="type c1">角色扮演类</p>
+                                    <p class="intro c5">画面精致，并采用独创的全景动态技术，使得玩家在游戏内的行为…</p>
+                                    <a title="领取礼包" target="_blank" href="#" class="gift"></a>
+                                    <a title="进入官网" target="_blank" href="gamepage.html" class="site"></a>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <span class="c5">新服： </span><a class="c1" target="_blank" href="#">双线268服</a><i class="new"></i>
+                                            <a target="_blank" href="#" class="enter"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <span class="c5">火爆： </span><a class="c1" target="_blank" href="#">双线1服</a><i class="hot"></i>
+                                            <a target="_blank" href="#" class="enter"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a class="play" href="#" target="_blank" title="进入游戏"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div class="layout layout-1000">
+            <ul class="links">
+                <li><a href="about.html" target="_blank">关于我们</a></li>
+                <li><a href="about.html?tabNum=1" target="_blank">联系我们</a></li>
+                <li><a href="about.html?tabNum=2" target="_blank">商务合作</a></li>
+                <li><a href="about.html?tabNum=3" target="_blank">服务条款</a></li>
+                <li><a href="about.html?tabNum=4" target="_blank">人才招聘</a></li>
+                <li><a href="jzjh/1.html" target="_blank">家长监护</a></li>
+            </ul>
+            <div class="copyright">
+                <p>
+                    鄂ICP备12003812号 鄂ICP证B2-20120079 网络文化经营许可证 鄂网文【2012】0306-007号</p>
+                <p>
+                    Copyright &copy; 2012 All Rights Reserved
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--多页面公用js-->
+<script src="js/common.js"></script>
+<!--修改过的bootstrap轮播组件-->
+<script src="js/lib/bootstrap.unslider.js"></script>
+<script src="js/index.js"></script>
+<script src="js/reg.js"></script>
+</body>
+</html>

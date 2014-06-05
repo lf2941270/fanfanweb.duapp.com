@@ -1,0 +1,274 @@
+.shadow{
+    box-shadow: 2px 3px 5px -4px #BBBBBB;
+}
+.charge-con{
+    padding-bottom: 0px;
+    background: #f7f7fa;
+}
+
+.nav-left{
+    width: 200px;
+    height: 100%;
+    float: left;
+    position: relative;
+    background: #403d3b;
+}
+.nav-left:before {
+    box-shadow: -2px 0 8px -1px #000000;
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+.charge-con .info_box{
+    padding-top: 4px;
+    position: relative;
+}
+.nav-left .info_box .face{
+    background: #353231;
+    border-color: #44413f;
+}
+.nav-left .menu-y{
+    margin-top: 20px;
+    height: 100%;
+    position: relative;
+}
+.nav-left .menu-y li{
+    width: 200px;
+    height: 40px;
+}
+.nav-left .menu-y li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background:url("../images/charge/icon.png") scroll no-repeat;
+    cursor: pointer;
+}
+
+.nav-left .menu-y li .wy{
+    background-position:0 0;
+}
+.nav-left .menu-y li .wy:hover,.nav-left .menu-y .cur .wy{
+    background-position: -200px 0;
+}
+.nav-left .menu-y li .by{
+    background-position:0 -40px;
+}
+.nav-left .menu-y li .by:hover,.nav-left .menu-y .cur .by{
+    background-position: -200px -40px;
+}
+.nav-left .menu-y li .qb{
+    background-position:0 -80px;
+}
+.nav-left .menu-y li .qb:hover,.nav-left .menu-y .cur .qb{
+    background-position: -200px -80px;
+}
+.nav-left .menu-y li .zfb{
+    background-position:0 -120px;
+}
+.nav-left .menu-y li .zfb:hover,.nav-left .menu-y .cur .zfb{
+    background-position: -200px -120px;
+}
+.nav-left .menu-y li .szx{
+    background-position:0 -160px;
+}
+.nav-left .menu-y li .szx:hover,.nav-left .menu-y .cur .szx{
+    background-position: -200px -160px;
+}
+.nav-left .menu-y li .lt{
+    background-position:0 -200px;
+}
+.nav-left .menu-y li .lt:hover,.nav-left .menu-y .cur .lt{
+    background-position: -200px -200px;
+}
+.nav-left .menu-y li .dx{
+    background-position:0 -240px;
+}
+.nav-left .menu-y li .dx:hover,.nav-left .menu-y .cur .dx{
+    background-position: -200px -240px;
+}
+.nav-left .menu-y li .jw{
+    background-position:0 -280px;
+}
+.nav-left .menu-y li .jw:hover,.nav-left .menu-y .cur .jw{
+    background-position: -200px -280px;
+}
+.nav-left .menu-y li a:hover,.nav-left .menu-y .cur a{
+    background-color: #2f2c2b;
+}
+.nav-left .menu-y .navLabel{
+    width: 3px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    background: #ffcf00;
+    top: 0;
+}
+.charge-con .main{
+    float: left;
+    width: 800px;
+    min-height: 500px;
+    padding-bottom: 40px;
+}
+.charge-con .hd{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.charge-con .hd h2{
+    border-bottom: 1px solid #d1d2d5;
+}
+.charge-con .hd h2 span{
+    display: inline-block;
+    padding:5px 6px 5px 12px;
+    background: url("../images/user/arrow_12.png") 4px 50% no-repeat;
+    border-bottom: 1px solid #d1d2d5;
+}
+.charge-con .bd{
+    margin: 2px 24px 0 24px;
+    color: #7b7a7a;
+}
+.charge-con .bd .item{
+    padding: 22px 0 18px 22px;
+    border-bottom: 1px dashed #dadada;
+}
+.charge-con .bd .item h3{
+    font-size: 14px;
+    font-weight: normal;
+}
+.charge-con .bd .item .item-bd{
+    margin-top: 16px;
+    position:relative;
+    margin-left: 27px;
+    line-height: 18px;
+}
+.charge-con .bd .item a{
+    text-decoration: none;
+}
+.charge-con .bd .item .item-bd label{
+    display: inline-block;
+    padding-left:6px ;
+    width: 100px;
+    font-size: 14px;
+}
+.charge-con .bd .item label.hover{
+    color: #e34812;
+}
+.charge-con .bd .item label.checked{
+    color: #e34812;
+}
+.charge-con .bd .item .item-bd .choose-btn{
+    display: inline-block;
+    margin-right: 35px;
+    width: 224px;
+    height: 41px;
+    line-height: 39px;
+    background: url("../images/charge/choose-btn.png");
+    cursor: pointer;
+    color: #724e0b;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+.charge-con .bd .item .item-bd .choose-btn:hover{
+    color: #fff;
+}
+.charge-con .bd .item .item-bd .choose-server{
+    background-position: 0 -41px;
+}
+.charge-con .bd .item .choose-box{
+    position: absolute;
+    z-index: 100;
+    display: none;
+    top: 47px;
+    left: 1px;
+    width: 500px;
+    height:190px;
+    padding: 15px 25px;
+    background: #fff;
+    border:1px solid #fcae22;
+    border-radius: 3px;
+    box-shadow: 3px 3px 9px -8px #000;
+}
+.charge-con .bd .item a{
+    display: inline-block;
+    margin: 4px 0;
+}
+.charge-con .bd .item .choose-box label{
+    display: inline-block;
+
+    margin-right: 0;
+}
+.charge-con .bd .item .server-box label{
+    width: 76px;
+}
+.charge-con .bd .item .choose-box i{
+    display: block;
+    width: 13px;
+    height: 11px;
+    position: absolute;
+    top: -11px;
+    background: url("../images/charge/arrow.png");
+}
+.charge-con .bd .item .game-box i{
+    left: 198px;
+}
+.charge-con .bd .item .server-box i{
+    left: 463px;
+}
+.input{
+    color: #7B7A7A;
+    line-height: 18px;
+}
+.charge-con .bd .item a.sp{
+    display: block;
+}
+.charge-con .bd .item a.sp .mn{
+    width: 100px;
+    margin-right: 5px;
+}
+.charge-con .bd .item .item-bd label.sp{
+    width: auto;
+}
+.charge-con .bd .item .bank-list li{
+    float: left;
+    width: 202px;
+    height: 28px;
+    padding: 6px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border:1px solid #DDDDDD;
+    cursor: pointer;
+}
+.charge-con .bd .item .bank-list li.select {
+    border: 2px solid #E4393C;
+    padding: 5px;
+}
+.charge-con .bd .item .bank-list li.hover,.charge-con .bd .item .bank-list li.select {
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.15);
+}
+.charge-con .bd .item .bank-list li input{
+    margin-left: 6px;
+    margin-right: 11px;
+    padding: 0;
+    position: relative;
+    top: 4px;
+}
+.charge-con .bd .item .bank-list li img{
+    cursor: pointer;
+}
+.charge-con .bd .submit{
+    margin:30px 324px 20px;
+    width: 104px;
+    height: 32px;
+    background: url("../images/charge/charge-btn.png") no-repeat scroll;
+    cursor: pointer;
+    border: none;
+}
+.charge-con .bd .submit:hover{
+    background-position: 0 -32px;
+}

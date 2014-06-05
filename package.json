@@ -13,6 +13,7 @@
     "jsdom":"0.10.5",
     "eventproxy": "0.2.6",
     "bae-message":"*",
-    "weibo":"*"
+    "weibo":"*",
+    "nodemailer":"*"
   }
 }

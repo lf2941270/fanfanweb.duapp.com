@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>游戏列表-最无极</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8;">
+    <script src="js/lib/jquery-1.8.3.min.js">
+    </script>
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="css/gamepage.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="page">
+    <div id="topbar">
+        <div class="layout layout-1000 clearfix">
+            <a class="slogo com" href="index.html" title="进入首页"></a>
+            <div class="border com"></div>
+            <!--用户已登录-->
+            <!--<div class="haslogin com">
+                您好!<span>forchenbinbin</span> [<a href="http://www.ibaiyu.cn/loginout.aspx">注销登录</a>]
+            </div>-->
+            <!--用户未登录-->
+            <div class="login com">
+                <span>[<a href="login.html" target="_blank">登录</a>]</span>
+                <div class="border com"></div>
+                <span>[<a href="reg.html" target="_blank">注册</a>]</span>
+            </div>
+            <dl class="rec com">
+                <dt>推荐</dt>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+            </dl>
+            <ul class="rside com">
+                <li><a onclick="SetHome(this,window.location)" style="cursor:pointer">设为首页</a> </li>
+                <div class="border com"></div>
+                <li><a id="bookmark" style="cursor:pointer">加入收藏</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div id="header">
+        <div class="layout layout-1000 clearfix">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li><a href="index.html" target="_blank">首 页</a></li>
+                <li><a href="usercenter.html" target="_blank">用户中心</a></li>
+                <li><a href="charge.html" target="_blank">充值中心</a></li>
+                <li><a href="giftlist.html" target="_blank">游戏礼包</a></li>
+                <li><a href="newslist.html" target="_blank">新闻公告</a></li>
+                <li><a href="#" target="_blank">游戏论坛</a></li>
+                <li class="cur"><a target="_blank">游戏列表</a></li>
+                <li class="navLabel"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="layout layout-1000 clearfix">
+            <div class="left">
+                <!--用户未登录-->
+                <!--<div class="login">
+                    <form class="login-box" METHOD="POST" action="http://lifanweb.tk/ibaiyu/ibaiyu.com/test.php">
+                        <input class="user input" type="text" placeholder="请输入账号" id="username" name="username">
+                        <input class="pwd input" type="password" placeholder="请输入密码" id="password" name="password">
+                        <input type="submit" value="" class="submit">
+                        <div class="r_box">
+                            <input type="checkbox" checked="" id="remenber" name="remenber">
+                            <label for="remenber">记住密码</label>
+                            |
+                            <a href="#" target="_blank">忘记密码？</a>
+                        </div>
+                        <a href="reg.html" target="_blank" title="立即注册账号" class="reg"></a>
+                    </form>
+                </div>-->
+                <!--用户已经登录-->
+                <div class="haslogin">
+                    <div class="info_box clearfix">
+                        <div class="face">
+                            <img src="images/face_164.jpg"/>
+                        </div>
+                        <div class="info">
+                            <p class="c1">forchenbinbin</p>
+                            <p class="c2">
+                                <!--去掉用戶等級-->
+                                <!--<span class="range">
+                                    <i class="l"></i><i class="c"><i class="r0"></i></i><i class="r"></i>
+                                </span>-->
+                                <span class="logoff">[<a class="c2" href="#" title="注销登录">注销登录</a>]</span></p>
+                            <p class="msg"><a href="msg.html" target="_blank" class=" c2"><span class="c1">0</span>条未读消息</a></p>
+                        </div>
+                    </div>
+                    <div class="manage_box">
+                        <div class="switch clearfix c3">
+                            <div class="s cur">最近登录</div>
+                            <div class="s"> 账户管理</div>
+                            <div class="navLabel"></div>
+                        </div>
+                        <div class="">
+                            <ul class="lately">
+                                <li><a class="game_icon g1" href="#" target="_blank">女神联盟 双线268服</a></li>
+                                <li><a class="game_icon g1" href="#" target="_blank">女神联盟 双线268服</a></li>
+                                <li><a class="game_icon g1" href="#" target="_blank">女神联盟 双线268服</a></li>
+                            </ul>
+                            <ul class="manage clearfix" style="display: none;">
+                                <li><a target="_blank" href="info.html" class="i1">资料修改</a></li>
+                                <li><a class="i2" href="charge.html" target="_blank">快速充值</a></li>
+                                <li><a class="i3" href="safe.html" target="_blank">安全设置</a></li>
+                                <li><a class="i4" href="password.html" target="_blank">密码修改</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--最新开服模块-->
+                <div class="open_ser_box con">
+                    <div class="hd">
+                        <h2>最新开服游戏</h2>
+                        <div class="title_bar w218"></div>
+                    </div>
+                    <div class="bd">
+                        <ul>
+                            <li class="cur">
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                            <li>
+                                <div class="small">
+                                    <span class="time c4">11-27 19:00</span>
+                                    <span class="game_icon"></span>
+                                    <span class="c4">女神联盟 268服</span>
+                                </div>
+                                <div class="big">
+                                    <div class="gamebox clearfix">
+                                        <div class="game_icon_b"></div>
+                                        <p class="gamename c3">女神联盟</p>
+                                        <p class="gametype c4">类型：角色扮演类</p>
+                                        <a class="gift" href="getgift.html" target="_blank" title="领取礼包"></a>
+                                        <a class="site" href="gamepage.html" target="_blank" title="进入官网"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">新服： 双线268服</a><i class="new"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <a href="#" target="_blank">火爆： 双线1服</a><i class="hot"></i>
+                                            <a class="enter" href="#" target="_blank"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="underline"></div>
+                                <div class="timeline"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--用户中心快捷通道-->
+                <div class="usergate con">
+                    <div class="hd">
+                        <h2>用户中心快捷通道</h2>
+                        <div class="title_bar w218"></div>
+                    </div>
+                    <div class="bd">
+                        <ul class="clearfix">
+                            <li><a class="i_1" href="#" target="_blank"></a></li>
+                            <li><a class="i_2" href="#" target="_blank"></a></li>
+                            <li><a class="i_3" href="#" target="_blank"></a></li>
+                            <li><a class="i_4" href="#" target="_blank"></a></li>
+                            <li><a class="i_5" href="#" target="_blank"></a></li>
+                            <li><a class="i_6" href="#" target="_blank"></a></li>
+                        </ul>
+                        <div class="phone"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <!--轮播和新闻模块-->
+                <div class="slidenews_box">
+                    <!--轮播模块-->
+                    <div class="slide_box sd">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img src="images/gamepage/153149_kXfHUi.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img src="images/gamepage/155300_IRzoiK.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img src="images/gamepage/103705_oMYq6Z.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img src="images/gamepage/143652_nUCOgM.jpg">
+                                </a>
+                            </li>
+                        </ul>
+                        <ol class="clearfix">
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                            <li class="dot"></li>
+                        </ol>
+                    </div>
+                    <!--新闻模块-->
+                    <div class="news_box sd">
+                        <!--tab栏-->
+                        <ul class="switch clearfix c3">
+                            <li class="s cur">综合</li>
+                            <li class="s"> 公告</li>
+                            <li class="s"> 活动</li>
+                            <a class="more" href="#" title="更多最无极资讯"></a>
+                        </ul>
+                        <!--新闻内容容器-->
+                        <div class="container">
+                            <ul>
+                                <li>
+                                    <a href="newslist.html?tabNum=0" class="type" target="_blank">新闻</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">活动</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">公告</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=0" class="type" target="_blank">新闻</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=0" class="type" target="_blank">新闻</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">公告</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="newslist.html?tabNum=0" class="type" target="_blank">新闻</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=0" class="type" target="_blank">新闻</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=0" class="type" target="_blank">新闻</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=0" class="type" target="_blank">新闻</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=0" class="type" target="_blank">新闻</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=0" class="type" target="_blank">新闻</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">活动</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">活动</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">活动</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">活动</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">活动</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">活动</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">公告</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">公告</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">公告</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">公告</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">公告</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                                <li>
+                                    <a href="newslist.html?tabNum=1" class="type" target="_blank">公告</a>
+                                    <a href="news.html" class="item">双线35服（正式服）1月7日11点火爆开启</a>
+                                    <span class="date">[11-25]</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!--快捷通道-->
+                <ul class="fast-way clearfix">
+                    <li><a href="#" title="领取礼包"><img src="images/gamepage/gift.jpg"/> </a></li>
+                    <li><a href="#" title="VIP特权"><img src="images/gamepage/vip.jpg"/></a></li>
+                    <li><a href="#" title="开服活动"><img src="images/gamepage/kaifu.jpg"/></a></li>
+                    <li><a href="#" title="登陆器下载"><img src="images/gamepage/log.jpg"/></a></li>
+                </ul>
+                <!--服务器列表-->
+                <div class="server-list sd">
+                    <div class="g-hd">
+                        <i class="svl"></i>
+                        <span>游戏服务器</span>
+                    </div>
+                    <div class="g-bd sv-bd">
+                        <ul class="switch clearfix">
+                            <li class="s cur"><i></i>1-24服</li>
+                            <!--如果服务器数量少于24个，则不需要输出这项-->
+                            <li class="s"><i></i>25-48服</li>
+                            <!--服务器状态图标说明项-->
+                            <li class="instru">
+                                <ul>
+                                    <li><i class="st1"></i><span>畅通</span></li>
+                                    <li><i class="st2"></i><span>拥挤</span></li>
+                                    <li><i class="st3"></i><span>繁忙</span></li>
+                                    <li><i class="st4"></i><span>维护</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="sv-box">
+                            <ul class="clearfix">
+                                <li>
+                                    <a href="#">
+                                        <!--左边的图标，st1、st2、st3、st4分别表示畅通、拥挤、繁忙、维护-->
+                                        <i class="sv-status st3"></i>
+                                        <span>双线1服</span>
+                                        <!--右边的图标，r1、r2、r3分别表示新、荐、满-->
+                                        <i class="rec r3"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st3"></i>
+                                        <span>双线2服</span>
+                                        <i class="rec r2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st3"></i>
+                                        <span>双线3服</span>
+                                        <i class="rec r2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st3"></i>
+                                        <span>双线4服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st3"></i>
+                                        <span>双线5服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st3"></i>
+                                        <span>双线6服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st4"></i>
+                                        <span>双线7服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st4"></i>
+                                        <span>双线8服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st2"></i>
+                                        <span>双线9服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st2"></i>
+                                        <span>双线10服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st4"></i>
+                                        <span>双线11服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st1"></i>
+                                        <span>双线12服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st2"></i>
+                                        <span>双线13服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st2"></i>
+                                        <span>双线14服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st2"></i>
+                                        <span>双线15服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st1"></i>
+                                        <span>双线16服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st2"></i>
+                                        <span>双线17服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st2"></i>
+                                        <span>双线18服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st2"></i>
+                                        <span>双线19服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st2"></i>
+                                        <span>双线20服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st1"></i>
+                                        <span>双线21服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st1"></i>
+                                        <span>双线22服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st1"></i>
+                                        <span>双线23服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st1"></i>
+                                        <span>双线24服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <!--左边的图标，st1、st2、st3、st4分别表示畅通、拥挤、繁忙、维护-->
+                                        <i class="sv-status st2"></i>
+                                        <span>双线25服</span>
+                                        <!--右边的图标，r1、r2、r3分别表示新、荐、满-->
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st2"></i>
+                                        <span>双线26服</span>
+                                        <i class="rec"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st3"></i>
+                                        <span>双线27服</span>
+                                        <i class="rec r3"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st3"></i>
+                                        <span>双线28服</span>
+                                        <i class="rec r1"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="sv-status st3"></i>
+                                        <span>双线29服</span>
+                                        <i class="rec r1"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--游戏资料-->
+                <div class="game-data sd">
+                    <div class="g-hd">
+                        <i class="gd"></i>
+                        <span>游戏资料</span>
+                    </div>
+                    <div class="g-bd">
+                        <ul class="clearfix">
+                            <!--a标签内最多只能容纳8个汉字-->
+                            <li><a href="#" target="_blank">背景故事</a></li>
+                            <li><a href="#" target="_blank">挂机系统</a></li>
+                            <li><a href="#" target="_blank">基本功能</a></li>
+                            <li><a href="#" target="_blank">剧情推图</a></li>
+                            <li><a href="#" target="_blank">职业技能</a></li>
+                            <li><a href="#" target="_blank">职业介绍</a></li>
+                            <li><a href="#" target="_blank">将谱</a></li>
+                            <li><a href="#" target="_blank">器灵玩法</a></li>
+                            <li><a href="#" target="_blank">招募星君</a></li>
+                            <li><a href="#" target="_blank">装备获取</a></li>
+                            <li><a href="#" target="_blank">装备强化</a></li>
+                            <li><a href="#" target="_blank">城池系统</a></li>
+                            <li><a href="#" target="_blank">好友系统</a></li>
+                            <li><a href="#" target="_blank">炼丹</a></li>
+                            <li><a href="#" target="_blank">门派系统</a></li>
+                            <li><a href="#" target="_blank">勇夺龙珠</a></li>
+                            <li><a href="#" target="_blank">闯天宫</a></li>
+                            <li><a href="#" target="_blank">法宝</a></li>
+                            <li><a href="#" target="_blank">封神榜</a></li>
+                            <li><a href="#" target="_blank">乾坤袋</a></li>
+                            <li><a href="#" target="_blank">天降财神</a></li>
+                            <li><a href="#" target="_blank">无极盘</a></li>
+                            <li><a href="#" target="_blank">仙格</a></li>
+                            <li><a href="#" target="_blank">星君下凡</a></li>
+                            <li><a href="#" target="_blank">职业技能属性</a></li>
+                            <li><a href="#" target="_blank">数值对照表</a></li>
+                            <li><a href="#" target="_blank">角色职业介绍</a></li>
+                            <li><a href="#" target="_blank">FAQ</a></li>
+                            <li><a href="#" target="_blank">VIP特权</a></li>
+                            <li><a href="#" target="_blank">新手常见问题心得</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--游戏截图-->
+                <div class="screenshot sd">
+                    <div class="g-hd">
+                        <i class="sc"></i>
+                        <span>游戏截图</span>
+                    </div>
+                    <div class="g-bd">
+                        <ul class="clearfix">
+                            <!--小图规格168*120，放到img的src属性中，大图放到data-pic的属性中，点击鼠标后弹出显示大图-->
+                            <li><img title="点击查看大图" src="images/gamepage/img-s-1.jpg" data-pic="images/gamepage/img-b-1.jpg"/></li>
+                            <li><img title="点击查看大图" src="images/gamepage/img-s-2.jpg" data-pic="images/gamepage/img-b-2.jpg"/></li>
+                            <li><img title="点击查看大图" src="images/gamepage/img-s-3.jpg" data-pic="images/gamepage/img-b-3.jpg"/></li>
+                            <li><img title="点击查看大图" src="images/gamepage/img-s-4.jpg" data-pic="images/gamepage/img-b-4.jpg"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="layout layout-1000">
+            <ul class="links">
+                <li><a href="about.html" target="_blank">关于我们</a></li>
+                <li><a href="about.html?tabNum=1" target="_blank">联系我们</a></li>
+                <li><a href="about.html?tabNum=2" target="_blank">商务合作</a></li>
+                <li><a href="about.html?tabNum=3" target="_blank">服务条款</a></li>
+                <li><a href="about.html?tabNum=4" target="_blank">人才招聘</a></li>
+                <li><a href="jzjh/1.html" target="_blank">家长监护</a></li>
+            </ul>
+            <div class="copyright">
+                <p>
+                    鄂ICP备12003812号 鄂ICP证B2-20120079 网络文化经营许可证 鄂网文【2012】0306-007号</p>
+                <p>
+                    Copyright &copy; 2012 All Rights Reserved
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--多页面公用js-->
+<script src="js/common.js"></script>
+<!--修改过的bootstrap轮播组件-->
+<script src="js/lib/bootstrap.unslider.js"></script>
+<script src="js/gamepage.js"></script>
+</body>
+</html>

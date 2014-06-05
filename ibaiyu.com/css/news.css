@@ -1,0 +1,129 @@
+.newslist-box .bd{
+    margin: 33px 0;
+    padding-bottom: 40px;
+    background: #f7f7fa;
+    border-bottom: 1px solid #dddddd;
+}
+.newslist-box .bd .container{
+    min-height: 687px;
+}
+.newslist-box .switch{
+    height: 31px;
+    line-height: 31px;
+    padding-left: 52px;
+    background: url("../images/user/tab-bg_13.gif") repeat-x scroll 0 0;
+    color: #f0f0f2;
+    position: relative;
+}
+.newslist-box .switch .s{
+    width: 90px;
+    height: 31px;
+    float: left;
+    line-height: 31px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.newslist-box .switch .navLabel{
+    background: #e2440c;
+    height: 3px;
+    overflow: hidden;
+    position: absolute;
+    top: -1px;
+    width: 90px;
+    z-index: 2;
+}
+.newslist-box .switch .cur{
+    background: #F7F7FA;
+    color: #454545;
+}
+.newslist-box .switch .choose-game{
+    margin-left: 20px;
+}
+
+.newslist-box dl{
+    padding: 25px 40px 0;
+}
+.newslist-box dt {
+    color: #E2440C;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 6px;
+}
+.newslist-box dd {
+    border-bottom: 1px dashed #DADADA;
+    color: #5E5E5E;
+    height: 32px;
+    line-height: 32px;
+}
+.newslist-box dl span {
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+.newslist-box .sp1 {
+    width: 138px;
+}
+.newslist-box .sp2 {
+    width: 400px;
+}
+.newslist-box .sp3 {
+    width: 98px;
+}
+.newslist-box dd .sp3{
+    color: #868686;
+}
+.newslist-box dl a{
+    color: #5e5e5e;
+}
+.newslist-box dl a:hover{
+    color: #E2440C;
+}
+
+.newscontent-box .hd{
+    margin-bottom: 50px;
+}
+.newscontent-box .news-container{
+    background: #f7f7fa;
+    min-height: 730px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    font-family: "微软雅黑";
+}
+.newscontent-box .news-container .news-title{
+    height: 76px;
+    margin: 28px auto;
+    text-align: center;
+    line-height:30px;
+}
+.newscontent-box .news-container .news-title h2{
+    color: #ff6600;
+}
+.newscontent-box .news-container .news-title .news-info span{
+    margin-right: 8px;
+}
+.newscontent-box .news-container .news-title .news-info span b{
+    color: #ff6600;
+    font-weight: normal;
+}
+.newscontent-box .news-container .news-content{
+    padding: 0 38px 40px;
+    line-height: 21px;
+    color: #333333;
+}
+.newscontent-box .siblings{
+    margin: 12px auto 6px 33px;
+    line-height: 24px;
+}
+.newscontent-box .siblings span{
+    color: #ff6600;
+    font-weight: bold;
+}
+.newscontent-box .siblings a{
+    color: #333333;
+}
+.newscontent-box .siblings a:hover{
+    color:#E2440C;
+}

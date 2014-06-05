@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="92e84474-08a7-4d90-a468-2cea3985e65d" name="Default" comment="" />
+    <list id="e8c9f5a2-bec4-471f-9db4-0dc8993bda1a" name="New changelist" comment="" />
+    <ignored path="ibaiyu.com.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ibaiyu.com" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../demo2/demo.html" />
+        <option value="$PROJECT_DIR$/js/common.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/about.html" />
+        <option value="$PROJECT_DIR$/charge.html" />
+        <option value="$PROJECT_DIR$/check.html" />
+        <option value="$PROJECT_DIR$/gamepage.html" />
+        <option value="$PROJECT_DIR$/getgift.html" />
+        <option value="$PROJECT_DIR$/giftlist.html" />
+        <option value="$PROJECT_DIR$/info.html" />
+        <option value="$PROJECT_DIR$/msg.html" />
+        <option value="$PROJECT_DIR$/news.html" />
+        <option value="$PROJECT_DIR$/newslist.html" />
+        <option value="$PROJECT_DIR$/password.html" />
+        <option value="$PROJECT_DIR$/safe.html" />
+        <option value="$PROJECT_DIR$/usercenter.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1448" />
+    <option name="height" value="878" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibaiyu.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="131" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="131" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="135" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="123" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="110" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="120" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="794" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="121" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="119" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="110" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="805" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\Desktop\ibaiyu.com\js\lib" />
+      <recent name="D:\Documents\Desktop\ibaiyu.com\js" />
+      <recent name="D:\Documents\Desktop\ibaiyu.com\css" />
+      <recent name="D:\Documents\Desktop\ibaiyu.com" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\Desktop\ibaiyu.com" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="name" value="Dart" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <browser start="false" url="" with-js-debugger="false" />
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="true" cleanupOnStartRun="true" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="true">C:\Documents and Settings\Administrator\Application Data\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\Documents\Desktop\appid4wxmfatc0t\ibaiyu.com" />
+          <option name="myCopyRoot" value="D:\Documents\Desktop\appid4wxmfatc0t\ibaiyu.com" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\Documents\Desktop\appid4wxmfatc0t\ibaiyu.com\.idea" />
+          <option name="myCopyRoot" value="D:\Documents\Desktop\appid4wxmfatc0t\ibaiyu.com\.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\Documents\Desktop\appid4wxmfatc0t\ibaiyu.com" />
+          <option name="myCopyRoot" value="D:\Documents\Desktop\appid4wxmfatc0t\ibaiyu.com" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92e84474-08a7-4d90-a468-2cea3985e65d" name="Default" comment="" />
+      <changelist id="e8c9f5a2-bec4-471f-9db4-0dc8993bda1a" name="New changelist" comment="" />
+      <created>1386552158578</created>
+      <updated>1386552158578</updated>
+    </task>
+    <task id="LOCAL-00001">
+      <created>1387246287109</created>
+      <updated>1387246287109</updated>
+    </task>
+    <task id="LOCAL-00002">
+      <created>1387255784109</created>
+      <updated>1387255784109</updated>
+    </task>
+    <task id="LOCAL-00003">
+      <created>1387261336109</created>
+      <updated>1387261336109</updated>
+    </task>
+    <task id="LOCAL-00004">
+      <created>1387261513093</created>
+      <updated>1387261513093</updated>
+    </task>
+    <task id="LOCAL-00005">
+      <created>1387272362109</created>
+      <updated>1387272362109</updated>
+    </task>
+    <task id="LOCAL-00006">
+      <created>1387272456093</created>
+      <updated>1387272456093</updated>
+    </task>
+    <task id="LOCAL-00007">
+      <created>1387272554109</created>
+      <updated>1387272554109</updated>
+    </task>
+    <task id="LOCAL-00008">
+      <created>1387328952093</created>
+      <updated>1387328952093</updated>
+    </task>
+    <task id="LOCAL-00009">
+      <created>1387335673109</created>
+      <updated>1387335673109</updated>
+    </task>
+    <task id="LOCAL-00010">
+      <created>1387348014109</created>
+      <updated>1387348014109</updated>
+    </task>
+    <task id="LOCAL-00011">
+      <created>1387358952109</created>
+      <updated>1387358952109</updated>
+    </task>
+    <task id="LOCAL-00012">
+      <created>1387358980140</created>
+      <updated>1387358980140</updated>
+    </task>
+    <task id="LOCAL-00013">
+      <created>1387424610140</created>
+      <updated>1387424610140</updated>
+    </task>
+    <task id="LOCAL-00014">
+      <created>1387424760125</created>
+      <updated>1387424760125</updated>
+    </task>
+    <task id="LOCAL-00015">
+      <created>1387425333109</created>
+      <updated>1387425333109</updated>
+    </task>
+    <task id="LOCAL-00016">
+      <created>1387430850109</created>
+      <updated>1387430850109</updated>
+    </task>
+    <task id="LOCAL-00017">
+      <created>1387431383109</created>
+      <updated>1387431383109</updated>
+    </task>
+    <task id="LOCAL-00018">
+      <created>1387433299109</created>
+      <updated>1387433299109</updated>
+    </task>
+    <task id="LOCAL-00019">
+      <created>1387433324109</created>
+      <updated>1387433324109</updated>
+    </task>
+    <task id="LOCAL-00020">
+      <created>1387435231109</created>
+      <updated>1387435231109</updated>
+    </task>
+    <task id="LOCAL-00021">
+      <created>1387435271109</created>
+      <updated>1387435271109</updated>
+    </task>
+    <task id="LOCAL-00022">
+      <created>1387435504109</created>
+      <updated>1387435504109</updated>
+    </task>
+    <task id="LOCAL-00023">
+      <created>1387437912093</created>
+      <updated>1387437912093</updated>
+    </task>
+    <task id="LOCAL-00024">
+      <created>1387441611109</created>
+      <updated>1387441611109</updated>
+    </task>
+    <task id="LOCAL-00025">
+      <created>1387444455125</created>
+      <updated>1387444455125</updated>
+    </task>
+    <task id="LOCAL-00026">
+      <created>1387507405125</created>
+      <updated>1387507405125</updated>
+    </task>
+    <task id="LOCAL-00027">
+      <created>1387508219109</created>
+      <updated>1387508219109</updated>
+    </task>
+    <task id="LOCAL-00028">
+      <created>1387509226109</created>
+      <updated>1387509226109</updated>
+    </task>
+    <task id="LOCAL-00029">
+      <created>1387511224109</created>
+      <updated>1387511224109</updated>
+    </task>
+    <task id="LOCAL-00030">
+      <created>1387524900109</created>
+      <updated>1387524900109</updated>
+    </task>
+    <task id="LOCAL-00031">
+      <created>1387526671109</created>
+      <updated>1387526671109</updated>
+    </task>
+    <task id="LOCAL-00032">
+      <created>1387762847140</created>
+      <updated>1387762847140</updated>
+    </task>
+    <task id="LOCAL-00033">
+      <created>1387763811109</created>
+      <updated>1387763811109</updated>
+    </task>
+    <task id="LOCAL-00034">
+      <created>1387780121109</created>
+      <updated>1387780121109</updated>
+    </task>
+    <task id="LOCAL-00035">
+      <created>1387781522109</created>
+      <updated>1387781522109</updated>
+    </task>
+    <task id="LOCAL-00036">
+      <created>1387785822140</created>
+      <updated>1387785822140</updated>
+    </task>
+    <task id="LOCAL-00037">
+      <created>1387788298109</created>
+      <updated>1387788298109</updated>
+    </task>
+    <task id="LOCAL-00038">
+      <created>1387790459109</created>
+      <updated>1387790459109</updated>
+    </task>
+    <task id="LOCAL-00039">
+      <created>1387790998109</created>
+      <updated>1387790998109</updated>
+    </task>
+    <task id="LOCAL-00040">
+      <created>1387791124109</created>
+      <updated>1387791124109</updated>
+    </task>
+    <task id="LOCAL-00041">
+      <created>1387855943156</created>
+      <updated>1387855943156</updated>
+    </task>
+    <task id="LOCAL-00042">
+      <created>1387866842125</created>
+      <updated>1387866842125</updated>
+    </task>
+    <task id="LOCAL-00043">
+      <created>1387867747109</created>
+      <updated>1387867747109</updated>
+    </task>
+    <task id="LOCAL-00044">
+      <created>1387868025109</created>
+      <updated>1387868025109</updated>
+    </task>
+    <task id="LOCAL-00045">
+      <created>1387870729109</created>
+      <updated>1387870729109</updated>
+    </task>
+    <task id="LOCAL-00046">
+      <created>1387872749093</created>
+      <updated>1387872749093</updated>
+    </task>
+    <task id="LOCAL-00047">
+      <created>1387874521109</created>
+      <updated>1387874521109</updated>
+    </task>
+    <task id="LOCAL-00048">
+      <created>1387874593109</created>
+      <updated>1387874593109</updated>
+    </task>
+    <task id="LOCAL-00049">
+      <created>1387953693125</created>
+      <updated>1387953693125</updated>
+    </task>
+    <task id="LOCAL-00050">
+      <created>1387954906109</created>
+      <updated>1387954906109</updated>
+    </task>
+    <task id="LOCAL-00051">
+      <created>1387958952109</created>
+      <updated>1387958952109</updated>
+    </task>
+    <task id="LOCAL-00052">
+      <created>1387960166109</created>
+      <updated>1387960166109</updated>
+    </task>
+    <task id="LOCAL-00053">
+      <created>1387960608109</created>
+      <updated>1387960608109</updated>
+    </task>
+    <task id="LOCAL-00054">
+      <created>1387960986109</created>
+      <updated>1387960986109</updated>
+    </task>
+    <task id="LOCAL-00055">
+      <created>1387961400109</created>
+      <updated>1387961400109</updated>
+    </task>
+    <task id="LOCAL-00056">
+      <created>1387961535109</created>
+      <updated>1387961535109</updated>
+    </task>
+    <task id="LOCAL-00057">
+      <created>1387963437109</created>
+      <updated>1387963437109</updated>
+    </task>
+    <task id="LOCAL-00058">
+      <created>1388022875156</created>
+      <updated>1388022875156</updated>
+    </task>
+    <task id="LOCAL-00059">
+      <created>1388024423109</created>
+      <updated>1388024423109</updated>
+    </task>
+    <task id="LOCAL-00060">
+      <created>1388030496093</created>
+      <updated>1388030496093</updated>
+    </task>
+    <task id="LOCAL-00061">
+      <created>1388037432109</created>
+      <updated>1388037432109</updated>
+    </task>
+    <task id="LOCAL-00062">
+      <created>1388042084109</created>
+      <updated>1388042084109</updated>
+    </task>
+    <task id="LOCAL-00063">
+      <created>1388042464109</created>
+      <updated>1388042464109</updated>
+    </task>
+    <task id="LOCAL-00064">
+      <created>1388045845109</created>
+      <updated>1388045845109</updated>
+    </task>
+    <task id="LOCAL-00065">
+      <created>1388046155109</created>
+      <updated>1388046155109</updated>
+    </task>
+    <task id="LOCAL-00066">
+      <created>1388109500125</created>
+      <updated>1388109500125</updated>
+    </task>
+    <task id="LOCAL-00067">
+      <created>1388112892109</created>
+      <updated>1388112892109</updated>
+    </task>
+    <task id="LOCAL-00068">
+      <created>1388113463109</created>
+      <updated>1388113463109</updated>
+    </task>
+    <task id="LOCAL-00069">
+      <created>1388116002109</created>
+      <updated>1388116002109</updated>
+    </task>
+    <task id="LOCAL-00070">
+      <created>1388127817093</created>
+      <updated>1388127817093</updated>
+    </task>
+    <task id="LOCAL-00071">
+      <created>1388130181109</created>
+      <updated>1388130181109</updated>
+    </task>
+    <task id="LOCAL-00072">
+      <created>1388131141093</created>
+      <updated>1388131141093</updated>
+    </task>
+    <task id="LOCAL-00073">
+      <created>1388131387109</created>
+      <updated>1388131387109</updated>
+    </task>
+    <task id="LOCAL-00074">
+      <created>1388376233125</created>
+      <updated>1388376233125</updated>
+    </task>
+    <task id="LOCAL-00075">
+      <created>1388381252109</created>
+      <updated>1388381252109</updated>
+    </task>
+    <task id="LOCAL-00076">
+      <created>1388382918109</created>
+      <updated>1388382918109</updated>
+    </task>
+    <task id="LOCAL-00077">
+      <created>1388384954109</created>
+      <updated>1388384954109</updated>
+    </task>
+    <task id="LOCAL-00078">
+      <created>1388385146093</created>
+      <updated>1388385146093</updated>
+    </task>
+    <task id="LOCAL-00079">
+      <created>1388386269093</created>
+      <updated>1388386269093</updated>
+    </task>
+    <task id="LOCAL-00080">
+      <created>1388387126109</created>
+      <updated>1388387126109</updated>
+    </task>
+    <task id="LOCAL-00081">
+      <created>1388389120109</created>
+      <updated>1388389120109</updated>
+    </task>
+    <task id="LOCAL-00082">
+      <created>1388390248109</created>
+      <updated>1388390248109</updated>
+    </task>
+    <task id="LOCAL-00083">
+      <created>1388392450109</created>
+      <updated>1388392450109</updated>
+    </task>
+    <task id="LOCAL-00084">
+      <created>1388457825109</created>
+      <updated>1388457825109</updated>
+    </task>
+    <task id="LOCAL-00085">
+      <created>1388458590109</created>
+      <updated>1388458590109</updated>
+    </task>
+    <task id="LOCAL-00086">
+      <created>1388461221109</created>
+      <updated>1388461221109</updated>
+    </task>
+    <task id="LOCAL-00087">
+      <created>1388461707109</created>
+      <updated>1388461707109</updated>
+    </task>
+    <task id="LOCAL-00088">
+      <created>1388462148109</created>
+      <updated>1388462148109</updated>
+    </task>
+    <task id="LOCAL-00089">
+      <created>1388462248109</created>
+      <updated>1388462248109</updated>
+    </task>
+    <task id="LOCAL-00090">
+      <created>1388462476109</created>
+      <updated>1388462476109</updated>
+    </task>
+    <task id="LOCAL-00091">
+      <created>1388471639109</created>
+      <updated>1388471639109</updated>
+    </task>
+    <task id="LOCAL-00092">
+      <created>1388474400109</created>
+      <updated>1388474400109</updated>
+    </task>
+    <task id="LOCAL-00093">
+      <created>1388475787109</created>
+      <updated>1388475787109</updated>
+    </task>
+    <task id="LOCAL-00094">
+      <created>1388476474093</created>
+      <updated>1388476474093</updated>
+    </task>
+    <task id="LOCAL-00095">
+      <created>1388477461109</created>
+      <updated>1388477461109</updated>
+    </task>
+    <task id="LOCAL-00096">
+      <created>1388479204093</created>
+      <updated>1388479204093</updated>
+    </task>
+    <task id="LOCAL-00097">
+      <created>1388480601109</created>
+      <updated>1388480601109</updated>
+    </task>
+    <task id="LOCAL-00098">
+      <created>1388481927109</created>
+      <updated>1388481927109</updated>
+    </task>
+    <task id="LOCAL-00099">
+      <created>1388633519171</created>
+      <updated>1388633519171</updated>
+    </task>
+    <task id="LOCAL-00100">
+      <created>1388640206109</created>
+      <updated>1388640206109</updated>
+    </task>
+    <task id="LOCAL-00101">
+      <created>1388644876109</created>
+      <updated>1388644876109</updated>
+    </task>
+    <task id="LOCAL-00102">
+      <created>1388654665109</created>
+      <updated>1388654665109</updated>
+    </task>
+    <task id="LOCAL-00103">
+      <created>1388719032109</created>
+      <updated>1388719032109</updated>
+    </task>
+    <task id="LOCAL-00104">
+      <created>1388730646109</created>
+      <updated>1388730646109</updated>
+    </task>
+    <task id="LOCAL-00105">
+      <created>1388732904109</created>
+      <updated>1388732904109</updated>
+    </task>
+    <task id="LOCAL-00106">
+      <created>1388980552156</created>
+      <updated>1388980552156</updated>
+    </task>
+    <task id="LOCAL-00107">
+      <created>1388988280109</created>
+      <updated>1388988280109</updated>
+    </task>
+    <task id="LOCAL-00108">
+      <created>1388990369109</created>
+      <updated>1388990369109</updated>
+    </task>
+    <task id="LOCAL-00109">
+      <created>1388997563093</created>
+      <updated>1388997563093</updated>
+    </task>
+    <task id="LOCAL-00110">
+      <created>1389000356093</created>
+      <updated>1389000356093</updated>
+    </task>
+    <task id="LOCAL-00111">
+      <created>1389060027140</created>
+      <updated>1389060027140</updated>
+    </task>
+    <task id="LOCAL-00112">
+      <created>1389080925125</created>
+      <updated>1389080925125</updated>
+    </task>
+    <task id="LOCAL-00113">
+      <created>1389081618109</created>
+      <updated>1389081618109</updated>
+    </task>
+    <task id="LOCAL-00114">
+      <created>1389153720109</created>
+      <updated>1389153720109</updated>
+    </task>
+    <task id="LOCAL-00115">
+      <created>1389168664109</created>
+      <updated>1389168664109</updated>
+    </task>
+    <task id="LOCAL-00116">
+      <created>1389171379125</created>
+      <updated>1389171379125</updated>
+    </task>
+    <task id="LOCAL-00117">
+      <created>1389249559140</created>
+      <updated>1389249559140</updated>
+    </task>
+    <task id="LOCAL-00118">
+      <created>1389249829093</created>
+      <updated>1389249829093</updated>
+    </task>
+    <task id="LOCAL-00119">
+      <created>1389251166109</created>
+      <updated>1389251166109</updated>
+    </task>
+    <task id="LOCAL-00120">
+      <created>1389252834093</created>
+      <updated>1389252834093</updated>
+    </task>
+    <task id="LOCAL-00121">
+      <created>1389256756109</created>
+      <updated>1389256756109</updated>
+    </task>
+    <task id="LOCAL-00122">
+      <created>1389257035109</created>
+      <updated>1389257035109</updated>
+    </task>
+    <task id="LOCAL-00123">
+      <created>1389257704109</created>
+      <updated>1389257704109</updated>
+    </task>
+    <task id="LOCAL-00124">
+      <created>1389257934109</created>
+      <updated>1389257934109</updated>
+    </task>
+    <task id="LOCAL-00125">
+      <created>1389258347140</created>
+      <updated>1389258347140</updated>
+    </task>
+    <task id="LOCAL-00126">
+      <created>1389259677125</created>
+      <updated>1389259677125</updated>
+    </task>
+    <task id="LOCAL-00127">
+      <created>1389322132140</created>
+      <updated>1389322132140</updated>
+    </task>
+    <task id="LOCAL-00128">
+      <created>1389322292109</created>
+      <updated>1389322292109</updated>
+    </task>
+    <task id="LOCAL-00129">
+      <created>1389323781109</created>
+      <updated>1389323781109</updated>
+    </task>
+    <task id="LOCAL-00130">
+      <created>1389324202109</created>
+      <updated>1389324202109</updated>
+    </task>
+    <task id="LOCAL-00131">
+      <created>1389574989109</created>
+      <updated>1389574989109</updated>
+    </task>
+    <task id="LOCAL-00132">
+      <created>1389575792109</created>
+      <updated>1389575792109</updated>
+    </task>
+    <task id="LOCAL-00133">
+      <created>1389577510093</created>
+      <updated>1389577510093</updated>
+    </task>
+    <task id="LOCAL-00134">
+      <created>1389577696109</created>
+      <updated>1389577696109</updated>
+    </task>
+    <task id="LOCAL-00135">
+      <created>1389577741109</created>
+      <updated>1389577741109</updated>
+    </task>
+    <task id="LOCAL-00136">
+      <created>1389679700125</created>
+      <updated>1389679700125</updated>
+    </task>
+    <task id="LOCAL-00137">
+      <created>1389679859109</created>
+      <updated>1389679859109</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-4" y="-4" width="1448" height="878" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32827586" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965517" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982357" sideWeight="0.737931" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20042343" sideWeight="0.47733334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15525758" sideWeight="0.22896552" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8468965" sideWeight="0.50035286" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51724136" sideWeight="0.49964714" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37066665" sideWeight="0.49964714" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5226667" sideWeight="0.49964714" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="11" />
+    </breakpoint-manager>
+  </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history />
+  </component>
+</project>
+

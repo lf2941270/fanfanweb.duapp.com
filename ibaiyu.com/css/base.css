@@ -1,0 +1,254 @@
+/*base.css为全站所有页面都公用的样式表文件*/
+/*初始化样式*/
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,dt,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px"宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+a{text-decoration:none; color: #333333;}
+a:hover{text-decoration:underline;}
+em{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+
+/*页面常用颜色*/
+.c1{color: #ffb606;}
+.c2{color: #d4d2d2;}
+.c3{color: #454545;}
+.c4{color: #767676;}
+.c5{color: #c3c3c3;}
+/*16*16游戏图标*/
+.game_icon{
+    background: url("../images/gameicon_269.gif") no-repeat scroll;
+}
+.game_icon_b{
+    background: url("../images/game_icon_b.gif");
+}
+/*页面样式*/
+/*清除浮动*/
+.clearfix:after{
+    content:'.';
+    height:0;
+    visibility:hidden;
+    display:block;
+    clear:both;
+}
+/*layout外层布局元素*/
+.layout{
+    margin: 0 auto;
+    text-align: left;
+    overflow: hidden;
+}
+.layout-1000{
+    width: 1000px;
+}
+/*con模块外层布局元素*/
+.con{
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #d6d6d6;
+    background: #ffffff;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+/*hd为通用标题栏*/
+.hd{
+    overflow: visible;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+}
+.hd h2{
+    color: #e44f0b;
+    font-size: 14px;
+    margin: 12px 19px 4px 19px;
+
+}
+.hd .title_bar{
+    position: absolute;
+    height: 5px;
+    padding-left: 4px;
+    margin-left: -4px;
+    background: url("../images/title_bar.gif") no-repeat scroll 0 0;
+}
+.w218{
+    width: 218px;
+}
+.w768{
+    width: 768px;
+}
+.w998{
+    width: 998px;
+}
+#page,#header,#content,#footer{
+    width: 100%;
+    margin:0 auto;
+    min-width: 1000px;
+    text-align: left;
+}
+#topbar{
+    width: 100%;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    background:url("../images/topbar_bg.jpg") repeat-x 0 0 scroll ;
+}
+#topbar,#topbar a{
+    color: #333333;
+}
+#topbar a:hover{
+    color:#ff4300;
+}
+#topbar .com{
+    height: 30px;float: left;line-height: 32px;
+}
+#topbar .slogo{
+    cursor: pointer;
+    width: 116px;
+    background: url("../images/s_logo.png") no-repeat center 0 scroll;
+}
+#topbar .border{
+    width: 0px;
+    margin: 0 8px;
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #efefef;
+}
+#topbar .login,#topbar .haslogin{
+    width: 220px;
+}
+#topbar .login{
+    font-size: 14px;
+}
+#topbar .login span{
+    float: left;
+    padding: 0 3px;
+}
+#topbar .login a{
+    font-weight: bold;
+
+}
+
+#topbar .haslogin span{
+    color: #e2440c;
+}
+
+#topbar .rec dt{
+    padding-left: 13px;
+    background: url("../images/rec_bg.gif") no-repeat 0 0;
+    font-weight: bold;
+    color: #e2440c;
+}
+#topbar .rec dt,#topbar .rec dd{
+    display: inline-block;
+    _float:left;
+}
+#topbar .rec dd{
+    margin-left: 5px;
+}
+#topbar .rec dd a{
+    background: url("../images/game_icon.gif") no-repeat scroll;
+    padding-left: 18px;
+    height: 16px;
+    line-height: 16px;
+    display: block;
+    _float:left;
+    _margin-top:7px;
+
+}
+#topbar .rside{
+    float: right;
+}
+#topbar .rside li{
+
+    float:left;
+}
+/*弹出浮层可公用部分*/
+#shade{
+    position: fixed;
+    z-index: 10000;
+    display: none;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    filter:alpha(opacity=60);
+}
+.pop-con{
+    position: fixed;
+    z-index: 10001;
+    background: #f8f7f4;
+    box-shadow: 3px 3px 9px -7px #000;
+    display: none;
+}
+.pop-con .pop-hd{
+    border-bottom: 1px solid #d1d2d5;
+    background: #ffffff;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.pop-con .pop-hd h2{
+    margin-bottom: 6px;
+    margin-top: 17px;
+    margin: 17px 0 6px 10px;
+    padding-left: 14px;
+    background: url("../images/user/arrow_12.png") 4px 50% no-repeat;
+    font-size: 14px;
+    color: #e2440c;
+}
+.pop-con .close{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 0px;
+    right: 0px;
+    background: url("../images/popclose.png") 12px 12px no-repeat;
+}
+.pop-con .close:hover{
+    background-position: -20px -20px;
+}
+
+/*表单样式*/
+.input{
+    height: 18px;
+    border:1px solid #cccccc;
+    border-radius: 1px 1px 1px 1px;
+    background: url("../images/input_42.gif") 0 0 scroll repeat-x #fff;
+}
+.input:focus{
+    border-color: #f77110;
+}
+input::-moz-placeholder { color: #797979; }
+input::-webkit-input-placeholder { color:#797979; }
+input:focus::-moz-placeholder { color: #b7b7b7; }
+input:focus::-webkit-input-placeholder { color:#b7b7b7; }
+/*页尾模块*/
+#footer{
+    margin-top: 10px;
+    border-top:3px solid #ff6600 ;
+    background: #ffffff;
+}
+#footer .links{
+    display: block;
+    text-align: center;
+    padding: 20px 0 16px 0 ;
+    border-bottom: 1px solid #cccccc;
+}
+#footer .links li{
+    display: inline-block;
+    width: 96px;
+}
+#footer .links li a{
+    color: #888888;
+    font-size: 14px;
+}
+#footer .links li a:hover{
+    color: #ff6600;
+    text-decoration: none;
+}
+.copyright{
+    text-align: center;
+    color: #888888;
+    padding: 14px 0 80px;
+}
+.copyright p{
+    line-height: 24px;
+}

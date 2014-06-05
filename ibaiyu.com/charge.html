@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>充值中心</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8;">
+    <script src="js/lib/jquery-1.8.3.min.js">
+    </script>
+
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="css/charge.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div id="page">
+    <div id="topbar">
+        <div class="layout layout-1000 clearfix">
+            <a class="slogo com" href="index.html" title="进入首页"></a>
+            <div class="border com"></div>
+            <!--用户已登录-->
+            <div class="haslogin com">
+                您好!<span>forchenbinbin</span> [<a href="http://www.ibaiyu.cn/loginout.aspx">注销登录</a>]
+            </div>
+            <!--用户未登录-->
+            <!--<div class="login com">
+                <span>[<a href="login.html" target="_blank">登录</a>]</span>
+                <div class="border com"></div>
+                <span>[<a href="reg.html" target="_blank">注册</a>]</span>
+            </div>-->
+            <dl class="rec com">
+                <dt>推荐</dt>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+            </dl>
+            <ul class="rside com">
+                <li><a onclick="SetHome(this,window.location)" style="cursor:pointer">设为首页</a> </li>
+                <div class="border com"></div>
+                <li><a id="bookmark" style="cursor:pointer">加入收藏</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div id="header">
+        <div class="layout layout-1000 clearfix">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li><a href="index.html" target="_blank">首 页</a></li>
+                <li><a href="usercenter.html" target="_blank">用户中心</a></li>
+                <li class="cur"><a href="charge.html" target="_blank">充值中心</a></li>
+                <li><a href="giftlist.html" target="_blank">游戏礼包</a></li>
+                <li><a href="newslist.html" target="_blank">新闻公告</a></li>
+                <li><a href="#" target="_blank">游戏论坛</a></li>
+                <li class="navLabel"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="layout layout-1000 clearfix con shadow charge-con">
+            <div class="nav-left">
+                <div class="info_box clearfix">
+                    <div class="face">
+                        <img src="images/face_164.jpg">
+                    </div>
+                    <div class="info">
+                        <p class="c1">forchenbinbin</p>
+                        <p class="c2">
+                            <!--去掉用戶等級-->
+                            <!--<span class="range">
+                                <i class="l"></i><i class="c"><i class="r0"></i></i><i class="r"></i>
+                            </span>-->
+
+                        <p class="msg"><a class=" c2" target="_blank" href="#"><span class="c1">0</span>条未读消息</a></p>
+                    </div>
+                </div>
+                <ul class="menu-y">
+                    <li class="cur"><a class="wy" title="网上银行充值"></a></li>
+                    <li><a class="by" title="百娱币充值"></a></li>
+                    <li><a class="qb" title="Q币充值"></a></li>
+                    <li><a class="zfb" title="支付宝余额支付"></a></li>
+                    <li><a class="szx" title="神州行易宝支付"></a></li>
+                    <li><a class="lt" title="联通卡易宝支付"></a></li>
+                    <li><a class="dx" title="电信卡易宝支付"></a></li>
+                    <li><a class="jw" title="骏网卡易宝支付"></a></li>
+                    <li class="navLabel"></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="hd">
+                    <h2><span>充值中心</span></h2>
+                </div>
+                <form class="bd">
+                    <div class="item" data-show="0">
+                        <h3>网银支付</h3>
+                        <p class="item-bd">
+                            只要您开通网上银行服务，足不出户即可实现快捷准确的帐号充值。</br>
+                            请勿在此通道中使用其他方式充值。
+                        </p>
+                    </div>
+                    <div class="item" data-show="1">
+                        <h3>百娱币支付</h3>
+                        <p class="item-bd">
+                            您可以使用您平台中的百娱币余额实现快捷准确的帐号充值。</br>
+                            请勿在此通道中使用其他方式充值。
+                        </p>
+                    </div>
+                    <div class="item" data-show="2">
+                        <h3>Q币卡充值</h3>
+                        <p class="item-bd">
+                            只要您购买Q币充值卡即可实现快捷准确的帐号充值。</br>
+                            请勿在此通道中使用其他方式充值。
+                        </p>
+                    </div>
+                    <div class="item" data-show="3">
+                        <h3>支付宝(余额)支付</h3>
+                        <p class="item-bd">
+                            您可以使用支付宝余额进行支付，足不出户即可实现快捷准确的帐号充值。</br>
+                            请勿在此通道中使用其他方式充值。
+                        </p>
+                    </div>
+                    <div class="item" data-show="4">
+                        <h3>神州行(易宝)支付</h3>
+                        <p class="item-bd">
+                            只要您购买神州行充值卡即可实现快捷准确的帐号充值。</br>
+                            请勿在此通道中使用其他方式充值。
+                        </p>
+                    </div>
+                    <div class="item" data-show="5">
+                        <h3>联通卡(易宝)支付</h3>
+                        <p class="item-bd">
+                            只要您购买联通充值卡即可实现快捷准确的帐号充值。</br>
+                            请勿在此通道中使用其他方式充值。
+                        </p>
+                    </div>
+                    <div class="item" data-show="6">
+                        <h3>电信卡(易宝)支付</h3>
+                        <p class="item-bd">
+                            只要您购买电信充值卡即可实现快捷准确的帐号充值。</br>
+                            请勿在此通道中使用其他方式充值。
+                        </p>
+                    </div>
+                    <div class="item" data-show="7">
+                        <h3>骏网卡(易宝)支付</h3>
+                        <p class="item-bd">
+                            只要您购买骏网充值卡即可实现快捷准确的帐号充值。</br>
+                            请勿在此通道中使用其他方式充值。
+                        </p>
+                    </div>
+                    <div class="item" data-show="0,2,3,4,5,6,7">
+                        <h3>充值到哪里：</h3>
+                        <p class="item-bd">
+                            <a><input type="radio" name="type" id="type1" value="1" checked="checked" /><label class="checked" for="type1">充值到游戏</label></a>
+                            <a><input type="radio" name="type" id="type2" value="2" /><label for="type2">充值到百娱币</label></a>
+                        </p>
+                    </div>
+                    <div class="item choose" data-show="0,1,2,3,4,5,6,7">
+                        <h3>选择游戏：</h3>
+                        <div class="item-bd">
+                            <a class="choose-btn choose-game">选择充值的游戏</a>
+                            <a class="choose-btn choose-server">选择游戏服务器</a>
+                            <div class="game-box choose-box">
+                                <i></i>
+                                <a><input type="radio" name="game" id="game1" value="1"/><label for="game1">仙落凡尘</label></a>
+                                <a><input type="radio" name="game" id="game2" value="2"/><label for="game2">神曲</label></a>
+                                <a><input type="radio" name="game" id="game3" value="3"/><label for="game3">热血海贼</label></a>
+                                <a><input type="radio" name="game" id="game4" value="4"/><label for="game4">大侠传</label></a>
+                                <a><input type="radio" name="game" id="game5" value="5"/><label for="game5">街机三国</label></a>
+                                <a><input type="radio" name="game" id="game6" value="6"/><label for="game6">三国魂</label></a>
+                                <a><input type="radio" name="game" id="game7" value="7"/><label for="game7">斗破乾坤</label></a>
+                                <a><input type="radio" name="game" id="game8" value="8"/><label for="game8">天尊传奇</label></a>
+                            </div>
+                            <div class="server-box choose-box">
+                                <i></i>
+                                <a><input type="radio" name="server" id="server1" value="1"/><label for="server1">双线1服</label></a>
+                                <a><input type="radio" name="server" id="server2" value="2"/><label for="server2">双线2服</label></a>
+                                <a><input type="radio" name="server" id="server3" value="3"/><label for="server3">双线3服</label></a>
+                                <a><input type="radio" name="server" id="server4" value="4"/><label for="server4">双线4服</label></a>
+                                <a><input type="radio" name="server" id="server5" value="5"/><label for="server5">双线5服</label></a>
+                                <a><input type="radio" name="server" id="server6" value="6"/><label for="server6">双线6服</label></a>
+                                <a><input type="radio" name="server" id="server7" value="7"/><label for="server7">双线7服</label></a>
+                                <a><input type="radio" name="server" id="server8" value="8"/><label for="server8">双线8服</label></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-show="0,1,2,3,4,5,6,7">
+                        <h3>充值账号：<input type="text" class="input" name="username" id="username" placeholder="请输入账号"/></h3>
+                    </div>
+                    <div class="item" data-show="0,1,2,3,4,5,6,7">
+                        <h3>选择充值金额：</h3>
+                        <p class="item-bd">
+                            <a><input type="radio" name="money" id="money1" value="10" /><label for="money1">10元</label></a>
+                            <a><input type="radio" name="money" id="money2" value="20" /><label for="money2">20元</label></a>
+                            <a><input type="radio" name="money" id="money3" value="30" /><label for="money3">30元</label></a>
+                            <a><input type="radio" name="money" id="money4" value="50" /><label for="money4">50元</label></a>
+                            <a><input type="radio" name="money" id="money5" value="100" /><label for="money5">100元</label></a>
+                            <a><input type="radio" name="money" id="money6" value="200" /><label for="money6">200元</label></a>
+                            <a><input type="radio" name="money" id="money7" value="300" /><label for="money7">300元</label></a>
+                            <a><input type="radio" name="money" id="money8" value="500" /><label for="money8">500元</label></a>
+                            <a><input type="radio" name="money" id="money9" value="1000" /><label for="money9">1000元</label></a>
+                            <a><input type="radio" name="money" id="money10" value="2000" /><label for="money10">2000元</label></a>
+                            <a><input type="radio" name="money" id="money11" value="3000" /><label for="money11">3000元</label></a>
+                            <a><input type="radio" name="money" id="money12" value="5000" /><label for="money12">5000元</label></a>
+                            <a class="sp">
+                                <input type="radio" name="money" id="moneyother" value="other" /><label class="sp" for="moneyother">其他金额:</label>
+                                <input class="input mn" type="text" name="other" id="other" placeholder="请输入金额"/>元
+                            </a>
+                        </p>
+                    </div>
+                    <div class="item" data-show="0">
+                        <h3>选择充值的银行：</h3>
+                        <ul class="item-bd bank-list clearfix">
+                            <li><input type="radio" name="bank" id="bank1" value="1" /><label for="bank1"><img src="images/charge/icbc_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank2" value="2" /><label for="bank2"><img src="images/charge/ccb_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank3" value="3" /><label for="bank3"><img src="images/charge/abc_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank4" value="4" /><label for="bank4"><img src="images/charge/post_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank5" value="5" /><label for="bank5"><img src="images/charge/bcom_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank6" value="6" /><label for="bank6"><img src="images/charge/cmb_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank7" value="7" /><label for="bank7"><img src="images/charge/boc_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank8" value="8" /><label for="bank8"><img src="images/charge/ceb_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank9" value="9" /><label for="bank9"><img src="images/charge/citic_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank10" value="10" /><label for="bank10"><img src="images/charge/sdb_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank11" value="11" /><label for="bank11"><img src="images/charge/spdb_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank12" value="12" /><label for="bank12"><img src="images/charge/cmbc_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank13" value="13" /><label for="bank13"><img src="images/charge/cib_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank14" value="14" /><label for="bank14"><img src="images/charge/pab_1301.png"/></label></li>
+                            <li><input type="radio" name="bank" id="bank15" value="15" /><label for="bank15"><img src="images/charge/gdb_1301.png"/></label></li>
+                        </ul>
+                    </div>
+                    <input data-show="0,1,2,3,4,5,6,7" type="submit" value="" class="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="layout layout-1000">
+            <ul class="links">
+                <li><a href="about.html" target="_blank">关于我们</a></li>
+                <li><a href="about.html?tabNum=1" target="_blank">联系我们</a></li>
+                <li><a href="about.html?tabNum=2" target="_blank">商务合作</a></li>
+                <li><a href="about.html?tabNum=3" target="_blank">服务条款</a></li>
+                <li><a href="about.html?tabNum=4" target="_blank">人才招聘</a></li>
+                <li><a href="jzjh/1.html" target="_blank">家长监护</a></li>
+            </ul>
+            <div class="copyright">
+                <p>
+                    鄂ICP备12003812号 鄂ICP证B2-20120079 网络文化经营许可证 鄂网文【2012】0306-007号
+                </p>
+                <p>
+                    Copyright &copy; 2012 All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--多页面公用js-->
+<script src="js/common.js"></script>
+<script src="js/charge.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户中心-首页</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8;">
+    <script src="js/lib/jquery-1.8.3.min.js">
+    </script>
+
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="css/usercenter.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div id="page">
+    <div id="topbar">
+        <div class="layout layout-1000 clearfix">
+            <a class="slogo com" href="index.html" title="进入首页"></a>
+            <div class="border com"></div>
+            <!--用户已登录-->
+            <div class="haslogin com">
+                您好!<span>forchenbinbin</span> [<a href="http://www.ibaiyu.cn/loginout.aspx">注销登录</a>]
+            </div>
+            <!--用户未登录-->
+            <!--<div class="login com">
+                <span>[<a href="login.html" target="_blank">登录</a>]</span>
+                <div class="border com"></div>
+                <span>[<a href="reg.html" target="_blank">注册</a>]</span>
+            </div>-->
+            <dl class="rec com">
+                <dt>推荐</dt>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+            </dl>
+            <ul class="rside com">
+                <li><a onclick="SetHome(this,window.location)" style="cursor:pointer">设为首页</a> </li>
+                <div class="border com"></div>
+                <li><a id="bookmark" style="cursor:pointer">加入收藏</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div id="header">
+        <div class="layout layout-1000 clearfix">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li><a href="index.html" target="_blank">首 页</a></li>
+                <li class="cur"><a href="usercenter.html" target="_blank">用户中心</a></li>
+                <li><a href="charge.html" target="_blank">充值中心</a></li>
+                <li><a href="giftlist.html" target="_blank">游戏礼包</a></li>
+                <li><a href="newslist.html" target="_blank">新闻公告</a></li>
+                <li><a href="#" target="_blank">游戏论坛</a></li>
+                <li class="navLabel"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="layout layout-1000 clearfix con shadow user-con">
+            <div class="nav-left">
+                <div class="info_box clearfix">
+                    <div class="face">
+                        <img src="images/face_164.jpg">
+                    </div>
+                    <div class="info">
+                        <p class="c1">forchenbinbin</p>
+                        <p class="c2">
+                            <!--去掉用戶等級-->
+                            <!--<span class="range">
+                                <i class="l"></i><i class="c"><i class="r0"></i></i><i class="r"></i>
+                            </span>-->
+
+                        <p class="msg"><a class=" c2" target="_blank" href="#"><span class="c1">0</span>条未读消息</a></p>
+                    </div>
+                </div>
+                <ul class="menu-y">
+                    <li class="cur"><a class="index" href="usercenter.html" title="用户中心"></a></li>
+                    <li><a class="quit" href="quit.html" title="注销登录"></a></li>
+                    <li><a class="info" href="info.html" title="个人信息"></a></li>
+                    <li><a class="psd" href="password.html" title="密码修改"></a></li>
+                    <li><a class="msg" href="msg.html" title="消息管理"></a></li>
+                    <li><a class="safe" href="safe.html" title="安全设置"></a></li>
+                    <li><a class="charge" href="charge.html" title="账户充值"></a></li>
+                    <li><a class="check" href="check.html" title="充值记录"></a></li>
+                    <li class="navLabel"></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="hd">
+                    <h2><span>中心首页</span></h2>
+                </div>
+                <div class="bd">
+                    <div class="user-info">
+                        <div class="face-box">
+                            <div class="face"><img src="images/user/face_36.jpg"/></div>
+                            <a href="info.html" class="edit" title="修改个人信息"></a>
+                        </div>
+                        <p class="welcome">尊敬的玩家<strong>forchenbinbin</strong>，欢迎登录爱百娱游戏中心！</p>
+                        <p class="msg"><a href="#" target="_blank"><strong>0</strong>条未读消息</a></p>
+                        <!--去掉用戶等級-->
+                        <!--<p class="lv">用户等级：
+                            <span class="range">
+                                <i class="l"></i><i class="c"><i class="r0"></i></i><i class="r"></i>
+                            </span>
+                        </p>-->
+                        <p class="account">账户余额：
+                            <span class="item">百娱币:<strong>0</strong></span>
+                            <span class="item">兑换券:<strong>0</strong></span>
+                            <span class="item">返利券:<strong>0</strong></span>
+                        </p>
+                        <p class="safe">
+                            <span>帐户安全等级：</span>
+                            <!--lv1-lv3分别代表低、中、高-->
+                            <span class="lv lv3"></span>
+                        </p>
+                        <p class="safe2">
+                            <!--true表示已绑定，false表示未绑定,后面的文字也要跟着改-->
+                            <span class="item true"><i class="email"></i>邮箱已绑定</span>
+                            <span class="item true"><i class="protect"></i>密保已设置</span>
+                            <span class="item true"><i class="idcard"></i>身份证已绑定</span>
+                        </p>
+                    </div>
+                    <div class="has-play">
+                        <div class="hd">
+                            <h2><span>最近玩过的游戏</span></h2>
+                        </div>
+                        <div class="game-content">
+                            <div class="game-box">
+                                <ul class="clearfix">
+
+                                    <li class="">
+                                        <img src="images/9000261_s_n.jpg">
+                                        <a class="summary" target="_blank" href="#">
+                                            <span class="name">龙吟三国</span>
+                                            <span class="server">双线268服</span>
+                                            <span class="bt_start"></span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <img src="images/9000261_s_n.jpg">
+                                        <a class="summary" target="_blank" href="#">
+                                            <span class="name">龙吟三国</span>
+                                            <span class="server">双线268服</span>
+                                            <span class="bt_start"></span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <img src="images/9000261_s_n.jpg">
+                                        <a class="summary" target="_blank" href="#">
+                                            <span class="name">龙吟三国</span>
+                                            <span class="server">双线268服</span>
+                                            <span class="bt_start"></span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <img src="images/9000261_s_n.jpg">
+                                        <a class="summary" target="_blank" href="#">
+                                            <span class="name">龙吟三国</span>
+                                            <span class="server">双线268服</span>
+                                            <span class="bt_start"></span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <img src="images/9000261_s_n.jpg">
+                                        <a class="summary" target="_blank" href="#">
+                                            <span class="name">龙吟三国</span>
+                                            <span class="server">双线268服</span>
+                                            <span class="bt_start"></span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <img src="images/9000261_s_n.jpg">
+                                        <a class="summary" target="_blank" href="#">
+                                            <span class="name">龙吟三国</span>
+                                            <span class="server">双线268服</span>
+                                            <span class="bt_start"></span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <img src="images/9000261_s_n.jpg">
+                                        <a class="summary" target="_blank" href="#">
+                                            <span class="name">龙吟三国</span>
+                                            <span class="server">双线268服</span>
+                                            <span class="bt_start"></span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <img src="images/9000261_s_n.jpg">
+                                        <a class="summary" target="_blank" href="#">
+                                            <span class="name">龙吟三国</span>
+                                            <span class="server">双线268服</span>
+                                            <span class="bt_start"></span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <img src="images/9000261_s_n.jpg">
+                                        <a class="summary" target="_blank" href="#">
+                                            <span class="name">龙吟三国</span>
+                                            <span class="server">双线268服</span>
+                                            <span class="bt_start"></span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <img src="images/9000261_s_n.jpg">
+                                        <a class="summary" target="_blank" href="#">
+                                            <span class="name">龙吟三国</span>
+                                            <span class="server">双线268服</span>
+                                            <span class="bt_start"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="arrow prev"></div>
+                            <div class="arrow next"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="layout layout-1000">
+            <ul class="links">
+                <li><a href="about.html" target="_blank">关于我们</a></li>
+                <li><a href="about.html?tabNum=1" target="_blank">联系我们</a></li>
+                <li><a href="about.html?tabNum=2" target="_blank">商务合作</a></li>
+                <li><a href="about.html?tabNum=3" target="_blank">服务条款</a></li>
+                <li><a href="about.html?tabNum=4" target="_blank">人才招聘</a></li>
+                <li><a href="jzjh/1.html" target="_blank">家长监护</a></li>
+            </ul>
+            <div class="copyright">
+                <p>
+                    鄂ICP备12003812号 鄂ICP证B2-20120079 网络文化经营许可证 鄂网文【2012】0306-007号</p>
+                <p>
+                    Copyright &copy; 2012 All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--多页面公用js-->
+<script src="js/common.js"></script>
+<script src="js/usercenter.js"></script>
+</body>
+</html>

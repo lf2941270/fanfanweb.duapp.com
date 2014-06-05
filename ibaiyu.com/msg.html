@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户中心-消息管理</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8;">
+    <script src="js/lib/jquery-1.8.3.min.js">
+    </script>
+
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="css/usercenter.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div id="page">
+    <div id="topbar">
+        <div class="layout layout-1000 clearfix">
+            <a class="slogo com" href="index.html" title="进入首页"></a>
+            <div class="border com"></div>
+            <!--用户已登录-->
+            <div class="haslogin com">
+                您好!<span>forchenbinbin</span> [<a href="http://www.ibaiyu.cn/loginout.aspx">注销登录</a>]
+            </div>
+            <!--用户未登录-->
+            <!--<div class="login com">
+                <span>[<a href="login.html" target="_blank">登录</a>]</span>
+                <div class="border com"></div>
+                <span>[<a href="reg.html" target="_blank">注册</a>]</span>
+            </div>-->
+            <dl class="rec com">
+                <dt>推荐</dt>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+            </dl>
+            <ul class="rside com">
+                <li><a onclick="SetHome(this,window.location)" style="cursor:pointer">设为首页</a> </li>
+                <div class="border com"></div>
+                <li><a id="bookmark" style="cursor:pointer">加入收藏</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div id="header">
+        <div class="layout layout-1000 clearfix">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li><a href="index.html" target="_blank">首 页</a></li>
+                <li class="cur"><a href="usercenter.html" target="_blank">用户中心</a></li>
+                <li><a href="charge.html" target="_blank">充值中心</a></li>
+                <li><a href="giftlist.html" target="_blank">游戏礼包</a></li>
+                <li><a href="newslist.html" target="_blank">新闻公告</a></li>
+                <li><a href="#" target="_blank">游戏论坛</a></li>
+                <li class="navLabel"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="layout layout-1000 clearfix con shadow user-con">
+            <div class="nav-left">
+                <div class="info_box clearfix">
+                    <div class="face">
+                        <img src="images/face_164.jpg">
+                    </div>
+                    <div class="info">
+                        <p class="c1">forchenbinbin</p>
+                        <p class="c2">
+                            <!--去掉用戶等級-->
+                            <!--<span class="range">
+                                <i class="l"></i><i class="c"><i class="r0"></i></i><i class="r"></i>
+                            </span>-->
+
+                        <p class="msg"><a class=" c2" target="_blank" href="#"><span class="c1">0</span>条未读消息</a></p>
+                    </div>
+                </div>
+                <ul class="menu-y">
+                    <li><a class="index" href="usercenter.html" title="用户中心"></a></li>
+                    <li><a class="quit" href="quit.html" title="注销登录"></a></li>
+                    <li><a class="info" href="info.html" title="个人信息"></a></li>
+                    <li><a class="psd" href="password.html" title="密码修改"></a></li>
+                    <li class="cur"><a class="msg" href="msg.html" title="消息管理"></a></li>
+                    <li><a class="safe" href="safe.html" title="安全设置"></a></li>
+                    <li><a class="charge" href="charge.html" title="账户充值"></a></li>
+                    <li><a class="check" href="check.html" title="充值记录"></a></li>
+                    <li class="navLabel"></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="hd">
+                    <h2><span>消息管理</span></h2>
+                </div>
+                <div class="bd">
+                    <form class="msg-box">
+                        <dl>
+                            <dt>
+                                <span class="sp1">选中</span>
+                                <span class="sp2">消息类型</span>
+                                <span class="sp3">消息标题</span>
+                                <span class="sp4">消息状态</span>
+                                <span class="sp5">发布时间</span>
+                            </dt>
+                            <dd>
+                                <span class="sp1"><input type="checkbox" name=""></span>
+                                <span class="sp2">站内信</span>
+                                <span class="sp3">新手卡信息：女神联盟新手卡</span>
+                                <!--给这个span加上名称为"true"的class表示未读，加上"false"表示已读-->
+                                <span class="sp4 true"><i></i>未读</span>
+                                <span class="sp5">2013-11-28 10:43:04</span>
+                            </dd>
+                            <dd>
+                                <span class="sp1"><input type="checkbox" name=""></span>
+                                <span class="sp2">站内信</span>
+                                <span class="sp3">新手卡信息：枪魂新手卡</span>
+                                <span class="sp4 true"><i></i>未读</span>
+                                <span class="sp5">2013-11-28 10:43:04</span>
+                            </dd>
+                            <dd>
+                                <span class="sp1"><input type="checkbox" name=""></span>
+                                <span class="sp2">站内信</span>
+                                <span class="sp3">系统信息：绑定邮箱成功</span>
+                                <span class="sp4 false"><i></i>已读</span>
+                                <span class="sp5">2013-11-28 10:43:04</span>
+                            </dd>
+                            <dd>
+                                <span class="sp1"><input type="checkbox" name=""></span>
+                                <span class="sp2">站内信</span>
+                                <span class="sp3">注册成功消息</span>
+                                <span class="sp4 false"><i></i>已读</span>
+                                <span class="sp5">2013-11-28 10:43:04</span>
+                            </dd>
+                            <dd>
+                                <span class="sp1"><input type="checkbox" name=""></span>
+                                <span class="sp2">站内信</span>
+                                <span class="sp3">系统信息：绑定邮箱成功</span>
+                                <span class="sp4 false"><i></i>已读</span>
+                                <span class="sp5">2013-11-28 10:43:04</span>
+                            </dd>
+                            <dd>
+                                <span class="sp1"><input type="checkbox" name=""></span>
+                                <span class="sp2">站内信</span>
+                                <span class="sp3">注册成功消息</span>
+                                <span class="sp4 false"><i></i>已读</span>
+                                <span class="sp5">2013-11-28 10:43:04</span>
+                            </dd>
+                            <dd>
+                                <span class="sp1"><input type="checkbox" name=""></span>
+                                <span class="sp2">站内信</span>
+                                <span class="sp3">系统信息：绑定邮箱成功</span>
+                                <span class="sp4 false"><i></i>已读</span>
+                                <span class="sp5">2013-11-28 10:43:04</span>
+                            </dd>
+                            <dd>
+                                <span class="sp1"><input type="checkbox" name="" checked="checked"></span>
+                                <span class="sp2">站内信</span>
+                                <span class="sp3">注册成功消息</span>
+                                <span class="sp4 false"><i></i>已读</span>
+                                <span class="sp5">2013-11-28 10:43:04</span>
+                            </dd>
+                        </dl>
+                        <a class="choose-all btn">
+                            <i></i>
+                            <span>全选</span>
+                        </a>
+                        <!--删除按钮暂时未作任何传递数据的处理-->
+                        <a class="delete btn">
+                            <i></i>
+                            <span>删除</span>
+                        </a>
+
+                    </form>
+                    <!--隐藏的消息内容样式-->
+                    <style type="text/css">
+                        .msg-content .msg-c{
+                            display: none;
+                        }
+                        .msg-content .msg-c .pop-bd{
+                            width: 570px;
+                            padding: 20px 30px 15px;
+                            color:#5e5e5e;
+                        }
+                        .msg-content .msg-c .pop-bd span{
+                            display: inline-block;
+                            line-height: 18px;
+                            margin-bottom: 8px;
+                        }
+                    </style>
+                    <!--隐藏的消息内容，点击时弹出对应消息-->
+                    <div class="msg-content">
+                        <div class="msg-c">
+                            <div class="pop-bd">
+                                <span style="color: #FF9900">消息内容：</span> <span style="color: #F7654B">
+                                            领取女神联盟新手卡成功！卡号：7CBB-8C82514F-EA3AF332-744F3DB8-00ADFE73
+                                        </span>
+                                <br>
+                                <span style="color: #FF9900">防诈骗提示：</span>请您在游戏中不要相信任何中奖信息，那些都是骗子的骗人招数,请您要妥善保管好您的帐号。
+
+                            </div>
+                        </div>
+                        <div class="msg-c">
+                            <div class="pop-bd">
+                                <span style="color: #FF9900">消息内容：</span> <span style="color: #F7654B">
+                                            领取枪魂新手卡成功！卡号：7CBB-8C82514F-EA3AF332-744F3DB8-00ADFE73
+                                        </span>
+                                <br>
+                                <span style="color: #FF9900">防诈骗提示：</span>请您在游戏中不要相信任何中奖信息，那些都是骗子的骗人招数,请您要妥善保管好您的帐号。
+                            </div>
+                        </div>
+                        <div class="msg-c">
+                            <div class="pop-bd">
+                                <span style="color: #FF9900">消息内容：</span> <span style="color: #F7654B">
+                                            恭喜您成功绑定邮箱4*******@qq.com!
+                                        </span>
+                                <br>
+                                <span style="color: #FF9900">防诈骗提示：</span>请您在游戏中不要相信任何中奖信息，那些都是骗子的骗人招数,请您要妥善保管好您的帐号。
+                            </div>
+                        </div>
+                        <div class="msg-c">
+                            <div class="pop-bd">
+                                <span style="color: #F7654B">
+                                            恭喜您成功注册爱百娱账号，您可凭借此账号登录爱百娱旗下任何一款游戏，祝您游戏愉快。如果您在游戏过程中遇到任何问题，欢迎您致电客服咨询。
+                                        </span>
+                                <br>
+                                <span style="color: #FF9900">防诈骗提示：</span>请您在游戏中不要相信任何中奖信息，那些都是骗子的骗人招数,请您要妥善保管好您的帐号。
+                            </div>
+                        </div>
+                        <div class="msg-c">
+                            <div class="pop-bd">
+                                <span style="color: #FF9900">消息内容：</span> <span style="color: #F7654B">
+                                            恭喜您成功绑定邮箱4*******@qq.com!
+                                        </span>
+                                <br>
+                                <span style="color: #FF9900">防诈骗提示：</span>请您在游戏中不要相信任何中奖信息，那些都是骗子的骗人招数,请您要妥善保管好您的帐号。
+                            </div>
+                        </div>
+                        <div class="msg-c">
+                            <div class="pop-bd">
+                                <span style="color: #F7654B">
+                                            恭喜您成功注册爱百娱账号，您可凭借此账号登录爱百娱旗下任何一款游戏，祝您游戏愉快。如果您在游戏过程中遇到任何问题，欢迎您致电客服咨询。
+                                        </span>
+                                <br>
+                                <span style="color: #FF9900">防诈骗提示：</span>请您在游戏中不要相信任何中奖信息，那些都是骗子的骗人招数,请您要妥善保管好您的帐号。
+                            </div>
+                        </div>
+                        <div class="msg-c">
+                            <div class="pop-bd">
+                                <span style="color: #FF9900">消息内容：</span> <span style="color: #F7654B">
+                                            恭喜您成功绑定邮箱4*******@qq.com!
+                                        </span>
+                                <br>
+                                <span style="color: #FF9900">防诈骗提示：</span>请您在游戏中不要相信任何中奖信息，那些都是骗子的骗人招数,请您要妥善保管好您的帐号。
+                            </div>
+                        </div>
+                        <div class="msg-c">
+                            <div class="pop-bd">
+                                <span style="color: #F7654B">
+                                            恭喜您成功注册爱百娱账号，您可凭借此账号登录爱百娱旗下任何一款游戏，祝您游戏愉快。如果您在游戏过程中遇到任何问题，欢迎您致电客服咨询。
+                                        </span>
+                                <br>
+                                <span style="color: #FF9900">防诈骗提示：</span>请您在游戏中不要相信任何中奖信息，那些都是骗子的骗人招数,请您要妥善保管好您的帐号。
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--分页-->
+                    <div class="pages">
+                        <a class="false">首页</a>
+                        <a class="false">上一页</a>
+                        <a class="cur">1</a>
+                        <a class="" href="#">2</a>
+                        <a class="" href="#">3</a>
+                        <a class="" href="#">下一页</a>
+                        <input name="pageNum" class="input" value="">
+                        <a href="#" class="goToPage">go</a>
+                        <em>共3页</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="layout layout-1000">
+            <ul class="links">
+                <li><a href="about.html" target="_blank">关于我们</a></li>
+                <li><a href="about.html?tabNum=1" target="_blank">联系我们</a></li>
+                <li><a href="about.html?tabNum=2" target="_blank">商务合作</a></li>
+                <li><a href="about.html?tabNum=3" target="_blank">服务条款</a></li>
+                <li><a href="about.html?tabNum=4" target="_blank">人才招聘</a></li>
+                <li><a href="jzjh/1.html" target="_blank">家长监护</a></li>
+            </ul>
+            <div class="copyright">
+                <p>
+                    鄂ICP备12003812号 鄂ICP证B2-20120079 网络文化经营许可证 鄂网文【2012】0306-007号</p>
+                <p>
+                    Copyright &copy; 2012 All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--多页面公用js-->
+<script src="js/common.js"></script>
+<script src="js/usercenter.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

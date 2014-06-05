@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户中心-安全设置</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8;">
+    <script src="js/lib/jquery-1.8.3.min.js">
+    </script>
+
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="css/usercenter.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div id="page">
+    <div id="topbar">
+        <div class="layout layout-1000 clearfix">
+            <a class="slogo com" href="index.html" title="进入首页"></a>
+            <div class="border com"></div>
+            <!--用户已登录-->
+            <div class="haslogin com">
+                您好!<span>forchenbinbin</span> [<a href="http://www.ibaiyu.cn/loginout.aspx">注销登录</a>]
+            </div>
+            <!--用户未登录-->
+            <!--<div class="login com">
+                <span>[<a href="login.html" target="_blank">登录</a>]</span>
+                <div class="border com"></div>
+                <span>[<a href="reg.html" target="_blank">注册</a>]</span>
+            </div>-->
+            <dl class="rec com">
+                <dt>推荐</dt>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+                <dd><a class="game1" href="gamepage.html" target="_blank">勇者之塔</a></dd>
+            </dl>
+            <ul class="rside com">
+                <li><a onclick="SetHome(this,window.location)" style="cursor:pointer">设为首页</a> </li>
+                <div class="border com"></div>
+                <li><a id="bookmark" style="cursor:pointer">加入收藏</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div id="header">
+        <div class="layout layout-1000 clearfix">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li><a href="index.html" target="_blank">首 页</a></li>
+                <li class="cur"><a href="usercenter.html" target="_blank">用户中心</a></li>
+                <li><a href="charge.html" target="_blank">充值中心</a></li>
+                <li><a href="giftlist.html" target="_blank">游戏礼包</a></li>
+                <li><a href="newslist.html" target="_blank">新闻公告</a></li>
+                <li><a href="#" target="_blank">游戏论坛</a></li>
+                <li class="navLabel"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="layout layout-1000 clearfix con shadow user-con">
+            <div class="nav-left">
+                <div class="info_box clearfix">
+                    <div class="face">
+                        <img src="images/face_164.jpg">
+                    </div>
+                    <div class="info">
+                        <p class="c1">forchenbinbin</p>
+                        <p class="c2">
+                            <!--去掉用戶等級-->
+                            <!--<span class="range">
+                                <i class="l"></i><i class="c"><i class="r0"></i></i><i class="r"></i>
+                            </span>-->
+
+                        <p class="msg"><a class=" c2" target="_blank" href="#"><span class="c1">0</span>条未读消息</a></p>
+                    </div>
+                </div>
+                <ul class="menu-y">
+                    <li><a class="index" href="usercenter.html" title="用户中心"></a></li>
+                    <li><a class="quit" href="quit.html" title="注销登录"></a></li>
+                    <li><a class="info" href="info.html" title="个人信息"></a></li>
+                    <li><a class="psd" href="password.html" title="密码修改"></a></li>
+                    <li><a class="msg" href="msg.html" title="消息管理"></a></li>
+                    <li class="cur"><a class="safe" href="safe.html" title="安全设置"></a></li>
+                    <li><a class="charge" href="charge.html" title="账户充值"></a></li>
+                    <li><a class="check" href="check.html" title="充值记录"></a></li>
+                    <li class="navLabel"></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="hd">
+                    <h2><span>安全设置</span></h2>
+                    <!--i标签的class表示当前的安全等级，lv1-lv3分别代表低中高三个等级-->
+                    <p class="safe-range"><span>您当前的帐号安全等级:</span><i class="lv1"></i></p>
+                </div>
+                <div class="bd">
+                    <div class="safe-list">
+                        <div class="item clearfix">
+                            <div class="box false"><i class="email"></i>邮箱未绑定</div>
+                            <div class="r-box">
+                                <p>安全系数：<i></i></p>
+                                <p>安全说明：通过邮箱认证的账户，玩家可在忘记密码的时候通过认证邮箱取回密码。</p>
+                                <!--通过设置“has-bind”的class将按钮变为已绑定不可点击状态，下同-->
+                                <a class="bind-btn email"></a>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <div class="box false"><i class="protect"></i>密保未设置</div>
+                            <div class="r-box">
+                                <p>安全系数：<i></i></p>
+                                <p>安全说明：密保问题，保障您的帐号安全，玩家可在忘记密码的时候通过认密保答案取回密码。</p>
+                                <a class="bind-btn protect"></a>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <div class="box false"><i class="idcard"></i>身份证未绑定</div>
+                            <div class="r-box">
+                                <p>安全系数：<i></i></p>
+                                <p>安全说明：您可以进入游戏，但是我们建议您填写如下身份资料以免受到防沉迷系统的限制。 </p>
+                                <a class="bind-btn idcard"></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="pop-con email-bind">
+                                <form class="step step1" style="display: block;">
+                                    <div class="status-bar"></div>
+                                    <p>
+                                        <label for="emailInput">输入邮箱：</label>
+                                        <input class="input" type="email" id="emailInput" name="emailInput"/>
+                                    </p>
+                                    <input class="sendemail" type="submit" value="">
+                                </form>
+                                <div class="step step2">
+                                    <div class="status-bar"></div>
+                                    <p>
+                                        系统已向您的邮箱发送认证邮件，邮件里的认证链接有效期为48小时，请及时进行确认。如五分钟内未能收到认证邮件，您可以点击这里<a class="reSend">重新发送</a>认证邮件或<a class="changeEmail">更换认证邮箱</a>。
+                                    </p>
+                                </div>
+                                <div class="step step3">
+                                    <div class="status-bar"></div>
+                                    <div class="wrap">
+                                        <p class="p1">恭喜您！邮箱验证成功！</p>
+                                        <p><span class="widget" widget-type="timecount" options='{"link":"usercenter.html"}'>5</span>秒后自动返回用户中心</p>
+                                        <p><a href="usercenter.html">点击此处立即返回</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pop-con protect-bind">
+                                <form class="step step1" style="display: block;">
+                                    <div class="status-bar"></div>
+                                    <p>
+                                        <label for="question1">密保问题一：</label>
+                                        <select id="question1" name="question1">
+                                            <option value="1">我高中老师的名字一？</option>
+                                            <option value="2">我高中老师的名字二？</option>
+                                            <option value="3">我高中老师的名字三？</option>
+                                            <option value="4">我高中老师的名字四？</option>
+                                            <option value="5">我高中老师的名字五？</option>
+                                            <option value="6">我高中老师的名字六？</option>
+                                            <option value="7">我高中老师的名字七？</option>
+                                            <option value="8">我高中老师的名字八？</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label for="answer1">密保答案一：</label>
+                                        <input class="input" type="text" id="answer1" name="answer1"/>
+                                    </p>
+                                    <p>
+                                        <label for="question2">密保问题二：</label>
+                                        <select id="question2" name="question2">
+                                            <option value="1">我高中老师的名字一？</option>
+                                            <option value="2">我高中老师的名字二？</option>
+                                            <option value="3">我高中老师的名字三？</option>
+                                            <option value="4">我高中老师的名字四？</option>
+                                            <option value="5">我高中老师的名字五？</option>
+                                            <option value="6">我高中老师的名字六？</option>
+                                            <option value="7">我高中老师的名字七？</option>
+                                            <option value="8">我高中老师的名字八？</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label for="answer2">密保答案二：</label>
+                                        <input class="input" type="text" id="answer2" name="answer2"/>
+                                    </p>
+                                    <p>
+                                        <input class="sendbtn" type="submit" value="">
+                                    </p>
+                                </form>
+
+                                <div class="step step2">
+                                    <div class="status-bar"></div>
+                                    <div class="suc-wrap">
+                                        <p class="p1">恭喜您！密保设置成功！</p>
+                                        <p><span class="widget" widget-type="timecount" options='{"link":"usercenter.html"}'>5</span>秒后自动返回用户中心</p>
+                                        <p><a href="usercenter.html">点击此处立即返回</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pop-con idcard-bind">
+                                <form class="step step1" style="display: block;">
+                                    <div class="status-bar"></div>
+                                    <p>
+                                        <label for="realname">输入真实姓名：</label>
+                                        <input class="input" type="text" id="realname" name="realname"/>
+                                    </p>
+                                    <p>
+                                        <label for="idnumber">输入身份证号：</label>
+                                        <input class="input" type="number" id="idnumber" name="idnumber"/>
+                                    </p>
+                                    <p>
+                                        <input class="sendbtn" type="submit" value="">
+                                    </p>
+                                </form>
+
+                                <div class="step step2">
+                                    <div class="status-bar"></div>
+                                    <div class="suc-wrap">
+                                        <p class="p1">恭喜您！身份证绑定成功！</p>
+                                        <p><span class="widget" widget-type="timecount" options='{"link":"usercenter.html"}'>5</span>秒后自动返回用户中心</p>
+                                        <p><a href="usercenter.html">点击此处立即返回</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="layout layout-1000">
+            <ul class="links">
+                <li><a href="about.html" target="_blank">关于我们</a></li>
+                <li><a href="about.html?tabNum=1" target="_blank">联系我们</a></li>
+                <li><a href="about.html?tabNum=2" target="_blank">商务合作</a></li>
+                <li><a href="about.html?tabNum=3" target="_blank">服务条款</a></li>
+                <li><a href="about.html?tabNum=4" target="_blank">人才招聘</a></li>
+                <li><a href="jzjh/1.html" target="_blank">家长监护</a></li>
+            </ul>
+            <div class="copyright">
+                <p>
+                    鄂ICP备12003812号 鄂ICP证B2-20120079 网络文化经营许可证 鄂网文【2012】0306-007号</p>
+                <p>
+                    Copyright &copy; 2012 All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--多页面公用js-->
+<script src="js/common.js"></script>
+<script src="js/usercenter.js"></script>
+</body>
+</html>
