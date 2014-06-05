@@ -39,6 +39,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'ibaiyu.com')));
 app.use(express.session({
     secret: settings.cookieSecret
 }))
