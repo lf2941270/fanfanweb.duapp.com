@@ -118,6 +118,7 @@ input,select,option{
     padding: 0;
     overflow: hidden;
 }
+
 .user-con .hd h2{
     border-bottom: 1px solid #d1d2d5;
 }
@@ -140,7 +141,11 @@ input,select,option{
     top: -4px;
     width: 26px;
     height: 23px;
-    background: url("../images/user/note_12.gif") 0 0 no-repeat;
+    background: url("../images/user/note_12.gif") center bottom no-repeat;
+}
+.user-con .hd .note i.findtype{
+    left: 2px;
+    background: url("../images/user/czzx_09.png") center bottom no-repeat;
 }
 .user-con .hd .note span{
     position: relative;
