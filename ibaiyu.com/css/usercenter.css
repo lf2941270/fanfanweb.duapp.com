@@ -292,6 +292,26 @@ input,select,option{
     overflow: hidden;
     position: relative;
 }
+.user-con .type-con{
+    padding-top: 36px;
+}
+.type-con .type-box{
+    display: block;
+    width: 370px;
+    height: 72px;
+    margin: 30px auto 0px;
+    padding: 16px;
+    border: 1px solid #faddc7;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px -8px #000000;
+}
+.type-con .icon{
+    width: 95px;
+    height: 72px;
+    display: block;
+    float: left;
+}
 .game-box ul {
     display: block;
     position: absolute;
