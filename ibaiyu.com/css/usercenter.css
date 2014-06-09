@@ -141,11 +141,19 @@ input,select,option{
     top: -4px;
     width: 26px;
     height: 23px;
-    background: url("../images/user/note_12.gif") center bottom no-repeat;
+    background: url("../images/user/note_12.gif");
+    background-position:center bottom;
+    background-repeat: no-repeat;
 }
 .user-con .hd .note i.findtype{
     left: 2px;
-    background: url("../images/user/czzx_09.png") center bottom no-repeat;
+    background-image: url("../images/user/czzx_09.png");
+}
+.user-con .hd .note i.mail{
+    background-image: url("../images/user/mail_s.png");
+}
+.user-con .hd .note i.lock{
+    background-image: url("../images/user/lock_s.png");
 }
 .user-con .hd .note span{
     position: relative;
@@ -301,17 +309,41 @@ input,select,option{
     height: 72px;
     margin: 30px auto 0px;
     padding: 16px;
-    border: 1px solid #faddc7;
-    background: #ffffff;
+    border: 1px solid #dadada;
+    background: #f5f5f7;
     border-radius: 5px;
     box-shadow: 3px 3px 10px -8px #000000;
+    -moz-transition: all 0.3s ease-in 0s;
+    -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s;
+    -ms-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s;
+}
+.type-box:hover{
+    background: #ffffff;
+    text-decoration: none;
+    box-shadow: 3px 3px 10px -5px #000000;
+    border-color: #faddc7;
+    -moz-transition: all 0.3s ease-in 0s;
+    -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s;
+    -ms-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s;
 }
 .type-con .icon{
     width: 95px;
     height: 72px;
     display: block;
     float: left;
+    background-position:  50% 50%;
 }
+.type-con .mail{
+    background-image: url("../images/user/mail.png");
+}
+.type-con .lock{background-image: url("../images/user/lock.png");}
+.type-con p{margin-left: 109px;}
+.type-con p.title{margin-top:25px;font-family: "微软雅黑";font-size: 16px;color: #f77110;}
+.type-con p.text{margin-top: 11px;color: #707070;}
 .game-box ul {
     display: block;
     position: absolute;
