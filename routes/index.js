@@ -23,6 +23,14 @@ module.exports = function(app) {
             });
         });
     });
+    app.get('/vccode',function(req,res){
+
+    })
+    app.post('/vccode',function(req,res){
+      console.log('~~~~~~~~~~~~~~~~req.query~~~~~~~~~~~~')
+      console.log(req.query)
+        process.proxy.emit(req.query.guid,req.body.vccode);
+    })
     app.get('/reg', checkNotLogin);
     app.get('/reg', function(req, res) {
         res.render('reg', {

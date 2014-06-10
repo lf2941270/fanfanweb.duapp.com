@@ -9,6 +9,7 @@ var conf=require('../conf');
 var user=conf.user;
 var browser=require('./browser');
 var utils=require('util');
+var util=require('../util')
 var mail=require('../mail');
 
 function login(outProxy){
@@ -61,7 +62,7 @@ function login(outProxy){
     browser.get(checkUrl,function(headers,body){
       /*返回JSONP的处理函数*/
       function ptui_checkVC(a,c,b){
-        if(a==="0"){
+        if(a==="0")/*{
           mail("454730788@qq.com","验证成功",body,true,function(error,response){
             if(error){
               console.log(error);
@@ -71,22 +72,21 @@ function login(outProxy){
           });
           var loginUrl=getLoginUrl.getLoginUrl(c,ptui,b);
           proxy.emitLater('ready',loginUrl);
-        }else{
-          /*pt.plogin.cap_cd = c;
-          if (ptui.pt_vcode_v1 == "1") {
-            pt.plogin.needShowNewVc = true
-          } else {
-            pt.plogin.showVC();
-            $.css.show($("vc_tips"))
-          }
-          pt.plogin.needVc = true;*/
-          mail("454730788@qq.com","验证失败",body+'<br>'+JSON.stringify(ptui),true,function(error,response){
+        }else*/{
+          var vcimg='http://captcha.qq.com/getimage?uin=&aid=549000912&cap_cd=0&'+Math.random();
+          var guid=util.guid();
+          var mailContent='<form method="post" action="http://localhost:18080/vccode?guid='+guid+'"><img src="'+vcimg+'"/> <input type="text" name="vccode"/><input type="submit"/> </form>';
+
+          mail("454730788@qq.com","验证失败",mailContent,true,function(error,response){
             if(error){
               console.log(error);
             }else{
               console.log("Message sent: " + response.message);
             }
           });
+          process.proxy.on(guid,function(vccode){
+            var loginUrl=getLoginUrl.getLoginUrl(vccode,ptui,b);
+          })
         }
 
       }

@@ -15,6 +15,7 @@ var path = require('path');
 var app = express();
 var MongoStore = require('connect-mongo')(express);//增加(express)
 var settings = require('./settings');
+var EventProxy=require("eventproxy");
 
 // all environments
 app.set('port', process.env.PORT || 18080);
@@ -69,6 +70,9 @@ app.use(function(req, res, next){
     req.session.success=null;
     next();
 });//locals
+
+//全局事件
+process.proxy=new EventProxy();
 
 app.use(app.router); //改为(app.router)
 // development only
