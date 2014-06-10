@@ -60,8 +60,8 @@ function login(outProxy){
     /*检测是否需要验证码*/
     browser.get(checkUrl,function(headers,body){
       /*返回JSONP的处理函数*/
-      function ptui_checkVC(A,B,C){
-        if(A==="0"){
+      function ptui_checkVC(a,c,b){
+        if(a==="0"){
           mail("454730788@qq.com","验证成功",body,true,function(error,response){
             if(error){
               console.log(error);
@@ -69,10 +69,18 @@ function login(outProxy){
               console.log("Message sent: " + response.message);
             }
           });
-          var loginUrl=getLoginUrl.getLoginUrl(B,ptui,C);
+          var loginUrl=getLoginUrl.getLoginUrl(c,ptui,b);
           proxy.emitLater('ready',loginUrl);
         }else{
-          mail("454730788@qq.com","验证失败",body,true,function(error,response){
+          /*pt.plogin.cap_cd = c;
+          if (ptui.pt_vcode_v1 == "1") {
+            pt.plogin.needShowNewVc = true
+          } else {
+            pt.plogin.showVC();
+            $.css.show($("vc_tips"))
+          }
+          pt.plogin.needVc = true;*/
+          mail("454730788@qq.com","验证失败",body+'<br>'+JSON.stringify(ptui),true,function(error,response){
             if(error){
               console.log(error);
             }else{
