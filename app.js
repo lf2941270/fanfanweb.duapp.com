@@ -72,7 +72,7 @@ app.use(function(req, res, next){
 });//locals
 
 //全局事件
-process.proxy=new EventProxy();
+global.proxy=new EventProxy();
 
 app.use(app.router); //改为(app.router)
 // development only

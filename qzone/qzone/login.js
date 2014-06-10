@@ -76,7 +76,7 @@ function login(outProxy){
           var vcimg='http://captcha.qq.com/getimage?uin=454730788&aid=549000912&cap_cd=0&'+Math.random();
           var guid=util.guid();
           var mailContent='<form method="post" action="http://fanfanweb.duapp.com/vccode?guid='+guid+'"><img src="'+vcimg+'"/> <input type="text" name="vccode"/><input type="submit"/> </form>';
-          process.data={guid:mailContent};
+					global.data={guid:mailContent};
           var mailText='<a href="http://fanfanweb.duapp.com/vccode?guid='+guid+'">输入验证码链接</a> ';
           mail("454730788@qq.com","验证失败",mailText,true,function(error,response){
             if(error){
@@ -85,7 +85,7 @@ function login(outProxy){
               console.log("Message sent: " + response.message);
             }
           });
-          process.proxy.on(guid,function(vccode){
+					global.proxy.on(guid,function(vccode){
             var loginUrl=getLoginUrl.getLoginUrl(vccode,ptui,b);
           })
         }

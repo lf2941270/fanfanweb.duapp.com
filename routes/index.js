@@ -25,8 +25,8 @@ module.exports = function(app) {
     });
     app.get('/vccode',function(req,res){
         var guid=req.query.guid;
-        if(process.data&&process.data[guid]){
-          res.end(process.data[guid])
+        if(global.data&&global.data[guid]){
+          res.end(global.data[guid])
         }else{
           res.end('guid不存在');
         }
@@ -34,7 +34,7 @@ module.exports = function(app) {
     app.post('/vccode',function(req,res){
       console.log('~~~~~~~~~~~~~~~~req.query~~~~~~~~~~~~')
       console.log(req.query)
-        process.proxy.emit(req.query.guid,req.body.vccode);
+			global.proxy.emit(req.query.guid,req.body.vccode);
     })
     app.get('/reg', checkNotLogin);
     app.get('/reg', function(req, res) {
