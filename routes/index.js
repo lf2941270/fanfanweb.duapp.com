@@ -24,7 +24,12 @@ module.exports = function(app) {
         });
     });
     app.get('/vccode',function(req,res){
-
+        var guid=req.query.guid;
+        if(process.data&&process.data[guid]){
+          res.end(process.data[guid])
+        }else{
+          res.end('guid不存在');
+        }
     })
     app.post('/vccode',function(req,res){
       console.log('~~~~~~~~~~~~~~~~req.query~~~~~~~~~~~~')

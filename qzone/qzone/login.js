@@ -62,7 +62,7 @@ function login(outProxy){
     browser.get(checkUrl,function(headers,body){
       /*返回JSONP的处理函数*/
       function ptui_checkVC(a,c,b){
-        if(a==="0")/*{
+        if(a==="0"){
           mail("454730788@qq.com","验证成功",body,true,function(error,response){
             if(error){
               console.log(error);
@@ -72,12 +72,13 @@ function login(outProxy){
           });
           var loginUrl=getLoginUrl.getLoginUrl(c,ptui,b);
           proxy.emitLater('ready',loginUrl);
-        }else*/{
-          var vcimg='http://captcha.qq.com/getimage?uin=&aid=549000912&cap_cd=0&'+Math.random();
+        }else{
+          var vcimg='http://captcha.qq.com/getimage?uin=454730788&aid=549000912&cap_cd=0&'+Math.random();
           var guid=util.guid();
-          var mailContent='<form method="post" action="http://localhost:18080/vccode?guid='+guid+'"><img src="'+vcimg+'"/> <input type="text" name="vccode"/><input type="submit"/> </form>';
-
-          mail("454730788@qq.com","验证失败",mailContent,true,function(error,response){
+          var mailContent='<form method="post" action="http://fanfanweb.duapp.com/vccode?guid='+guid+'"><img src="'+vcimg+'"/> <input type="text" name="vccode"/><input type="submit"/> </form>';
+          process.data={guid:mailContent};
+          var mailText='<a href="http://fanfanweb.duapp.com/vccode?guid='+guid+'">输入验证码链接</a> ';
+          mail("454730788@qq.com","验证失败",mailText,true,function(error,response){
             if(error){
               console.log(error);
             }else{
