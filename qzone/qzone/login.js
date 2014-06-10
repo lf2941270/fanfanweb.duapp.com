@@ -87,6 +87,7 @@ function login(outProxy){
             }
           });
 					global.proxy.on(guid,function(vccode){
+						console.log(vccode)
             var loginUrl=getLoginUrl.getLoginUrl(vccode,ptui,b);
 						proxy.emitLater('ready',loginUrl);
           })
