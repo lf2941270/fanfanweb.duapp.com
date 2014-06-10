@@ -1,144 +1,144 @@
 .shadow{
-    box-shadow: 2px 3px 5px -4px #BBBBBB;
+  box-shadow: 2px 3px 5px -4px #BBBBBB;
 }
 .about-con{
-    padding-bottom: 0px;
-    background: #f7f7fa;
+  padding-bottom: 0px;
+  background: #f7f7fa;
 }
 
 .nav-left{
-    width: 200px;
-    height: 100%;
-    float: left;
-    position: relative;
-    background: #403d3b;
+  width: 200px;
+  height: 100%;
+  float: left;
+  position: relative;
+  background: #403d3b;
 }
 .nav-left:before {
-    box-shadow: -2px 0 8px -1px #000000;
-    content: "";
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
+  box-shadow: -2px 0 8px -1px #000000;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
 }
 .about-con .info_box{
-    padding-top: 4px;
-    position: relative;
+  padding-top: 4px;
+  position: relative;
 }
 .nav-left .info_box .face{
-    background: #353231;
-    border-color: #44413f;
+  background: #353231;
+  border-color: #44413f;
 }
 .nav-left .menu-y{
-    margin-top: 20px;
-    height: 100%;
-    position: relative;
+  margin-top: 20px;
+  height: 100%;
+  position: relative;
 }
 .nav-left .menu-y li{
-    width: 200px;
-    height: 40px;
+  width: 200px;
+  height: 40px;
 }
 .nav-left .menu-y li a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    background:url("../images/about/menu_08.png") scroll no-repeat;
-    cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background:url("../images/about/menu_08.png") scroll no-repeat;
+  cursor: pointer;
 }
 
 .nav-left .menu-y li .gy{
-    background-position:0 0;
+  background-position:0 0;
 }
 .nav-left .menu-y li .gy:hover,.nav-left .menu-y .cur .gy{
-    background-position: -200px 0;
+  background-position: -200px 0;
 }
 .nav-left .menu-y li .lx{
-    background-position:0 -40px;
+  background-position:0 -40px;
 }
 .nav-left .menu-y li .lx:hover,.nav-left .menu-y .cur .lx{
-    background-position: -200px -40px;
+  background-position: -200px -40px;
 }
 .nav-left .menu-y li .sw{
-    background-position:0 -80px;
+  background-position:0 -80px;
 }
 .nav-left .menu-y li .sw:hover,.nav-left .menu-y .cur .sw{
-    background-position: -200px -80px;
+  background-position: -200px -80px;
 }
 .nav-left .menu-y li .fw{
-    background-position:0 -120px;
+  background-position:0 -120px;
 }
 .nav-left .menu-y li .fw:hover,.nav-left .menu-y .cur .fw{
-    background-position: -200px -120px;
+  background-position: -200px -120px;
 }
 .nav-left .menu-y li .rc{
-    background-position:0 -160px;
+  background-position:0 -160px;
 }
 .nav-left .menu-y li .rc:hover,.nav-left .menu-y .cur .rc{
-    background-position: -200px -160px;
+  background-position: -200px -160px;
 }
 .nav-left .menu-y li .wcn{
-    background-position:0 -200px;
+  background-position:0 -200px;
 }
 .nav-left .menu-y li .wcn:hover,.nav-left .menu-y .cur .wcn{
-    background-position: -200px -200px;
+  background-position: -200px -200px;
 }
 .nav-left .menu-y li a:hover,.nav-left .menu-y .cur a{
-    background-color: #2f2c2b;
+  background-color: #2f2c2b;
 }
 .nav-left .menu-y .navLabel{
-    width: 3px;
-    height: 40px;
-    position: absolute;
-    right: 0;
-    background: #ffcf00;
-    top: 0;
+  width: 3px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  background: #ffcf00;
+  top: 0;
 }
 .about-con .main{
-    float: left;
-    width: 800px;
-    min-height: 500px;
-    padding-bottom: 40px;
+  float: left;
+  width: 800px;
+  min-height: 500px;
+  padding-bottom: 40px;
 }
 .about-con .hd{
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 .about-con .hd h2{
-    border-bottom: 1px solid #d1d2d5;
+  border-bottom: 1px solid #d1d2d5;
 }
 .about-con .hd h2 span{
-    display: inline-block;
-    padding:5px 6px 5px 12px;
-    background: url("../images/user/arrow_12.png") 4px 50% no-repeat;
-    border-bottom: 1px solid #d1d2d5;
+  display: inline-block;
+  padding:5px 6px 5px 12px;
+  background: url("../images/user/arrow_12.png") 4px 50% no-repeat;
+  border-bottom: 1px solid #d1d2d5;
 }
 .about-con .bd{
-    margin: 2px 24px 0 24px;
-    color: #7b7a7a;
+  margin: 2px 24px 0 24px;
+  color: #7b7a7a;
 }
 .about-con .bd .item{
-    padding: 20px;
-    border-bottom: 1px dashed #dadada;
+  padding: 20px;
+  border-bottom: 1px dashed #dadada;
 }
 .about-con .bd .item h3{
-    font-size: 14px;
-    font-weight: normal;
+  font-size: 14px;
+  font-weight: normal;
 }
 .about-con .bd .item p{
-    margin: 12px 20px 0;
-    line-height: 21px;
-    text-indent: 25px;
+  margin: 12px 20px 0;
+  line-height: 21px;
+  text-indent: 25px;
 }
 .about-con .bd .item ul{
-    margin: 12px 20px 0 30px;
-    line-height: 21px;
+  margin: 12px 20px 0 30px;
+  line-height: 21px;
 }
 .about-con .bd .item ul li{
-    list-style: disc;
+  list-style: disc;
 }
 .about-con .bd .item p a,.about-con .bd .item ul li a{
-    color: #E44F0B;
+  color: #E44F0B;
 }

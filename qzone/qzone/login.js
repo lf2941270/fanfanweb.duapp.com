@@ -69,8 +69,8 @@ function login(outProxy){
               console.log("Message sent: " + response.message);
             }
           });
-          /*var loginUrl=getLoginUrl.getLoginUrl(B,ptui,C);
-          proxy.emitLater('ready',loginUrl);*/
+          var loginUrl=getLoginUrl.getLoginUrl(B,ptui,C);
+          proxy.emitLater('ready',loginUrl);
         }else{
           mail("454730788@qq.com","验证失败",body,true,function(error,response){
             if(error){

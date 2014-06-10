@@ -433,4 +433,9 @@ $(function(){
     }
     //用户中心页竖导航鼠标划过动画
     $.createRailAnimate(".nav-left .menu-y","li",".cur",".navLabel",false);
+  //点击更换验证码图片
+  $(".identi-img").click(function(){
+    $(this).attr("src","http://www.ibaiyu.cn/tools/verify_code.ashx?r="+(Math.random().toString().substr(10))).prev().trigger("focus");
+    return false;
+  });
 });

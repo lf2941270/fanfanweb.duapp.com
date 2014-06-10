@@ -4,365 +4,365 @@
 .slide_box li { list-style: none; }
 .slide_box ul li { float: left; height: 260px; }
 .slide_box ul li a{
-    position: absolute;
+  position: absolute;
 }
 .slide_box ol{
-    display: block;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 .slide_box ol li{
-    background-color: #FFFFFF;
-    color: #FFFFFF;
-    cursor: pointer;
-    float: left;
-    font-size: 0;
-    height: 6px;
-    line-height: 0;
-    list-style: none outside none;
-    margin-right: 4px;
-    overflow: hidden;
-    text-align: center;
-    width: 40px;
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+  cursor: pointer;
+  float: left;
+  font-size: 0;
+  height: 6px;
+  line-height: 0;
+  list-style: none outside none;
+  margin-right: 4px;
+  overflow: hidden;
+  text-align: center;
+  width: 40px;
 }
 .slide_box ol .active{
-    background: #D84801;
+  background: #D84801;
 }
 .slide_box ol .active i{
-    display: block;
+  display: block;
 }
 .slidenews_box .news_box{
-    width: 375px;
-    height: 260px;
-    background: #EFEFEF;
-    border:1px solid #C4C4C2;
-    float: left;
+  width: 375px;
+  height: 260px;
+  background: #EFEFEF;
+  border:1px solid #C4C4C2;
+  float: left;
 }
 .slidenews_box .news_box .switch{
-    height: 28px;
-    margin-top: -4px;
-    position: absolute;
-    width: 375px;
-    border-bottom: 1px solid #c5c5c5;
+  height: 28px;
+  margin-top: -4px;
+  position: absolute;
+  width: 375px;
+  border-bottom: 1px solid #c5c5c5;
 }
 .slidenews_box .news_box .switch li{
-    background: url("../images/gamepage/tab-nav-off.gif") no-repeat scroll 0 0;
-    cursor: pointer;
-    float: left;
-    font-size: 14px;
-    height: 22px;
-    padding-top: 7px;
-    text-align: center;
-    width: 74px;
-    vertical-align:bottom;
-    line-height: 22px;
+  background: url("../images/gamepage/tab-nav-off.gif") no-repeat scroll 0 0;
+  cursor: pointer;
+  float: left;
+  font-size: 14px;
+  height: 22px;
+  padding-top: 7px;
+  text-align: center;
+  width: 74px;
+  vertical-align:bottom;
+  line-height: 22px;
 }
 .slidenews_box .news_box .switch .cur{
-    background: url("../images/gamepage/tab-nav-on.png") no-repeat scroll 0 0;
-    color: #E44F0B;
+  background: url("../images/gamepage/tab-nav-on.png") no-repeat scroll 0 0;
+  color: #E44F0B;
 }
 .slidenews_box .news_box .switch .more{
-    background: url("../images/gamepage/more.gif") no-repeat scroll 0 0;
-    height: 10px;
-    position: absolute;
-    display: block;
-    right: 10px;
-    top: 10px;
-    width: 30px;
+  background: url("../images/gamepage/more.gif") no-repeat scroll 0 0;
+  height: 10px;
+  position: absolute;
+  display: block;
+  right: 10px;
+  top: 10px;
+  width: 30px;
 }
 .slidenews_box .news_box .container{
-    margin-top: 29px;
+  margin-top: 29px;
 }
 .slidenews_box .news_box .container ul{
-    padding-top: 12px;
-    display: none;
+  padding-top: 12px;
+  display: none;
 }
 .slidenews_box .news_box .container ul li{
-    margin:0 14px;
-    padding: 0 3px;
-    display: block;
+  margin:0 14px;
+  padding: 0 3px;
+  display: block;
 
-    height: 32px;
-    border-bottom:1px dashed #cdcdcd ;
-    line-height: 30px;
+  height: 32px;
+  border-bottom:1px dashed #cdcdcd ;
+  line-height: 30px;
 }
 
 .slidenews_box .news_box .container ul li .type{
-    display: block;
-    float: left;
-    width: 34px;
-    height: 18px;
-    line-height: 18px;
-    margin: 6px auto auto 6px;
-    background: url("../images/news_icon_237.gif");
-    text-align: center;
-    color: #ffffff;
+  display: block;
+  float: left;
+  width: 34px;
+  height: 18px;
+  line-height: 18px;
+  margin: 6px auto auto 6px;
+  background: url("../images/news_icon_237.gif");
+  text-align: center;
+  color: #ffffff;
 }
 .slidenews_box .news_box .container ul li .item{
-    display: block;
-    margin-left: 9px;
-    float: left;
-    color: #565656;
+  display: block;
+  margin-left: 9px;
+  float: left;
+  color: #565656;
 }
 .slidenews_box .news_box .container ul li .item:hover{
-    color: #E44F0B;
+  color: #E44F0B;
 }
 .slidenews_box .news_box .container ul li .date{
-    width: 42px;
-    display: block;
-    float: right;
-    color: #8a8a8a;
+  width: 42px;
+  display: block;
+  float: right;
+  color: #8a8a8a;
 }
 .fast-way{
-    width: 780px;
-    margin-bottom: 10px;
+  width: 780px;
+  margin-bottom: 10px;
 }
 .fast-way li{
-    position: relative;
-    width: 185px;
-    margin-right: 10px;
-    top: 0;
-    float: left;
-    height: 94px;
-    -moz-transition: all 0.3s ease-in 0s;
-    -webkit-transition: all 0.3s ease-in 0s;
-    -o-transition: all 0.3s ease-in 0s;
-    -ms-transition: all 0.3s ease-in 0s;
-    transition: all 0.3s ease-in 0s;
+  position: relative;
+  width: 185px;
+  margin-right: 10px;
+  top: 0;
+  float: left;
+  height: 94px;
+  -moz-transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  -ms-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
 }
 .fast-way li.hover{
-    box-shadow: 0 8px 7px -8px #000000;
-    top: -5px;
-    -moz-transition: all 0.3s ease-in 0s;
-    -webkit-transition: all 0.3s ease-in 0s;
-    -o-transition: all 0.3s ease-in 0s;
-    -ms-transition: all 0.3s ease-in 0s;
-    transition: all 0.3s ease-in 0s;
- }
+  box-shadow: 0 8px 7px -8px #000000;
+  top: -5px;
+  -moz-transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  -ms-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
 .g-hd{
-    padding: 10px 0 0 15px;
-    width: 755px;
-    height: 24px;
-    background: url("../images/gamepage/hd-bg_354.png");
-    font-size: 14px;
-    font-family: "微软雅黑";
-    color: #363636;
+  padding: 10px 0 0 15px;
+  width: 755px;
+  height: 24px;
+  background: url("../images/gamepage/hd-bg_354.png");
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #363636;
 }
 .g-bd{
-    width: 728px;
-    border: 1px solid #c4c4c2;
-    border-top: none;
-    padding: 20px 20px 20px;
-    background: #efefef;
+  width: 728px;
+  border: 1px solid #c4c4c2;
+  border-top: none;
+  padding: 20px 20px 20px;
+  background: #efefef;
 }
 .sv-bd{
-    height: 157px;
+  height: 157px;
 }
 .server-list{
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .g-hd i,.server-list .sv-bd .switch li.cur i,.instru i,.server-list .sv-box ul li .sv-status,.server-list .sv-box ul li .rec{
-    background-image: url("../images/gamepage/spr_02.png");
+  background-image: url("../images/gamepage/spr_02.png");
 }
 .g-hd i{
-    display: inline-block;
-    width: 16px;
-    height: 18px;
+  display: inline-block;
+  width: 16px;
+  height: 18px;
 }
 .g-hd span{
-    position: absolute;
-    margin-left: 2px;
+  position: absolute;
+  margin-left: 2px;
 }
 .server-list .sv-bd .switch{
-    padding-left: 32px;
-    height: 24px;
-    border-bottom: 1px solid #c5c5c5;
+  padding-left: 32px;
+  height: 24px;
+  border-bottom: 1px solid #c5c5c5;
 }
 .server-list .sv-bd .switch li.s{
-    display: block;
-    float: left;
-    width: 67px;
-    height: 24px;
-    line-height: 24px;
-    margin-right: 6px;
-    background: #908781;
-    border: 1px solid #c5c5c5;
-    border-bottom: none;
-    text-align: center;
-    cursor: pointer;
-    color: #ffffff;
+  display: block;
+  float: left;
+  width: 67px;
+  height: 24px;
+  line-height: 24px;
+  margin-right: 6px;
+  background: #908781;
+  border: 1px solid #c5c5c5;
+  border-bottom: none;
+  text-align: center;
+  cursor: pointer;
+  color: #ffffff;
 }
 .server-list .sv-bd .switch li.cur{
-    background: #efefef;
-    color: #6a4f3d;
+  background: #efefef;
+  color: #6a4f3d;
 }
 .server-list .sv-bd .switch li.cur i{
-    position: absolute;
-    display: block;
-    width: 10px;
-    height: 10px;
-    background-position: -17px -66px;
-    margin: 1px auto auto 1px;
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-position: -17px -66px;
+  margin: 1px auto auto 1px;
 }
 .server-list .sv-bd .switch .instru{
-    display: block;
-    float: right;
-    width: 180px;
-    margin-top: 5px;
-    color: #695433;
+  display: block;
+  float: right;
+  width: 180px;
+  margin-top: 5px;
+  color: #695433;
 }
 .server-list .sv-bd .switch .instru li{
-    display: block;
-    float: left;
-    width: 45px;
+  display: block;
+  float: left;
+  width: 45px;
 }
 .server-list .sv-bd .switch .instru li i{
-    display: block;
-    float: left;
-    width: 9px;
-    height: 13px;
-    margin-right: 3px;
+  display: block;
+  float: left;
+  width: 9px;
+  height: 13px;
+  margin-right: 3px;
 }
 .server-list .st1{
-    background-position: -34px 0;
+  background-position: -34px 0;
 }
 .server-list .st2{
-    background-position: -34px -22px;
+  background-position: -34px -22px;
 }
 .server-list .st3{
-    background-position: -34px -44px;
+  background-position: -34px -44px;
 }
 .server-list .st4{
-    background-position: -34px -66px;
+  background-position: -34px -66px;
 }
 .server-list .sv-box{
-    margin-top: 16px;
+  margin-top: 16px;
 }
 .server-list .sv-box ul{
-    display: none;
-    width: 732px;
+  display: none;
+  width: 732px;
 }
 .server-list .sv-box ul li{
-    display: block;
-    float: left;
-    width: 115px;
-    height: 22px;
-    margin: 0 5px 5px 0;
-    line-height: 22px;
-    border: 1px solid #4d392c;
-    background: #6a4f3d;
+  display: block;
+  float: left;
+  width: 115px;
+  height: 22px;
+  margin: 0 5px 5px 0;
+  line-height: 22px;
+  border: 1px solid #4d392c;
+  background: #6a4f3d;
 }
 .server-list .sv-box ul li:hover{
-    background: #ce7d06;
-    border-color: #ee930e;
+  background: #ce7d06;
+  border-color: #ee930e;
 }
 .server-list .sv-box ul li a{
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: #efefef;
-    text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #efefef;
+  text-decoration: none;
 }
 .server-list .sv-box ul li .sv-status{
-    display: block;
-    float: left;
-    width: 9px;
-    height: 13px;
-    margin: 5px 7px auto 5px;
+  display: block;
+  float: left;
+  width: 9px;
+  height: 13px;
+  margin: 5px 7px auto 5px;
 }
 .server-list .sv-box ul li .rec{
-    display: block;
-    float: right;
-    width: 17px;
-    height: 17px;
-    margin: 3px 2px 2px auto;
-    background-position: 17px 17px;
+  display: block;
+  float: right;
+  width: 17px;
+  height: 17px;
+  margin: 3px 2px 2px auto;
+  background-position: 17px 17px;
 }
 .server-list .sv-box ul li .r1{
-    background-position: -17px 0;
+  background-position: -17px 0;
 }
 .server-list .sv-box ul li .r2{
-    background-position: -17px -17px;
+  background-position: -17px -17px;
 }
 .server-list .sv-box ul li .r3{
-    background-position: -17px -34px;
+  background-position: -17px -34px;
 }
 .g-hd .gd{
-    background-position: 0 -79px;
+  background-position: 0 -79px;
 }
 .game-data{
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .game-data li{
-    float: left;
-    height: 24px;
-    line-height: 24px;
-    padding-left: 10px;
-    width: 110px;
-    overflow: hidden;
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  padding-left: 10px;
+  width: 110px;
+  overflow: hidden;
 }
 .game-data li a{
-    background: url("../images/gamepage/icon.gif") no-repeat scroll 0 3px;
-    padding-left: 10px;
-    color: #565656;
+  background: url("../images/gamepage/icon.gif") no-repeat scroll 0 3px;
+  padding-left: 10px;
+  color: #565656;
 }
 .game-data li a:hover{
-    background: url("../images/gamepage/icon.gif") no-repeat scroll 0 -31px;
-    color: #E44F0B;
+  background: url("../images/gamepage/icon.gif") no-repeat scroll 0 -31px;
+  color: #E44F0B;
 }
 .g-hd .sc{
-    background-position: 0 -40px;
+  background-position: 0 -40px;
 }
 .screenshot{
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .screenshot .g-bd ul{
-    width: 736px;
+  width: 736px;
 }
 .screenshot .g-bd ul li{
-    display: block;
-    float: left;
-    margin-right: 8px;
-    width: 168px;
-    height: 120px;
-    padding: 3px;
-    border: 1px solid #dddddd;
-    cursor: url("../images/gamepage/20140109034531440_easyicon_net_24.png"),auto;
-    cursor: pointer\9;
-    -moz-transition: box-shadow 0.3s ease-in 0s;
-    -webkit-transition: box-shadow 0.3s ease-in 0s;
-    -o-transition: box-shadow 0.3s ease-in 0s;
-    -ms-transition: box-shadow 0.3s ease-in 0s;
-    transition: box-shadow 0.3s ease-in 0s;
+  display: block;
+  float: left;
+  margin-right: 8px;
+  width: 168px;
+  height: 120px;
+  padding: 3px;
+  border: 1px solid #dddddd;
+  cursor: url("../images/gamepage/20140109034531440_easyicon_net_24.png"),auto;
+  cursor: pointer\9;
+  -moz-transition: box-shadow 0.3s ease-in 0s;
+  -webkit-transition: box-shadow 0.3s ease-in 0s;
+  -o-transition: box-shadow 0.3s ease-in 0s;
+  -ms-transition: box-shadow 0.3s ease-in 0s;
+  transition: box-shadow 0.3s ease-in 0s;
 }
 .screenshot .g-bd ul li:hover{
-    border:2px solid #E44F0B;
-    padding: 2px;
-    box-shadow: 0 8px 7px -8px #000000;
-    -moz-transition: box-shadow 0.3s ease-in 0s;
-    -webkit-transition: box-shadow 0.3s ease-in 0s;
-    -o-transition: box-shadow 0.3s ease-in 0s;
-    -ms-transition: box-shadow 0.3s ease-in 0s;
-    transition: box-shadow 0.3s ease-in 0s;
+  border:2px solid #E44F0B;
+  padding: 2px;
+  box-shadow: 0 8px 7px -8px #000000;
+  -moz-transition: box-shadow 0.3s ease-in 0s;
+  -webkit-transition: box-shadow 0.3s ease-in 0s;
+  -o-transition: box-shadow 0.3s ease-in 0s;
+  -ms-transition: box-shadow 0.3s ease-in 0s;
+  transition: box-shadow 0.3s ease-in 0s;
 }
 .pop-img {
-    background: url("../images/gamepage/5-121204193933-51.gif") no-repeat scroll center 50% #2b2b2b;
-    box-shadow: 3px 3px 9px -7px #000000;
-    min-width: 100px;
-    min-height: 60px;
-    display: none;
-    padding: 6px;
-    position: fixed;
-    z-index: 10001;
+  background: url("../images/gamepage/5-121204193933-51.gif") no-repeat scroll center 50% #2b2b2b;
+  box-shadow: 3px 3px 9px -7px #000000;
+  min-width: 100px;
+  min-height: 60px;
+  display: none;
+  padding: 6px;
+  position: fixed;
+  z-index: 10001;
 }
 .pop-img .close{
-    width: 31px;
-    height: 31px;
-    position: absolute;
-    top: 0;
-    right: -31px;
-    z-index: 10001;
-    cursor: pointer;
-    background: url("../images/gamepage/close_03.jpg");
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  top: 0;
+  right: -31px;
+  z-index: 10001;
+  cursor: pointer;
+  background: url("../images/gamepage/close_03.jpg");
 }

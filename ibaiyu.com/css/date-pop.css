@@ -1,94 +1,94 @@
 .date-pop{
-    width: 226px;
-    height: 262px;
-    position: absolute;
-    left: -2px;
-    top:22px;
-    border-radius: 4px 4px 4px 4px;
-    border:1px solid #b5b5b5;
-    box-shadow: 2px 2px 6px -2px #ccc;
-    background: #ffffff;
-    display: none;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
+  width: 226px;
+  height: 262px;
+  position: absolute;
+  left: -2px;
+  top:22px;
+  border-radius: 4px 4px 4px 4px;
+  border:1px solid #b5b5b5;
+  box-shadow: 2px 2px 6px -2px #ccc;
+  background: #ffffff;
+  display: none;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
 }
 .date-pop-input{
-    position: absolute;
-    z-index: 1;
-    width: 80%;
-    height: 100%;
-    border: 0;
-    left: 0;
-    background: none;
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  height: 100%;
+  border: 0;
+  left: 0;
+  background: none;
 
 }
 .date-pop .arrow-top{
-    width: 16px;
-    height: 8px;
-    background: url("../images/user/arrow-top.png") no-repeat scroll 0 0;
-    position: absolute;
-    top: -8px;
-    left: 128px;
+  width: 16px;
+  height: 8px;
+  background: url("../images/user/arrow-top.png") no-repeat scroll 0 0;
+  position: absolute;
+  top: -8px;
+  left: 128px;
 }
 .date-pop .table-condensed{
-    margin: 4px auto;
-    text-align: center;
-    overflow: hidden;
+  margin: 4px auto;
+  text-align: center;
+  overflow: hidden;
 }
 .table-condensed td, .table-condensed th {
-    border: 0 none;
-    border-radius: 4px;
-    height: 20px;
-    text-align: center;
-    width: 20px;
-    padding: 4px 5px;
+  border: 0 none;
+  border-radius: 4px;
+  height: 20px;
+  text-align: center;
+  width: 20px;
+  padding: 4px 5px;
 }
 .table-condensed th.switch-date{
-    width: 145px;
+  width: 145px;
 }
 .table-condensed tr td.old,.table-condensed tr td.new {
-    color: #999999;
+  color: #999999;
 }
 .table-condensed tr td.today, .table-condensed tr td.today:hover, .table-condensed tr td.today.disabled, .table-condensed tr td.today.disabled:hover {
-    background-color: #FDE19A;
-    background-image: -moz-linear-gradient(center top , #FDD49A, #FDF59A);
-    background-image: -ms-linear-gradient(top,#fdd49a,#fdf59a);
-    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fdd49a),to(#fdf59a));
-    background-image: -webkit-linear-gradient(top,#fdd49a,#fdf59a);
-    background-image: -o-linear-gradient(top,#fdd49a,#fdf59a);
-    background-image: linear-gradient(top,#fdd49a,#fdf59a);
-    background-repeat: repeat-x;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  background-color: #FDE19A;
+  background-image: -moz-linear-gradient(center top , #FDD49A, #FDF59A);
+  background-image: -ms-linear-gradient(top,#fdd49a,#fdf59a);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#fdd49a),to(#fdf59a));
+  background-image: -webkit-linear-gradient(top,#fdd49a,#fdf59a);
+  background-image: -o-linear-gradient(top,#fdd49a,#fdf59a);
+  background-image: linear-gradient(top,#fdd49a,#fdf59a);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 .table-condensed tr td.day:hover {
-    background: none repeat scroll 0 0 #EEEEEE;
-    cursor: pointer;
+  background: none repeat scroll 0 0 #EEEEEE;
+  cursor: pointer;
 }
 .table-condensed tr td.active:active, .table-condensed tr td.active:hover:active, .table-condensed tr td.active.disabled:active, .table-condensed tr td.active.disabled:hover:active, .table-condensed tr td.active.active, .table-condensed tr td.active.active:hover, .table-condensed tr td.active.disabled.active, .table-condensed tr td.active.disabled.active:hover {
-    background-color: #E2440C;
+  background-color: #E2440C;
 }
 .table-condensed tr td.active, .table-condensed tr td.active:hover, .table-condensed tr td.active.disabled, .table-condensed tr td.active.disabled:hover {
-    background-color: #db3a00;
-    background-image: -moz-linear-gradient(center top , #db7100, #db3a00);
-    background-image: -ms-linear-gradient(top,#db7100,#db3a00);
-    background-image: -webkit-gradient(linear,0 0,0 100%,from(#db7100),to(#db3a00));
-    background-image: -webkit-linear-gradient(top,#db7100,#db3a00);
-    background-image: -o-linear-gradient(top,#db7100,#db3a00);
-    background-image: linear-gradient(top,#db7100,#db3a00);
-    background-repeat: repeat-x;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    color: #FFFFFF;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #db3a00;
+  background-image: -moz-linear-gradient(center top , #db7100, #db3a00);
+  background-image: -ms-linear-gradient(top,#db7100,#db3a00);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#db7100),to(#db3a00));
+  background-image: -webkit-linear-gradient(top,#db7100,#db3a00);
+  background-image: -o-linear-gradient(top,#db7100,#db3a00);
+  background-image: linear-gradient(top,#db7100,#db3a00);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 .table-condensed .prev,.table-condensed .next{
-    cursor: pointer;
+  cursor: pointer;
 }
 .table-condensed .prev:hover,.table-condensed .next:hover{
-    background: #EEEEEE;
+  background: #EEEEEE;
 }
 .table-condensed tfoot .today{
-    cursor: pointer;
+  cursor: pointer;
 }
 .table-condensed tfoot .today:hover{
-    background: #EEEEEE;
+  background: #EEEEEE;
 }
