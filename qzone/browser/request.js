@@ -16,7 +16,9 @@ module.exports=function(options,data,callback){
       body+=data;
     });
     res.on('end',function(){
-      callback(null,headers,body);
+      process.nextTick(function() {
+        callback(null,headers,body);
+      });
     });
     res.on('error',function(err){
       callback(err);

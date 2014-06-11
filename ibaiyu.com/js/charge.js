@@ -1,5 +1,8 @@
 $(document).ready(function(){
-
+    function setPayType(){
+      $("#PayType").val($(".menu-y").find(".cur").attr("data-value"));
+    }
+    setPayType()
     //充值中心页面创建Tab布局
     $(".charge-con").createTabBox({
         event:"click",
@@ -7,7 +10,8 @@ $(document).ready(function(){
         container:".main .bd",
         share:true,
         //每一次tab切换后都会执行的回调函数
-        callBack:function(){
+        callback:function(){
+            setPayType();
             typeInit.apply($("input[name='type']"));
             initHeight();
         }
@@ -29,21 +33,24 @@ $(document).ready(function(){
         })
 
     }
-    $(":radio").each(function(){
+    function radio(){
+      $(":radio").each(function(){
         radioInit.apply(this);
-    }).hover(function(){
-        $(this).next("label").addClass("hover");
-    },function(){
-        $(this).next("label").removeClass("hover");
-    }).on("change",function(){
-        radioInit.apply(this);
-    }).next("label").hover(
-        function(){
+      }).hover(function(){
+            $(this).next("label").addClass("hover");
+          },function(){
+            $(this).next("label").removeClass("hover");
+          }).on("change",function(){
+            radioInit.apply(this);
+          }).next("label").hover(
+          function(){
             $(this).addClass("hover");
-        },function(){
+          },function(){
             $(this).removeClass("hover");
-        }
-    );
+          }
+      );
+    }
+    radio();
     //选择游戏的交互
     //点击选择充值的游戏按钮选择游戏的框弹出，选择游戏后，改变该按钮上的文字为选择的游戏，然后弹出选择服务器的框
     function ChooseGame(){
@@ -72,11 +79,28 @@ $(document).ready(function(){
             $(me).parents(".choose-box").fadeOut().prev().prev().text($(me).next().text());
         }
         this.event=function(){
-            this.gameBtn.click(function(){
+            this.gameBtn.bind('click',function(){
                 _.serverBox.fadeOut();
                 _.gameBox.fadeIn();
+                _.loadGames();
             });
-            this.gameRadio.change(function(){
+            this.loadGames=function(){
+              $.ajax({
+                url:'/ibaiyu/admin/Servers/SdPay.ashx?method=GetGames',
+                success:function(data){
+                  var data=JSON.parse(data);
+                  var html='';
+                  for(var i= 0,len=data.length;i<len;i++){
+                    html+='<a><input type="radio" name="game" id="game'+data[i].Id+'" value="'+data[i].Id+'"><label for="game'+data[i].Id+'">'+data[i].Name+'</label></a>'
+                  }
+                  $(".game-box").append(html);
+                  _.radio=$(".choose-box").find(":radio");
+                  _.gameRadio=_.gameBox.find(":radio");
+                  radio();
+                }
+              })
+            }
+            this.gameRadio.bind('change',function(){
                 _.radioChoose(this);
                 _.gameid=$(this).attr("value");
                 //根据当前选中的value从服务器载入服务器列表

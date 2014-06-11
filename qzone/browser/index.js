@@ -77,9 +77,13 @@ Browser.prototype.dealSetCookie=function(setArr){
     }
     _.setCookie(deepValue);
   });
+  this.headers=this.headers||{};
 	this.headers.cookie=stringifyCookie(this.cookie);
 }
-Browser.prototype.get=function(href,callback){
+Browser.prototype.get=function(href,data,callback){
+  if(callback===undefined){
+    callback=data;
+  }
 	var _=this;
 	var options=url.parse(href);
 	options.method='get';
@@ -94,6 +98,7 @@ Browser.prototype.get=function(href,callback){
     if(headers.location!==undefined){
       _.get(headers.location,callback);
     }else{
+
       callback(headers,body);
     }
 	});

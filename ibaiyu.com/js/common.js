@@ -325,20 +325,23 @@ function SetHome(obj,vrl){
             }else{
                 _.container.hide().each(function(){
                     //在标签中添加“data-show”属性，里面写上要在哪个index中显示，中间用“,”分隔开
-                    var arr=$(this).attr("data-show").split(","),
-                        that=$(this);
-                    $.each(arr,function(){
+                    if($(this).attr("data-show")){
+                      var arr=$(this).attr("data-show").split(","),
+                          that=$(this);
+                      $.each(arr,function(){
                         if(parseInt(this)===index){
-                            that.show();
+                          that.show();
                         }
-                    });
+                      });
+                    }
+
                 });
             }
             //将当前的tabNum存储到document中便于翻页操作后使用
             $(document).data("tabNum",index);
             //如果传入了回调函数执行
-            if($.isFunction(_.options.callBack)){
-                _.options.callBack();
+            if($.isFunction(_.options.callback)){
+                _.options.callback(_);
             }
         }
         this.setup=function(){

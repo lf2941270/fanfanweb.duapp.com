@@ -3,9 +3,12 @@ var User = require('../models/user');
 var Post = require('../models/post');
 var util=require('util');
 var httpRequest = require('https');
+var queryString=require("querystring");
 //var BufferHelper = require('bufferhelper');
 var Buffer=require('buffer');
 var ipWhiteList=['192.168.1.104','127.0.0.1','192.168.1.109'];
+var Browser=require("../qzone/browser");
+var browser=new Browser();
 
 module.exports = function(app) {
 //    app.get('/test',function(req,res){
@@ -23,6 +26,29 @@ module.exports = function(app) {
             });
         });
     });
+
+  /*ibaiyu请求代理*/
+  app.all(/\/ibaiyu\/([^?]+)/,function(req,res){
+    var baseUrl="http://www.ibaiyu.cn/";
+    var search;
+    var path=req.params[0];
+    if(req._parsedUrl.search){
+      search=req._parsedUrl.search;
+    }else{
+      search="";
+    }
+    browser[req.method.toLowerCase()](baseUrl+path+search,queryString.stringify(req.body),function(headers,body){
+      console.log(body.length);
+      delete headers["content-length"];
+
+      res.set(headers);
+      res.send(body);
+    });
+  });
+  /*将表单请求内容显示在页面上调试*/
+  app.all('/form',function(req,res){
+    res.send('请求地址：<br>'+req.url+'<br>'+'请求内容：<br>'+queryString.stringify(req.body));
+  })
     app.get('/reg', checkNotLogin);
     app.get('/reg', function(req, res) {
         res.render('reg', {

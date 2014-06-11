@@ -76,14 +76,14 @@
                     </div>
                 </div>
                 <ul class="menu-y">
-                    <li class="cur"><a class="wy" title="网上银行充值"></a></li>
-                    <li><a class="by" title="百娱币充值"></a></li>
-                    <li><a class="qb" title="Q币充值"></a></li>
-                    <li><a class="zfb" title="支付宝余额支付"></a></li>
-                    <li><a class="szx" title="神州行易宝支付"></a></li>
-                    <li><a class="lt" title="联通卡易宝支付"></a></li>
-                    <li><a class="dx" title="电信卡易宝支付"></a></li>
-                    <li><a class="jw" title="骏网卡易宝支付"></a></li>
+                    <li class="cur" data-value="1"><a class="wy" title="网上银行充值"></a></li>
+                    <li data-value="7"><a class="by" title="百娱币充值"></a></li>
+                    <li data-value="5"><a class="qb" title="Q币充值"></a></li>
+                    <li data-value="8"><a class="zfb" title="支付宝余额支付"></a></li>
+                    <li data-value="2"><a class="szx" title="神州行易宝支付"></a></li>
+                    <li data-value="3"><a class="lt" title="联通卡易宝支付"></a></li>
+                    <li data-value="4"><a class="dx" title="电信卡易宝支付"></a></li>
+                    <li data-value="9"><a class="jw" title="骏网卡易宝支付"></a></li>
                     <li class="navLabel"></li>
                 </ul>
             </div>
@@ -91,7 +91,8 @@
                 <div class="hd">
                     <h2><span>充值中心</span></h2>
                 </div>
-                <form class="bd">
+                <form class="bd" action="/form" method="post">
+
                     <div class="item" data-show="0">
                         <h3>网银支付</h3>
                         <p class="item-bd">
@@ -229,6 +230,8 @@
                         </ul>
                     </div>
                     <input data-show="0,1,2,3,4,5,6,7" type="submit" value="" class="submit">
+                    <input type="hidden" name="PayType" id="PayType" value="">
+
                 </form>
             </div>
         </div>
