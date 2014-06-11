@@ -92,7 +92,6 @@ Shuo.prototype.createLikeForm=function(){
     active:0,
     fupdate:1
   }
-  console.log(this);
   console.log('(♥◠‿◠)ﾉ (♥◠‿◠)ﾉ (♥◠‿◠)ﾉ (♥◠‿◠)ﾉ (♥◠‿◠)ﾉ开心的昏割线 (♥◠‿◠)ﾉ (♥◠‿◠)ﾉ (♥◠‿◠)ﾉ (♥◠‿◠)ﾉ (♥◠‿◠)ﾉ (♥◠‿◠)ﾉ');
   console.log(form);
   return querystring.stringify(form);

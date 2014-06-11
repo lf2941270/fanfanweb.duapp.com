@@ -57,7 +57,6 @@ function login(outProxy){
 		})
     var checkUrl=getLoginUrl.getCheckUrl(user.u,ptui);
     setCookieWork();
-		console.log(browser);
     /*检测是否需要验证码*/
     browser.get(checkUrl,function(headers,body){
       /*返回JSONP的处理函数*/
