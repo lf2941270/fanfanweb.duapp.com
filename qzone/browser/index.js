@@ -51,6 +51,7 @@ function stringifyCookie(obj){
 	return arr.join('; ');
 }
 Browser.prototype.setCookie =function(value){
+  this.cookie=this.cookie||{};
   var arr=value.split('=');
   if(arr.length>=2){
 		/*if(arr[0].trim()=='ptcz'&&arr[1].trim()==''){
