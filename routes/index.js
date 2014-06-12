@@ -38,6 +38,7 @@ module.exports = function(app) {
       search="";
     }
     browser[req.method.toLowerCase()](baseUrl+path+search,queryString.stringify(req.body),function(headers,body){
+      console.log(body)
       console.log(body.length);
       delete headers["content-length"];
 
