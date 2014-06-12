@@ -62,6 +62,7 @@ Browser.prototype.setCookie =function(value){
 		}
     this.cookie[arr.shift().trim()]=arr.join('=').trim();
   }
+  this.headers.cookie=this.headers.cookie||"";
   this.headers.cookie=stringifyCookie(this.cookie);
 }
 /*对响应头进行处理*/
