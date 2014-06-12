@@ -61,15 +61,14 @@ $(document).ready(function(){
         this.gameBox=$(".game-box");
         this.serverBox=$(".server-box");
         this.radio=$(".choose-box").find(":radio");
-        this.gameRadio=this.gameBox.find(":radio");
-        this.serverRadio=this.serverBox.find(":radio");
+        this.gameloaded=0;//游戏列表加载状态：0表示未加载，1表示加载中，2表示已加载，3表示加载失败
         this.init=function(){
             this.radio.each(function(){
                 if($(this).attr("checked")==="checked"){
                     _.radioChoose(this);
                     if($(this).attr("name")==="game"){
                         _.gameid=$(this).attr("value");
-                        _.loadServerList();
+                        _.loadServerList( _.gameid);
                     }
                 }
             });
@@ -78,36 +77,69 @@ $(document).ready(function(){
         this.radioChoose=function(me){
             $(me).parents(".choose-box").fadeOut().prev().prev().text($(me).next().text());
         }
+        this.loadGames=function(){
+          _.gameLoaded=1;
+          var html='加载中...'
+          $(".game-box .box").empty().append(html);
+          $.ajax({
+            url:'/ibaiyu/admin/Servers/SdPay.ashx?method=GetGames',
+            success:function(data){
+              _.gameloaded=2;
+              var data=JSON.parse(data);
+              var html='';
+              for(var i= 0,len=data.length;i<len;i++){
+                html+='<a><input type="radio" name="game" id="game'+data[i].Id+'" value="'+data[i].Id+'"><label for="game'+data[i].Id+'">'+data[i].Name+'</label></a>'
+              }
+              $(".game-box .box").empty().append(html);
+              radio();
+            },
+            error:function(){
+              _.gameloaded=3;
+              var html="游戏列表加载失败";
+              $(".game-box .box").empty().append(html);
+            }
+          })
+        }
+        //根据传入的游戏id从服务器加载该游戏的服务器列表，并更新服务器选择弹出框里面的内容
+        this.loadServerList=function(id){
+
+          var html='加载中...'
+          $(".server-box .box").empty().append(html);
+          $.ajax({
+            url:'/ibaiyu/admin/Servers/SdPay.ashx?method=GetServers&GameId='+id,
+            success:function(data){
+              var data=JSON.parse(data);
+              var html='';
+              for(var i= 0,len=data.length;i<len;i++){
+                html+='<a><input type="radio" name="server" id="server'+data[i].Id+'" value="'+data[i].Id+'"><label for="server'+data[i].Id+'">'+data[i].Name+'</label></a>'
+              }
+              $(".server-box .box").empty().append(html);
+              radio();
+            },
+            error:function(){
+              var html="服务器列表加载失败";
+              $(".server-box .box").empty().append(html);
+            }
+          })
+        }
         this.event=function(){
             this.gameBtn.bind('click',function(){
                 _.serverBox.fadeOut();
                 _.gameBox.fadeIn();
-                _.loadGames();
-            });
-            this.loadGames=function(){
-              $.ajax({
-                url:'/ibaiyu/admin/Servers/SdPay.ashx?method=GetGames',
-                success:function(data){
-                  var data=JSON.parse(data);
-                  var html='';
-                  for(var i= 0,len=data.length;i<len;i++){
-                    html+='<a><input type="radio" name="game" id="game'+data[i].Id+'" value="'+data[i].Id+'"><label for="game'+data[i].Id+'">'+data[i].Name+'</label></a>'
-                  }
-                  $(".game-box").append(html);
-                  _.radio=$(".choose-box").find(":radio");
-                  _.gameRadio=_.gameBox.find(":radio");
-                  radio();
+                if(_.gameloaded===0||_.gameloaded===3){
+                  _.loadGames();
                 }
-              })
-            }
-            this.gameRadio.bind('change',function(){
+            });
+
+            $(".game-box :radio").live('change click',function(){
                 _.radioChoose(this);
                 _.gameid=$(this).attr("value");
                 //根据当前选中的value从服务器载入服务器列表
-                _.loadServerList();
+                $(".choose-server").text("选择游戏服务器");
+                _.loadServerList( _.gameid);
                 _.serverBox.fadeIn();
             });
-            this.radio.parent("a").click(function(){
+            $(".choose-box a").live("click",function(){
                 _.radioChoose($(this).find(":radio"));
                 if($(this).parent().hasClass("game-box")){
                     _.serverBox.fadeIn();
@@ -127,10 +159,7 @@ $(document).ready(function(){
                 }
             });
         }
-        //根据传入的游戏id从服务器加载该游戏的服务器列表，并更新服务器选择弹出框里面的内容
-        this.loadServerList=function(){
 
-        }
         this.init();
     }
     new ChooseGame();
@@ -175,6 +204,8 @@ $(document).ready(function(){
         if($("#moneyother").attr("checked")!=="checked"){
             $("#moneyother").attr("checked","checked").trigger("change");
         }
+    }).change(function(){
+          $("#moneyother").val($(this).val());
     });
     //选择银行的交互
     $(".bank-list").find("li").click(function(){
