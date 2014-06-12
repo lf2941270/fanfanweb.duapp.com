@@ -211,8 +211,54 @@ $(document).ready(function(){
     $(".bank-list").find("li").click(function(){
         $(this).addClass("select").find("input").attr("checked","checked").end().siblings().removeClass("select");
     }).hover(function(){
-            $(this).addClass("hover");
-        },function(){
-            $(this).removeClass("hover");
-        });
+        $(this).addClass("hover");
+    },function(){
+        $(this).removeClass("hover");
+    });
+    //提交表单时检验
+  $("#chargeForm").submit(function(){
+    if(!(checkForm("type")&&checkForm("username")&&checkForm("money"))){
+      return false;
+    }
+    if(getForm("type")==="1"){//如果是充值到游戏
+      if(!(checkForm("game")&&checkForm("server"))){
+        return false;
+      }
+    }
+    if(getForm("PayType")==="1"){//如果是使用网上银行充值
+      return checkForm("bank");
+    }
+  });
+  var formErr={
+    type:"请填写充值到哪里",
+    game:"请选择要充值的游戏",
+    server:"请选择要充值到哪个服务器",
+    username:"请填写要充值的账号",
+    money:"请选择充值金额",
+    bank:"请选择充值的银行"
+  }
+  //提供一个表单元素的name，检测改表单元素是否填写
+  function checkForm(name){
+    var val=getForm(name);
+    if(val!==undefined&&val!==""){
+      return true;
+    }else{
+      $.showErr(formErr[name]);
+      return false;
+    }
+  }
+  function getForm(name){
+    var val;
+    switch ($('[name="'+name+'"]').attr("type")){
+      case "radio":
+      case "checkbox":
+        val=$('[name="'+name+'"]:checked').val();
+        break;
+      case "text":
+      case "hidden":
+        val=$('[name="'+name+'"]').val();
+        break;
+    }
+    return val;
+  }
 });
