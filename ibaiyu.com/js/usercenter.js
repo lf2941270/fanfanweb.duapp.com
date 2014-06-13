@@ -304,7 +304,13 @@ $(function(){
         var index=$(this).index();
         $(this).addClass("cur").append("<i></i>").siblings().removeClass("cur").find("i").remove();
         $("#faceid").attr("value",index);
+        updateFaceImg();
     }).eq($("#faceid").val()).addClass("cur").append("<i></i>");
+    updateFaceImg();
+
+    function updateFaceImg(){
+      $(".face-big img").attr("src",$(".choose li.cur img").attr("src"));
+    }
     //站内信页面全选站内信
     $(".choose-all").toggle(function(){
         $(this).addClass("cancle-all").find("span").text("取消").parents("form").find("input:checkbox").attr("checked",true);
