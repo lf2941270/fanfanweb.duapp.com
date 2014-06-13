@@ -2,7 +2,18 @@ $(document).ready(function(){
     function setPayType(){
       $("#PayType").val($(".menu-y").find(".cur").attr("data-value"));
     }
-    setPayType()
+    setPayType();
+    function updateNeedPay(){
+      $.ajax({
+        url:"/ibaiyu/Czzx/Czzx.ashx?method=CheckMoney",
+        type:"post",
+        data:$("#chargeForm").serialize(),
+        success:function(data){
+          $(".need-pay").append(data);
+        }
+      })
+    }
+    updateNeedPay();
     //充值中心页面创建Tab布局
     $(".charge-con").createTabBox({
         event:"click",
@@ -88,7 +99,7 @@ $(document).ready(function(){
               var data=JSON.parse(data);
               var html='';
               for(var i= 0,len=data.length;i<len;i++){
-                html+='<a><input type="radio" name="game" id="game'+data[i].Id+'" value="'+data[i].Id+'"><label for="game'+data[i].Id+'">'+data[i].Name+'</label></a>'
+                html+='<a><input type="radio" name="GameId" id="game'+data[i].Id+'" value="'+data[i].Id+'"><label for="game'+data[i].Id+'">'+data[i].Name+'</label></a>'
               }
               $(".game-box .box").empty().append(html);
               radio();
@@ -111,7 +122,7 @@ $(document).ready(function(){
               var data=JSON.parse(data);
               var html='';
               for(var i= 0,len=data.length;i<len;i++){
-                html+='<a><input type="radio" name="server" id="server'+data[i].Id+'" value="'+data[i].Id+'"><label for="server'+data[i].Id+'">'+data[i].Name+'</label></a>'
+                html+='<a><input type="radio" name="ServerId" id="server'+data[i].Id+'" value="'+data[i].Id+'"><label for="server'+data[i].Id+'">'+data[i].Name+'</label></a>'
               }
               $(".server-box .box").empty().append(html);
               radio();
@@ -137,6 +148,7 @@ $(document).ready(function(){
                 //根据当前选中的value从服务器载入服务器列表
                 $(".choose-server").text("选择游戏服务器");
                 _.loadServerList( _.gameid);
+                updateNeedPay();
                 _.serverBox.fadeIn();
             });
             $(".choose-box a").live("click",function(){
@@ -189,9 +201,10 @@ $(document).ready(function(){
             }
         })
     }
-    typeInit.apply($("input[name='type']"));
-    $("input[name='type']").change(function(){
+    typeInit.apply($("input[name='Type']"));
+    $("input[name='Type']").change(function(){
        typeInit.apply(this);
+       updateNeedPay();
     });
     //其他金额被选中时对应的输入框获得焦点
     $("#moneyother").change(function(){
@@ -207,6 +220,9 @@ $(document).ready(function(){
     }).change(function(){
           $("#moneyother").val($(this).val());
     });
+    $("input[name='SelMoney']").change(function(){
+      updateNeedPay();
+    })
     //选择银行的交互
     $(".bank-list").find("li").click(function(){
         $(this).addClass("select").find("input").attr("checked","checked").end().siblings().removeClass("select");
@@ -217,25 +233,25 @@ $(document).ready(function(){
     });
     //提交表单时检验
   $("#chargeForm").submit(function(){
-    if(!(checkForm("type")&&checkForm("username")&&checkForm("money"))){
+    if(!(checkForm("Type")&&checkForm("UserName")&&checkForm("SelMoney"))){
       return false;
     }
-    if(getForm("type")==="1"){//如果是充值到游戏
-      if(!(checkForm("game")&&checkForm("server"))){
+    if(getForm("Type")==="1"){//如果是充值到游戏
+      if(!(checkForm("GameId")&&checkForm("ServerId"))){
         return false;
       }
     }
     if(getForm("PayType")==="1"){//如果是使用网上银行充值
-      return checkForm("bank");
+      return checkForm("chongzhi");
     }
   });
   var formErr={
-    type:"请填写充值到哪里",
-    game:"请选择要充值的游戏",
-    server:"请选择要充值到哪个服务器",
-    username:"请填写要充值的账号",
-    money:"请选择充值金额",
-    bank:"请选择充值的银行"
+    Type:"请填写充值到哪里",
+    GameId:"请选择要充值的游戏",
+    ServerId:"请选择要充值到哪个服务器",
+    UserName:"请填写要充值的账号",
+    SelMoney:"请选择充值金额",
+    chongzhi:"请选择充值的银行"
   }
   //提供一个表单元素的name，检测改表单元素是否填写
   function checkForm(name){

@@ -147,6 +147,7 @@ function SetHome(obj,vrl){
         (new  Popup()).init(me,o);
         return this;
     }
+
     /*创建一个显示错误信息的函数*/
     $.showErr=function(msg){
         function createRandName(){

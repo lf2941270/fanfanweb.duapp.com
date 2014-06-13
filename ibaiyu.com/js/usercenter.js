@@ -309,7 +309,7 @@ $(function(){
     updateFaceImg();
 
     function updateFaceImg(){
-      $(".face-big img").attr("src",$(".choose li.cur img").attr("src"));
+      $(".face img").attr("src",$(".choose li.cur img").attr("src"));
     }
     //站内信页面全选站内信
     $(".choose-all").toggle(function(){

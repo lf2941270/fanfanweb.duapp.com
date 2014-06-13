@@ -37,6 +37,12 @@ module.exports = function(app) {
     }else{
       search="";
     }
+    console.log(req.headers)
+    browser.init({
+      "Content-Type":req.headers["content-type"],
+      "Referer":req.headers["referer"]
+       }
+      );
     browser[req.method.toLowerCase()](baseUrl+path+search,queryString.stringify(req.body),function(headers,body){
       console.log(body)
       console.log(body.length);

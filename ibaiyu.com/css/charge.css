@@ -139,6 +139,9 @@
   font-size: 14px;
   font-weight: normal;
 }
+.charge-con .bd .item h3.need-pay{
+  margin-top: 8px;
+}
 .charge-con .bd .item .item-bd{
   margin-top: 16px;
   position:relative;
