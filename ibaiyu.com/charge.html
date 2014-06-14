@@ -164,7 +164,7 @@
                             <div class="game-box choose-box">
                                 <i></i>
                                 <div class="box">
-
+                                    <a><input type="radio" name="GameId" id="game0" value="0" checked="checked"><label for="game0">请选择游戏</label></a>
                                 </div>
 
                             </div>
@@ -183,7 +183,7 @@
                     <div class="item" data-show="0,1,2,3,4,5,6,7">
                         <h3>选择充值金额：</h3>
                         <p class="item-bd">
-                            <a><input type="radio" name="SelMoney" id="money1" value="10" /><label for="money1">10元</label></a>
+                            <a><input type="radio" name="SelMoney" id="money1" value="10" checked="checked"/><label for="money1">10元</label></a>
                             <a><input type="radio" name="SelMoney" id="money2" value="20" /><label for="money2">20元</label></a>
                             <a><input type="radio" name="SelMoney" id="money3" value="30" /><label for="money3">30元</label></a>
                             <a><input type="radio" name="SelMoney" id="money4" value="50" /><label for="money4">50元</label></a>
@@ -196,11 +196,15 @@
                             <a><input type="radio" name="SelMoney" id="money11" value="3000" /><label for="money11">3000元</label></a>
                             <a><input type="radio" name="SelMoney" id="money12" value="5000" /><label for="money12">5000元</label></a>
                             <a class="sp">
-                                <input type="radio" name="SelMoney" id="moneyother" value="" /><label class="sp" for="moneyother">其他金额:</label>
+                                <input type="radio" name="SelMoney" id="moneyother" value="0" /><label class="sp" for="moneyother">其他金额:</label>
                                 <input class="input mn" type="text" name="other" id="other" placeholder="请输入金额"/>元
                             </a>
                         </p>
-                        <h3 class="need-pay">应付金额：</h3>
+                        <p class="pay clearfix">
+                            <span>应付金额：</span><span class="need-pay data"></span>
+                            <span>获得：</span><span class="will-get data"></span>
+                        </p>
+
                     </div>
                     <div class="item" data-show="0">
                         <h3>选择充值的银行：</h3>

@@ -9,7 +9,10 @@ $(document).ready(function(){
         type:"post",
         data:$("#chargeForm").serialize(),
         success:function(data){
-          $(".need-pay").append(data);
+//          $(".need-pay").empty().append(data);
+					var arr=data.split("|");
+					$(".need-pay").empty().append(arr[0]+"人民币");
+					$(".will-get").empty().append(arr[1]);
         }
       })
     }
@@ -24,14 +27,14 @@ $(document).ready(function(){
         callback:function(){
             setPayType();
             typeInit.apply($("input[name='type']"));
-            initHeight();
+            initHeight(".charge-con");
         }
     });
     //充值中心左边竖导航鼠标划过动画
     $.createRailAnimate(".nav-left .menu-y","li",".cur",".navLabel",false);
     //设置外层容器高度，不然左边无法自适应高度
-    function initHeight(){
-        $(".charge-con").css("height",$(".charge-con").find(".main").outerHeight());
+    function initHeight(con){
+        $(con).css("height",$(".charge-con").find(".main").outerHeight());
     }
     //给单选表单添加hover和checked等增强效果
     function radioInit(){
@@ -218,9 +221,13 @@ $(document).ready(function(){
             $("#moneyother").attr("checked","checked").trigger("change");
         }
     }).change(function(){
-          $("#moneyother").val($(this).val());
+					var val=$(this).val();
+					if(val===""){
+						val=0;
+					}
+          $("#moneyother").val(val);
     });
-    $("input[name='SelMoney']").change(function(){
+    $("input[name='SelMoney']").add("#other").change(function(){
       updateNeedPay();
     })
     //选择银行的交互

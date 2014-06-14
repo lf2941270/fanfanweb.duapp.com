@@ -6,7 +6,7 @@ $(document).ready(function(){
         trigger:".menu-y li",
         container:".main",
         //每一次tab切换后都会执行的回调函数
-        callBack:function(){
+        callback:function(){
 
             initHeight();
             $.setParmOfHref("tabNum",$(document).data("tabNum"));

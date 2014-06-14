@@ -139,8 +139,15 @@
   font-size: 14px;
   font-weight: normal;
 }
-.charge-con .bd .item h3.need-pay{
+.charge-con .bd .item .pay{
   margin-top: 8px;
+  font-size: 14px;
+}
+.charge-con .bd .item .need-pay{
+  margin-right: 15px;
+}
+.charge-con .bd .item .data{
+  color: #e34812;
 }
 .charge-con .bd .item .item-bd{
   margin-top: 16px;
