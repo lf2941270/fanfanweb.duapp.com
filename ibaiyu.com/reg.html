@@ -48,10 +48,10 @@
                     <h2><i>注册账号</i><span>已有账号,<a href="login.html">直接登录》</a> </span></h2>
                 </div>
                 <div class="bd">
-                    <form class="reg-form" method="post" action="reg.php">
+                    <form class="reg-form" method="post" action="form">
                         <div class="item">
                             <label for="username">输入账号:</label>
-                            <input type="text" name="username" id="username" placeholder="请输入账号" class="user input">
+                            <input type="text" name="txtname" id="username" placeholder="请输入账号" class="user input">
                             <div class="info-box">
                                 <p class="error"></p>
 								<p class="correct"></p>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="item">
                             <label for="password">设置密码:</label>
-                            <input type="password" name="password" id="password" placeholder="请输入密码" class="psw input">
+                            <input type="password" name="txtpwd" id="password" placeholder="请输入密码" class="psw input">
                             <!--给i添加class "low""medium""high"分别表示密码强度低中高-->
                             <p class="intensity"><span>强度</span><i class=""></i></p>
                             <div class="info-box">
@@ -75,7 +75,7 @@
                         </div>
                         <div class="item">
                             <label for="confirm">确认密码:</label>
-                            <input type="password" name="confirm" id="confirm" placeholder="请再次输入密码" class="psw-cf input">
+                            <input type="password" name="txtagainpwd" id="confirm" placeholder="请再次输入密码" class="psw-cf input">
                             <div class="info-box">
                                 <p class="error"></p>
 						        <p class="correct"></p>
@@ -86,7 +86,7 @@
                         </div>
                         <div class="item">
                             <label for="email">认证邮箱:</label>
-                            <input type="email" name="email" id="email" placeholder="请输入认证邮箱" class="email input">
+                            <input type="email" name="txtemail" id="email" placeholder="请输入认证邮箱" class="email input">
                             <div class="info-box">
                                 <p class="error"></p>
 						        <p class="correct"></p>
@@ -99,7 +99,7 @@
                         <p class="item rule">根据《网络游戏管理暂行办法》关于实名注册的规定，请正确填写您的真实姓名与身份证号码。</p>
                         <div class="item">
                             <label for="realname">真实姓名:</label>
-                            <input type="text" name="realname" id="realname" placeholder="请输入真实姓名" class="realname input">
+                            <input type="text" name="txtrealname" id="realname" placeholder="请输入真实姓名" class="realname input">
                             <div class="info-box">
                                 <p class="error"></p>
 						        <p class="correct"></p>
@@ -110,7 +110,7 @@
                         </div>
                         <div class="item">
                             <label for="idcard">身份证号:</label>
-                            <input type="text" name="idcard" id="idcard" placeholder="请输入身份证号" class="idcard input">
+                            <input type="text" name="txtcard" id="idcard" placeholder="请输入身份证号" class="idcard input">
                             <div class="info-box">
                                 <p class="error"></p>
 						        <p class="correct"></p>
@@ -121,7 +121,7 @@
                         </div>
                         <div class="item">
                             <label for="identi">验 证 码:</label>
-                            <input type="text" name="identi" id="identi" placeholder="请输入验证码" class="identi input">
+                            <input type="text" name="txtyzm" id="identi" placeholder="请输入验证码" class="identi input">
                             <img class="identi-img" width="70" height="22" title="点击切换验证码" src="http://www.ibaiyu.cn/tools/verify_code.ashx"/>
                             <div class="info-box">
                                 <p class="error"></p>
@@ -132,7 +132,7 @@
                             </div>
                         </div>
                         <div class="item">
-                            <input type="checkbox" name="agree" id="agree">
+                            <input type="checkbox" name="ckxy" id="agree">
                             <label for="agree" class="agree">我已经阅读并接受<a href="#" target="_blank" title="爱百娱用户服务条款">《爱百娱用户服务条款》</a></label>
                             <div class="info-box">
                                 <p class="error"></p>
