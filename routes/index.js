@@ -248,7 +248,7 @@ function beforeAll(req,res,next){
   if(ipWhiteList.indexOf(req._remoteAddress)===-1){
       res.send('<script type="text/javascript">alert("你好，来自'+req._remoteAddress+'的逗比！你暂时没有访问权限哦！")</script>');
   }else{
-    res.set('Access-Control-Allow-Origin', 'http://localhost:*');
+    res.set('Access-Control-Allow-Origin', 'http://localhost:63342,http://localhost:8080,http://localhost:18080,http://localhost:3000');
 
     next();
   }
