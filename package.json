@@ -2,6 +2,8 @@
   "name": "application-name",
   "version": "0.0.1",
   "private": true,
+  "node-main":"app.js",
+  "main":"http://localhost:18080",
   "scripts": {
     "start": "node app.js"
   },
@@ -15,5 +17,10 @@
     "bae-message":"*",
     "weibo":"*",
     "nodemailer":"*"
+  },
+  "window": {
+    "toolbar": false,
+    "width": "100%",
+    "height": "100%"
   }
 }
