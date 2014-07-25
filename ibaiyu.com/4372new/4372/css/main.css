@@ -707,7 +707,7 @@ div.flickr span.disabled {
 
 
 
-/*yxlb_show.aspx�������㲿��*/
+/*yxlb_show.html�������㲿��*/
 #showno{display: none;}
 #shade{position: fixed;z-index: 10; display: none; left: 0; top:0; width: 100%; height: 100%; background: #000; opacity: 0.6; filter:alpha(opacity=60);}
 .pop-con{position: fixed;z-index: 11; background: #f8f7f4; box-shadow: 3px 3px 9px -7px #000; display: none;}
@@ -717,7 +717,7 @@ div.flickr span.disabled {
 .pop-con .close{position: absolute; width: 36px;height: 36px;top: 0px;right: 0px;background: url("../images/popclose.png") 12px 12px no-repeat;}
 .pop-con .close:hover{background-position: -20px -20px;}
 .con{ border-radius: 4px 4px 4px 4px; border: 1px solid #d6d6d6; background: #ffffff; margin-bottom: 10px; padding-bottom: 10px;}
-/*yxlb_show.aspx�������㲿��*/
+/*yxlb_show.html�������㲿��*/
 
 /*���*/
 .clearfix:after{
