@@ -302,15 +302,15 @@ a img{cursor:pointer;}
 .topbg3 .banner{width:100%;height:450px;background:url(../images/banner3.png) top;}
 .bodytop{margin:0 auto;width:1000px;height:128px;overflow:hidden;position:relative;}
 .kuang8{margin:0 auto;width:285px;height:520px;overflow:hidden;background:url(../images/kuang8_bg.png) no-repeat;position:relative;}
-.kuang8 .title{height:40px;line-height:40px;font-size:16px;font-weight:bold;text-align:center;color:#e93505;}
+.kuang8 .title{height:40px;line-height:40px;font-size:16px;font-weight:bold;text-align:center;color:#1286b3;}
 .kuang8 form{margin:0 auto;width:210px;}
 .kuang8 form label{display:block;line-height:27px;}
-.kuang8 form strong{float:left;font:14px;color:#FF6600;}
+.kuang8 form strong{float:left;font:14px;color:#0b7fac;}
 .kuang8 form .finput{float:left;margin-left:5px;margin-bottom:10px;padding:0 10px;width:130px;height:27px;background:url(../images/login_input_bg.png);border-width:0;}
 .kuang8 form .vcodeinput{margin-left:5px;margin-bottom:10px;padding:0 10px;width:70px;height:27px;background:url(../images/vcode_input_bg.png);border-width:0;}
 .kuang8 form .fcheck{display:inline;margin-left:40px;font-size:12px;}
 .kuang8 form .forget{margin-right:5px;font-size:12px;}
-.kuang8 form .forget a{color:#FF6600;}
+.kuang8 form .forget a{color:#0b7fac;}
 .kuang8 form .but_login{width:100px;height:30px;background:url(../images/but_login.png);}
 .kuang8 form .but_reg{width:100px;height:30px;background:url(../images/but_reg.png);}
 
@@ -327,10 +327,10 @@ a img{cursor:pointer;}
 .kuang9 .gcard{display:block;text-align:center;}
 
 .kuang10{margin:0 auto;width:285px;height:590px;overflow:hidden;background:url(../images/kuang8_bg_01.png);position:relative;}
-.kuang10 .title{height:40px;line-height:40px;font-size:16px;font-weight:bold;text-align:center;color:#e93505;}
+.kuang10 .title{height:40px;line-height:40px;font-size:16px;font-weight:bold;text-align:center;color:#1286b3;}
 .kuang10 form{margin:0 auto;width:210px;}
 .kuang10 form label{display:block;line-height:27px;}
-.kuang10 form strong{float:left;font:14px;color:#FF6600;}
+.kuang10 form strong{float:left;font:14px;color:#0b7fac;}
 .kuang10 form .finput{float:left;margin-left:5px;margin-bottom:10px;padding:0 10px;width:130px;height:27px;background:url(../images/login_input_bg.png);border-width:0;}
 .kuang10 form .vcodeinput{margin-left:5px;margin-bottom:10px;padding:0 10px;width:70px;height:27px;background:url(../images/vcode_input_bg.png);border-width:0;}
 .kuang10 form .fcheck{display:inline;margin-left:40px;font-size:12px;}
@@ -419,7 +419,7 @@ a img{cursor:pointer;}
 /*=========================��Ľ���=============================*/
 .kuang12{margin:0 auto;padding:5px;width:450px;height:435px;overflow:hidden;background:url(../images/kuang12_bg.png);}
 .kuang12 .title{height:34px;line-height:34px;background:url(../images/kuang12_title_bg.png);}
-.kuang12 .title .text{width:170px;height:34px;line-height:41px;background:url(../images/kuang12_title_text_bg.png);text-align:center;color:#e73505;font-size:12px;font-weight:bold;}
+.kuang12 .title .text{width:170px;height:34px;line-height:41px;background:url(../images/kuang12_title_text_bg.png);text-align:center;color:#0b7fac;font-size:12px;font-weight:bold;}
 .kuang7 .tab_head div{float:left;width:108px;text-align:center;font-weight:bold;color:#ffffff;cursor:pointer;}
 .kuang7 .tab_head div.cur{color:#0b7fac;background:url(../images/kuang7_tab_cur_bg.png);}
 .kuang7 .tab_head a:hover{text-decoration:none;}
@@ -488,7 +488,7 @@ a.link1:hover{text-decoration:none;}
 .reg .tab_head span{float:right;}
 .reg .tab_body{height:440px;}
 
-a.link2{display:inline-block;width:140px;height:30px;line-height:30px;text-align:center;font-size:12px;font-weight:bold;color:#e93706!important;}
+a.link2{display:inline-block;width:140px;height:30px;line-height:30px;text-align:center;font-size:12px;font-weight:bold;color:#0b7fac!important;}
 
 .czform{color:#3a3a3a;}
 .czform *{float:left;}
@@ -513,7 +513,7 @@ form .finput{margin-left:5px;margin-bottom:10px;padding:0 10px;width:130px;heigh
 .zlx{}
 .zlx ul{}
 .zlx ul li{height:40px;line-height:40px;font-size:12px;border-bottom:1px dashed #dedede;}
-.zlx ul li.head{color:#ff9900;}
+.zlx ul li.head{color:#0b7fac;}
 .zlx ul li .col1{float:left;width:38px;text-align:center;}
 .zlx ul li .col2{float:left;width:125px;}
 .zlx ul li .col3{float:left;width:300px;}
@@ -532,7 +532,7 @@ form .finput{margin-left:5px;margin-bottom:10px;padding:0 10px;width:130px;heigh
 .infolinks a{text-decoration:none;}
 
 .gametop{height:37px;line-height:37px;background:url(../images/gametop_bg.png);}
-.gameleft{float:left;width:185px;background:url(../images/gameleft_bg.png);}
+.gameleft{float:left;width:185px;background:url(../images/gameleft_bg.png);position: absolute;}
 .gamemain{float:right;background:black;color:#cccccc;}
 
 .icon_01{padding-left:32px;background:url(../images/icon_01.gif) left no-repeat;color:black!important;}
@@ -550,8 +550,8 @@ form .finput{margin-left:5px;margin-bottom:10px;padding:0 10px;width:130px;heigh
 
 a.linkhd{display:block;width:111px;height:22px;line-height:22px;background:url(../images/but_hd_bg.png);color:white!important;font-size:12px;font-weight:bold;text-align:center;}
 a.linkhd:hover{text-decoration:none;}
-a.link3{display:block;line-height:22px;font-size:12px;color:#df8400;}
-a.linkbg2{display:block;width:109px;height:27px;line-height:27px;background:url(../images/but_bg2.png);color:#da532c!important;font-size:12px;font-weight:bold;text-align:center;}
+a.link3{display:block;line-height:22px;font-size:12px;color:#0b7fac;}
+a.linkbg2{display:block;width:109px;height:27px;line-height:27px;background:url(../images/but_bg2.png);color:#0b7fac!important;font-size:12px;font-weight:bold;text-align:center;}
 a.linkbg2:hover{text-decoration:none;}
 
 .split{width:31px;height:62px;background:url(../images/split.png);cursor:pointer;}

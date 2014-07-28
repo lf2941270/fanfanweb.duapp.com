@@ -39,11 +39,11 @@
 
         var left_showorhide = function () {
             if ($(".split").attr("isshow") == "true") {
-                $(".gameleft").css({ "position": "absolute", "left": "-154px" });
+                $(".gameleft").animate({ "left": "-154px" });
                 $(".split").attr("isshow", "false").removeClass("show").removeClass("hide").addClass("show");
             }
             else {
-                $(".gameleft").css({ "position": "absolute", "left": "0" })
+                $(".gameleft").animate({  "left": "0" })
                 $(".split").attr("isshow", "true").removeClass("show").removeClass("hide").addClass("hide");
             }
             $(window).resize();
