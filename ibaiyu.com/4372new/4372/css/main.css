@@ -322,7 +322,7 @@ a img{cursor:pointer;}
 
 .kuang9{float:left;width:242px;height:360px;overlow:hidden;background:transparent;}
 .kuang9 .pic{margin:0 auto;margin-top:7px;width:225px;height:140px;border:1px solid #a4a4a4;}
-.kuang9 .title{display:block;margin:0 auto;width:227px;height:29px;line-height:29px;overflow:hidden;font-size:16px;font-weight:bold;text-align:center;}
+.kuang9 .title{display:block;margin:0 auto;width:227px;height:29px;line-height:29px;overflow:hidden;font-size:16px;font-weight:bold;text-align:center;color:#0b7fac;}
 .kuang9 .infos{padding:10px;padding-top:0px;margin:0 auto;width:207px;height:70px;line-height:17px;overflow:hidden;font-size:12px;background:transparent;color:black;}
 .kuang9 .gcard{display:block;text-align:center;}
 
@@ -358,7 +358,7 @@ a img{cursor:pointer;}
 .kuang11 .tab_body div.cur{display:block;}
 /*������ϸҳ�棨���ݣ�A��ǩ*/
 .kuang11 .tab_body a:hover {
-	color: #FF6600;
+	color: #0b7fac;
 	text-decoration: underline;
 
 }
@@ -607,7 +607,7 @@ div.flickr span.disabled {
 /*��Ϸ����ҳ�棨��һƪ����һƪ��*/
 .page p {
 	font-weight: bold;
-	color: #FF6600;
+	color: #0b7fac;
 }
 .page a {
 	text-decoration: none;
@@ -615,7 +615,7 @@ div.flickr span.disabled {
 	font-weight: normal;
 }
 .page a:hover {
-	color: #FF6600;
+	color: #0b7fac;
 	text-decoration: underline;
 }
 .page {
@@ -637,7 +637,7 @@ div.flickr span.disabled {
 
 /*�û����ģ���Ϸ����)�󶨳ɹ�˵��*/
 .user_anquan_sfz_input{ padding-top:30px; padding-left:30px;line-height:40px; font-size:15px}
-.user_anquan_sfz_input a{ font-weight:bold;color:#FF6600}
+.user_anquan_sfz_input a{ font-weight:bold;color:#0b7fac}
 /*�û����ģ���Ϸ����)�󶨳ɹ�˵��*/
 
 /*11��27���޸�����ҳ�����?*/
