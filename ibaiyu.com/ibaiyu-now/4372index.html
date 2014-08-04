@@ -1060,22 +1060,25 @@
 <style>
   .cus-float{
     position: fixed;
-    bottom: 150px;
+    top: 475px;
     /*top: 194px;*/
   }
   .cus-float .cartoon{
     position: absolute;
+    z-index: 1;
     width: 50px;
     height: 50px;
     left: 125px;
-    top: -10px;
+    top: -44px;
   }
   .cus-float .content{
     overflow: hidden;
-    box-shadow:1px 1px 16px -6px #000000;
+    box-shadow:4px 4px 16px -8px #000000;
     line-height: 1;
   }
   .cus-float .hd{
+    position: relative;
+    z-index: 2;
     width: 194px;
     height: 43px;
     background: #fda20d;
@@ -1088,19 +1091,25 @@
     background:#f3930b ;
   }
   .cus-float .bd{
-    width: 194px;
+    width: 192px;
     background: #fff;
-    height: 160px;
+    border-width:0px 1px 1px;
+    border-color:#ccc;
+    border-style: solid;
   }
   .cus-float .bd ul{
     font-family: "微软雅黑";
     font-size: 12px;
     color: #545454;
     margin: 0;
-    padding:8px 10px;
+    padding:12px 0px;
   }
   .cus-float .bd ul li{
-    margin-top:11px;
+    padding: 0 12px;
+    line-height:26px;
+  }
+  .cus-float .bd ul li:nth-child(odd){
+    background: #f0f0f0;
   }
   .cus-float .panel{
     position: relative;
@@ -1126,7 +1135,7 @@
     width: 0;
     height: 0;
     border-width: 3px;
-    border-style: solid dashed dashed;
+    border-style: solid;
     border-color:  transparent transparent #ffffff;
     font-size: 0;
     line-height: 0;
@@ -1154,12 +1163,14 @@
   <div class="content">
     <div class="hd">
       <a href="http://wpa.qq.com/msgrd?v=3&uin=4008378088&site=qq&menu=yes" title="点击联系在线客服">
-        <img src="4372/images/cus-icon_06.png" alt=""/>
+        <img style="margin-left: 30px" src="4372/images/cus-icon_06.png" alt=""/>
       </a>
     </div>
     <div class="bd">
+
       <ul>
-        <li>客服在线时间： 9：00 - 21：00</li>
+        <li></li>
+        <li>客服在线时间：9:00-21:00</li>
         <li>客服热线：027-83937330</li>
         <li>客服邮箱：kefu@ibaiyu.cn</li>
         <li>投诉邮箱：tousu@ibaiyu.cn</li>
@@ -1172,14 +1183,14 @@
 </div>
 <script>
   $(function(){
-    var cartoon=$(".cartoon").find("img");
+    var cartoon=$(".cartoon");
     function pngTogif(num){
       if(!num||num==6){
         num=1;
       }
       setTimeout(function(){
         num++;
-        cartoon.attr("src","4372/images/cartoon/"+num+".png");
+        cartoon.find("img").attr("src","4372/images/cartoon/"+num+".png");
         pngTogif(num);
       },150)
     }
@@ -1188,17 +1199,31 @@
     var content=cusFloat.find(".content");
     var w=content.width();
     var h=content.height();
-    cusFloat.css("left",$(window).width()/2+500+10+"px");//设置离左边的距离
-
+    if($(window).width()>=1428){
+      cusFloat.css("left",$(window).width()/2+500+20+"px");//设置离左边的距离
+    }else{
+      cusFloat.css("right",0+"px");
+    }
     $(".panel").click(function(){
       if(!$(this).hasClass("panel-off")){
         $(this).addClass("panel-off");
         $(this).find("span").text("展开");
-        content.animate({"width":"43px","height":"43px"})
+        content.stop().animate({"height":"43px"},function(){
+          content.find(".hd img").animate({"margin-left":"0px"});
+          content.animate({"width":"43px"},6000);
+        });
+        cartoon.stop().css("transform","rotateY(0deg)").animate({"left":"0px"},8000)
       }else{
         $(this).removeClass("panel-off");
         $(this).find("span").text("收起");
-        content.animate({"width":w+"px","height":h+"px"})
+        content.stop().animate({"width":w+"px","height":h+"px"},function(){
+          content.find(".hd img").animate({"margin-left":"30px"});
+        });
+        cartoon.css("transform","rotateY(180deg)")
+        cartoon.stop().animate({"left":"125px"},8000,function(){
+          cartoon.css("transform","rotateY(0deg)")
+        })
+
       }
     })
   })
