@@ -1,7 +1,7 @@
 $(function(){
 	var cartoon=$(".cartoon");
 	var cartoonImg=cartoon.find("img");
-	(function(){
+	/*(function(){
 		var num=1;
 		function pngTogif(){
 			setInterval(function(){
@@ -13,7 +13,7 @@ $(function(){
 			},150);
 		}
 		pngTogif();
-	})();
+	})();*/
 
 	var cusFloat=$(".cus-float");
 	var content=cusFloat.find(".content");
