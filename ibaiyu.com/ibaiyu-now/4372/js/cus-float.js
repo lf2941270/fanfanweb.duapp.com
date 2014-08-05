@@ -81,7 +81,7 @@ $(function(){
 			});
 		}
 		function getDirection(){//获取气泡应该的朝向
-			if(outerBox[0].offsetLeft>=40){
+			if(outerBox[0].offsetLeft>=40||$(window).width()<1408){
 				return "l";
 			}else{
 				return "r";
