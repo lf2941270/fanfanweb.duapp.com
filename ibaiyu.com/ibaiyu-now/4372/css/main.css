@@ -145,15 +145,16 @@ a img{cursor:pointer;}
 .kuang4 .top{width:740px;height:73px;background:url(../images/kuang4_top_bg.png);}
 .kuang4 .bottom{width:740px;height:10px;background:url(../images/kuang4_bottom_bg.png);}
 .kuang4 .mid{width:740px;background:url(../images/kuang4_mid_bg.png);}
-.gitem{float:left;margin-left:16px;margin-bottom:16px;width:219px;height:117px;border:2px solid #e5e5e5;background:#ffffff;}
-.gitem .left{float:left;width:98px;}
+.gitem{float:left;margin-left:16px;margin-bottom:16px;width:220px;height:109px;border:1px solid #e9e4da;background:#fbf8f0;border-radius: 5px;}
+.gitem:hover{background: #ffffff; border-color: #ffc548;box-shadow: 3px 3px 8px -6px #000;}
+.gitem .left{float:left;width:98px;position: relative;margin: 3px 0 0 3px;}
 .gitem .left .pic{margin:0 auto;width:90px;height:90px;overflow:hidden;border:1px solid #e5e5e5;}
-.gitem .left .title{height:20px;line-height:20px;text-align:center;color:red;}
+.gitem .left .title{width:90px;height:20px;line-height:20px;text-align:center;color:#fdb410;position: absolute; bottom: 0;left: 4px;background:url("../images/black_60.png");font-size: 12px;}
 .gitem .left .title a{color:red;}
-.gitem .right{float:right;width:105px;}
+.gitem .right{float:right;width:110px;margin: 3px 3px 0 0;}
 .gitem .right .type{height:20px;line-height:20px;font-size:12px;color:#787878;}
 .gitem .right .state{height:20px;line-height:20px;font-size:12px;color:#787878;}
-.gitem .gotogame{display:block;width:31px;height:30px;background:url(../images/but_09.png);color:#e82f00!important;font-size:12px;font-weight:bold;text-align:center;padding:10px 5px;}
+.gitem .gotogame{margin-left:4px;display:block;width:31px;height:31px;background:url(../images/but_09.png);color:#fff !important;font-size:12px;font-weight:bold;text-align:center;padding:8px 4px;}
 .gitem .gotogame{text-decoration:none!important;}
 
 .gameinfo{width:245px;height:324px;overflow:hidden;background:transparent;}

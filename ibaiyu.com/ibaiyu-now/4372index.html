@@ -617,39 +617,40 @@
 
 <!--循环数据结束-->
 
-
-<div class="clear"></div>
-</div>
-<div class="bottom"></div>
-</div>
 <!--分页开始-->
 <div style="text-align:center;">
 
 
-    <!-- AspNetPager 7.4.2 Copyright:2003-2012 Webdiyer (www.webdiyer.com) -->
-    <script type="text/javascript"
-            src="/WebResource.axd?d=R0EnSpzip8fhXKKDK_foE4RQxqjP6ogUwkpiSnt0EIazP4uGZqJd0STnCfrX2pSy6HxIYO8s6xhnsiHGgqGqisfncPbrIbEEYG_kdQaU7OkkaDojYoMDxppXvFLcU8Yy0&amp;t=635211472944215272"></script>
-    <div id="Pager" class="paginator">
-        <a disabled="disabled" style="margin-right:5px;">首页</a><a disabled="disabled"
-                                                                  style="margin-right:5px;">上一页</a><span class="cpb"
-                                                                                                         style="margin-right:5px;">1</span><a
-            href="javascript:__doPostBack('Pager','2')" style="margin-right:5px;">2</a><a
-            href="javascript:__doPostBack('Pager','2')" style="margin-right:5px;">下一页</a><a
-            href="javascript:__doPostBack('Pager','2')" style="margin-right:5px;">尾页</a>&nbsp;&nbsp;<input type="text"
-                                                                                                           value="1"
-                                                                                                           name="Pager_input"
-                                                                                                           id="Pager_input"
-                                                                                                           onkeydown="ANP_keydown(event,'Pager_btn');"
-                                                                                                           onkeyup="ANP_keyup('Pager_input');"
-                                                                                                           style="width:30px;"><input
-            type="image" src="../images/go.gif" name="Pager" id="Pager_btn"
-            onclick="if(ANP_checkInput('Pager_input',2,'页索引超出范围！','页索引不是有效的数值！')){__doPostBack('Pager','')} else{return false}">
-    </div>
-    <!-- AspNetPager 7.4.2 Copyright:2003-2012 Webdiyer (www.webdiyer.com) -->
+  <!-- AspNetPager 7.4.2 Copyright:2003-2012 Webdiyer (www.webdiyer.com) -->
+  <script type="text/javascript"
+          src="/WebResource.axd?d=R0EnSpzip8fhXKKDK_foE4RQxqjP6ogUwkpiSnt0EIazP4uGZqJd0STnCfrX2pSy6HxIYO8s6xhnsiHGgqGqisfncPbrIbEEYG_kdQaU7OkkaDojYoMDxppXvFLcU8Yy0&amp;t=635211472944215272"></script>
+  <div id="Pager" class="paginator">
+    <a disabled="disabled" style="margin-right:5px;">首页</a><a disabled="disabled"
+                                                              style="margin-right:5px;">上一页</a><span class="cpb"
+                                                                                                     style="margin-right:5px;">1</span><a
+      href="javascript:__doPostBack('Pager','2')" style="margin-right:5px;">2</a><a
+      href="javascript:__doPostBack('Pager','2')" style="margin-right:5px;">下一页</a><a
+      href="javascript:__doPostBack('Pager','2')" style="margin-right:5px;">尾页</a>&nbsp;&nbsp;<input type="text"
+                                                                                                     value="1"
+                                                                                                     name="Pager_input"
+                                                                                                     id="Pager_input"
+                                                                                                     onkeydown="ANP_keydown(event,'Pager_btn');"
+                                                                                                     onkeyup="ANP_keyup('Pager_input');"
+                                                                                                     style="width:30px;"><input
+      type="image" src="../images/go.gif" name="Pager" id="Pager_btn"
+      onclick="if(ANP_checkInput('Pager_input',2,'页索引超出范围！','页索引不是有效的数值！')){__doPostBack('Pager','')} else{return false}">
+  </div>
+  <!-- AspNetPager 7.4.2 Copyright:2003-2012 Webdiyer (www.webdiyer.com) -->
 
 
 </div>
 <!--分页结束-->
+<div class="clear"></div>
+</div>
+
+<div class="bottom"></div>
+</div>
+
 
 </div>
 
@@ -1060,7 +1061,7 @@
 <style>
   .cus-float{
     position: fixed;
-    top: 475px;
+    top: 460px;
     /*top: 194px;*/
   }
   .cus-float .cartoon{
@@ -1071,6 +1072,56 @@
     left: 125px;
     top: -44px;
   }
+  @-webkit-keyframes bubble
+  {
+    0%   {transform:scale(0.1,0.1);}
+    9%  {transform:scale(1.2,1.2);}
+    12%  {transform:scale(1,1);}
+    90% {opacity: 1}
+    100% {opacity: 0;}
+  }
+  @keyframes bubble
+  {
+    0%   {transform:scale(0.1,0.1);}
+    12%  {transform:scale(1.1,1.1);}
+    15%  {transform:scale(1,1);}
+    90% {opacity: 1}
+    100% {opacity: 0;}
+  }
+  .cus-float .cartoon .bubble{
+    position: absolute;
+    z-index: 5000;
+    width: 128px;
+    height: 108px;
+    top: -110px;
+  }
+  .cus-float .cartoon .bubble.normal{
+    -webkit-animation:bubble 4.6s;
+    animation:bubble 4.6s;
+  }
+  .cus-float .cartoon .bubble-l{
+    background: url("4372/images/bubble-l.png");
+    left: -93px;
+  }
+  .cus-float .cartoon .bubble-r{
+    background: url("4372/images/bubble-r.png");
+    left: 16px;
+  }
+  .cus-float .cartoon .bubble p{margin:30px 18px auto 14px;line-height: 18px;text-indent: 25px;font-size: 12px;color: #ef7b3b;font-family: "微软雅黑";}
+  .cus-float .cartoon .bubble-close{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    z-index: 9999;
+    right: 2px;
+    top: 6px;
+    background-image: url("4372/images/bubble-close.gif");
+    background-position: -14px 0;
+    cursor: pointer;
+  }
+  .cus-float .cartoon .bubble-close:hover{
+    background-position: 0 0;
+  }
   .cus-float .content{
     overflow: hidden;
     box-shadow:4px 4px 16px -8px #000000;
@@ -1079,19 +1130,19 @@
   .cus-float .hd{
     position: relative;
     z-index: 2;
-    width: 194px;
+    width: 184px;
     height: 43px;
     background: #fda20d;
   }
   .cus-float .hd a{
-    width: 194px;
+    width: 184px;
     display: block;
   }
   .cus-float .hd:hover{
     background:#f3930b ;
   }
   .cus-float .bd{
-    width: 192px;
+    width: 182px;
     background: #fff;
     border-width:0px 1px 1px;
     border-color:#ccc;
@@ -1159,17 +1210,16 @@
 <div class="cus-float">
   <div class="cartoon">
     <img src="4372/images/cartoon/1.png" alt=""/>
+
   </div>
   <div class="content">
     <div class="hd">
       <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODA3NjcxNF8xNjczNzRfNDAwODM3ODA4OF8yXw" title="点击联系在线客服">
-        <img style="margin-left: 30px" src="4372/images/cus-icon_06.png" alt=""/>
+        <img style="margin-left: 28px" src="4372/images/cus-icon_06.png" alt=""/>
       </a>
     </div>
     <div class="bd">
-
       <ul>
-        <li></li>
         <li>客服在线时间：9:00-21:00</li>
         <li>客服热线：027-83937330</li>
         <li>客服邮箱：kefu@ibaiyu.cn</li>
@@ -1181,52 +1231,6 @@
   </div>
   <div class="panel"><span>收起</span><b></b></div>
 </div>
-<script>
-  $(function(){
-    var cartoon=$(".cartoon");
-    function pngTogif(num){
-      if(!num||num==6){
-        num=1;
-      }
-      setTimeout(function(){
-        num++;
-        cartoon.find("img").attr("src","4372/images/cartoon/"+num+".png");
-        pngTogif(num);
-      },150)
-    }
-    pngTogif()
-    var cusFloat=$(".cus-float");
-    var content=cusFloat.find(".content");
-    var w=content.width();
-    var h=content.height();
-    if($(window).width()>=1428){
-      cusFloat.css("left",$(window).width()/2+500+20+"px");//设置离左边的距离
-    }else{
-      cusFloat.css("right",0+"px");
-    }
-    $(".panel").click(function(){
-      if(!$(this).hasClass("panel-off")){
-        $(this).addClass("panel-off");
-        $(this).find("span").text("展开");
-        content.stop().animate({"height":"43px"},function(){
-          content.find(".hd img").animate({"margin-left":"0px"});
-          content.animate({"width":"43px"},6000);
-        });
-        cartoon.stop().css("transform","rotateY(0deg)").animate({"left":"0px"},8000)
-      }else{
-        $(this).removeClass("panel-off");
-        $(this).find("span").text("收起");
-        content.stop().animate({"width":w+"px","height":h+"px"},function(){
-          content.find(".hd img").animate({"margin-left":"30px"});
-        });
-        cartoon.css("transform","rotateY(180deg)")
-        cartoon.stop().animate({"left":"125px"},8000,function(){
-          cartoon.css("transform","rotateY(0deg)")
-        })
-
-      }
-    })
-  })
-</script>
+<script src="4372/js/cus-float.js"></script>
 </body>
 </html>
