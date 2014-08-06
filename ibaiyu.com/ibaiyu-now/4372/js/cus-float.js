@@ -24,28 +24,41 @@ $(function(){
 	}else{
 		cusFloat.css("right",0+"px");
 	}
+	var offFlag=false;
+	function panelOff(){
+		offFlag=true;
+		$(this).addClass("panel-off");
+		$(this).find("span").text("展开");
+		content.stop().animate({"height":"43px"},function(){
+			content.find(".hd img").animate({"margin-left":"0px"});
+			content.animate({"width":"43px"},6000);
+		});
+		cartoonImg.css("transform","rotateY(0deg)");
+		cartoon.stop().animate({"left":"0px"},8000);
+	}
+	function panelOn(){
+		$(this).removeClass("panel-off");
+		$(this).find("span").text("收起");
+		content.stop().animate({"width":w+"px","height":h+"px"},function(){
+			content.find(".hd img").animate({"margin-left":"28px"});
+		});
+		cartoonImg.css("transform","rotateY(180deg)")
+		cartoon.stop().animate({"left":"125px"},8000,function(){
+			cartoonImg.css("transform","rotateY(0deg)")
+		})
+	}
 	$(".panel").click(function(){
 		if(!$(this).hasClass("panel-off")){
-			$(this).addClass("panel-off");
-			$(this).find("span").text("展开");
-			content.stop().animate({"height":"43px"},function(){
-				content.find(".hd img").animate({"margin-left":"0px"});
-				content.animate({"width":"43px"},6000);
-			});
-			cartoonImg.css("transform","rotateY(0deg)");
-			cartoon.stop().animate({"left":"0px"},8000)
+			panelOff.apply(this)
 		}else{
-			$(this).removeClass("panel-off");
-			$(this).find("span").text("收起");
-			content.stop().animate({"width":w+"px","height":h+"px"},function(){
-				content.find(".hd img").animate({"margin-left":"28px"});
-			});
-			cartoonImg.css("transform","rotateY(180deg)")
-			cartoon.stop().animate({"left":"125px"},8000,function(){
-				cartoonImg.css("transform","rotateY(0deg)")
-			})
+			panelOn.apply(this)
 		}
 	});
+	setTimeout(function(){
+		if(!offFlag){
+			panelOff.apply($(".panel"));
+		}
+	},6000);
 
 	//	气泡提醒消息
 	function Bubble(){
