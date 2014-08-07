@@ -40,9 +40,9 @@ body{
 	background:#ffffff url(../images/bg.png) repeat-x;
 	font-weight:normal;
 	font-size:14px;
-	/*��������������������*/
+	/*浏览器滚动条必须呈现*/
 	overflow-y:scroll;
-	/*��������������������*/
+	/*浏览器滚动条必须呈现*/
 }
 a:link, a:visited, a:active{color:#414141;text-decoration:none;cursor:pointer;}
 a:hover{color:#414141;text-decoration:underline;}
@@ -68,9 +68,9 @@ a img{cursor:pointer;}
 
 .logo{width:250px;height:128px;overflow:hidden;background:url(../images/logo.png);position:relative;left:0px;top:0px;z-index:999;}
 
-/*��ҳ��¼ǰDIV*/
+/*首页登录前DIV*/
 .login{display:block;width:246px;height:270px;overflow:hidden;background:url(../images/login_bg.png);position:relative;left:750px;top:128px;z-index:999;}
-/*��ҳ��¼ǰDIV*/
+/*首页登录前DIV*/
 .login .formLogin{margin:0 auto;width:205px;}
 .login .formLogin label{display:block;}
 .login .formLogin strong{font:14px;color:#e93e0c;}
@@ -83,9 +83,9 @@ a img{cursor:pointer;}
 .login .logininfo{text-align:center;color:black;}
 .login .logininfo span{color:#e94f0c;font-weight:bold;}
 
-/*��ҳ��¼��DIV*/
+/*首页登录后DIV*/
 .logined{display:none;width:246px;height:270px;overflow:hidden;background:url(../images/logined_bg.png);position:relative;left:750px;top:128px;z-index:999;}
-/*��ҳ��¼��DIV*/
+/*首页登录后DIV*/
 .logined .userinfo{margin:0 auto;width:216px;}
 .logined .userinfo .pics{padding:5px;width:58px;height:58px;overflow:hidden;background:#d4d4d4;}
 .logined .userinfo .names{width:135px;font-size:12px;}
@@ -229,7 +229,7 @@ a img{cursor:pointer;}
 .topbg2 .banner{width:100%;height:185px;background:url(../images/banner2.png) top;}
 .topbg2 .daohangbg{width:100%;height:37px;background:url(../images/daohang_bg.png) repeat-x;}
 
-/*------------------------2014-4-25----�Ķ���Ϸ�б�ҳ����ȡ����ҳ-------------------------------*/
+/*------------------------2014-4-25----改动游戏列表页及领取礼包页-------------------------------*/
 /*.kuang5{width:482px;height:435px;background:#434343;box-shadow: 10px 10px 0px #d9d9d9;}
 .kuang5 .linklist1{margin:0 auto;width:450px;text-align:center;}
 .kuang5 .linklist1 a{float:left;display:inline-block;width:148px;height:30px;line-height:30px;background:#fefefe;color:#696969;border:1px solid #e4d2c3;}
@@ -262,23 +262,24 @@ a img{cursor:pointer;}
 
 .kuang6{width:460px;}
 .kuang6 .gg_title{margin:0 auto;width:290px;height:36px;line-height:36px;font-size:18px;font-weight:bold;text-align:center;color:#ff6600;background:#f0f0f0;}
-/*====================�������ĸĶ���ʼ=====================*/
+/*====================进度条的改动开始=====================*/
 .kuang6 .gg_content{color: #696969;font-size: 14px;height: 105px;line-height: 1.5;overflow: auto;padding: 10px;
-    scrollbar-arrow-color: #ccc;/*��ͷ��ɫ*/
-    scrollbar-face-color:#e47519;/*������ɫ*/
-    scrollbar-3dlight-color: #fff;/*�������߽���ɫ*/
-    scrollbar-highlight-color: #fec254;/*����������ɫ*/
-    scrollbar-shadow-color: #eb8d0a;/*����������ɫ*/
-    scrollbar-darkshadow-color: #fff;/*�����ұ߽���ɫ*/
-    scrollbar-track-color: #fff;/*��������ɫ*/
+    scrollbar-arrow-color: #ccc;/*箭头颜色*/
+    scrollbar-face-color:#e47519;/*轴面颜色*/
+    scrollbar-3dlight-color: #fff;/*轴面左边角颜色*/
+    scrollbar-highlight-color: #fec254;/*左立体边颜色*/
+    scrollbar-shadow-color: #eb8d0a;/*右立体边颜色*/
+    scrollbar-darkshadow-color: #fff;/*轴面右边角颜色*/
+    scrollbar-track-color: #fff;/*轴轨道颜色*/
 
     }
 
-/*====================�������ĸĶ�����=====================*/
+/*====================进度条的改动结束=====================*/
 
-/*====================��Ϸ��������=====================*/
+
+/*====================游戏官网新闻=====================*/
 .kuang6 .list{padding:15px;width:430px;height:235px;background:#f7f7f7;}
-/*====================��Ϸ��������=====================*/
+/*====================游戏官网新闻=====================*/
 .kuang6 .list ul{margin:0;padding:0;}
 .kuang6 .list ul li{height:33px;line-height:33px;font-size:12px;border-bottom:1px dotted #c6c6c6;}
 .kuang6 .list ul li a{padding-left:15px;background:url(../images/biao.png) left no-repeat;}
@@ -287,11 +288,11 @@ a img{cursor:pointer;}
 .kuang7 .tab_head{height:25px;line-height:25px;background:url(../images/kuang7_tab_bg.png);}
 .kuang7 .tab_head div{float:left;width:108px;text-align:center;font-weight:bold;color:#ffffff;cursor:pointer;}
 .kuang7 .tab_head div.cur{color:#e93706;background:url(../images/kuang7_tab_cur_bg.png);}
-/*===========================�ͷ����ĵĸĶ���ʼ==============================*/
+/*===========================客服中心的改动开始==============================*/
 .kuang7 .tab_body .kf_nav{background: url("../images/kefu_bg.jpg");width: 100%; height: 250px; position: relative;}
 .kuang7 .tab_body .kf_nav a.btn{display: block;position: absolute;width: 117px;height: 29px;overflow: hidden;left: 731px;top: 189px;background: url("../images/kf_btn.gif");}
 .kuang7 .tab_body .kf_nav a.btn:hover{background-position:0 -29px;}
-/*===========================�ͷ����ĵĸĶ�����==============================*/
+/*===========================客服中心的改动结束==============================*/
 .serverlist{margin:0 auto;width:890px;}
 .serverlist ul{}
 .serverlist ul li{float:left;margin:12px;_margin:12px 10px;width:154px;height:22px;line-height:22px;background:url(../images/but_10.png);}
@@ -299,9 +300,9 @@ a img{cursor:pointer;}
 .serverlist ul li a .name{float:left;width:90px;text-align:center;color:#ffffff;}
 .serverlist ul li a .state1{float:right;width:58px;text-align:center;color:red;}
 .serverlist ul li a .state2{float:right;width:58px;text-align:center;color:green;}
-/*===========================��Ϸ������״̬(ά��)==============================*/
+/*===========================游戏服务器状态(维护)==============================*/
 .serverlist ul li a .state3{float:right;width:58px;text-align:center;color:Gray;}
-/*===========================��Ϸ������״̬(ά��)==============================*/
+/*===========================游戏服务器状态(维护)==============================*/
 
 /*.infolist{margin:0 auto;width:830px;}*/
 .infolist{margin:0 auto;width:860px;height: 200px;overflow: auto;}
@@ -375,7 +376,7 @@ a img{cursor:pointer;}
 .kuang11 .tab_body{height:525px;line-height:24px;font-size:12px;color:black;background:#ffffff;border:1px solid #f6c89d;}
 .kuang11 .tab_body a{color:black;}
 .kuang11 .tab_body div.cur{display:block;}
-/*������ϸҳ�棨���ݣ�A��ǩ*/
+/*新闻详细页面（内容）A标签*/
 .kuang11 .tab_body a:hover {
 	color: #FF6600;
 	text-decoration: underline;
@@ -393,14 +394,14 @@ a img{cursor:pointer;}
 .kuang11 .tab_body a strong{
     cursor:pointer;
 }
-/*������ϸҳ�棨���ݣ�A��ǩ*/
+/*新闻详细页面（内容）A标签*/
 .kuang11 .list{margin:0 auto;width:680px;min-height:410px;_height:410px;overflow:visible;}
 /*
 .kuang11 .list ul{}
 .kuang11 .list ul li{height:33px;line-height:33px;border-bottom:1px dotted #cccccc;}
 .kuang11 .list ul li a{padding-left:24px;background:url(../images/biao.png) left no-repeat;color:#313131;}
 */
-/*=========================���Ź��棨4372new_list�����Ľ���=============================*/
+/*=========================新闻公告（4372new_list）更改结束=============================*/
 .kuang11 .list dl{}
 .kuang11 .list dl dt{
     height: 35px;
@@ -435,7 +436,7 @@ a img{cursor:pointer;}
 .kuang11 .list dl dd.even{
     background: #ffffff;
 }
-/*=========================���Ľ���=============================*/
+/*=========================更改结束=============================*/
 .kuang12{margin:0 auto;padding:5px;width:450px;height:435px;overflow:hidden;background:url(../images/kuang12_bg.png);}
 .kuang12 .title{height:34px;line-height:34px;background:url(../images/kuang12_title_bg.png);}
 .kuang12 .title .text{width:170px;height:34px;background:url(../images/kuang12_title_text_bg.png);text-align:center;color:#e73505;font-size:12px;font-weight:bold;}
@@ -584,12 +585,13 @@ a.linkbg2:hover{text-decoration:none;}
 .tip{margin:0 auto;padding:0 10px;width:617px;height:28px;line-height:28px;background:url(../images/tip_bg.png);color:#454545;}
 
 
-/*��ҳLogo*/
+/*首页Logo*/
 .logo{position: absolute;width: 250px;height: 128px;z-index: 999;left: 50%;top: -20px;margin-left: -500px;background:url(../images/logo.png) no-repeat;}
-/*��ҳLogo*/
+/*首页Logo*/
 
 
-/*��ҳ��¼���ʻ�����*/
+
+/*首页登录后帐户管理*/
 .logingame{margin-left:40px;}
 .left_la1{float:left; width:18px; height:16px;	background-image: url(../../images/leftlaimg.png);background-repeat: no-repeat;background-position:0px 0px; margin-left:25px; margin-top:6px;}
 .left_la2{float:left; width:18px; height:16px;	background-image: url(../../images/leftlaimg.png);background-repeat: no-repeat;background-position:0px -16px; margin-left:7px;margin-top:6px;}
@@ -599,10 +601,10 @@ a.linkbg2:hover{text-decoration:none;}
 .login_kuaijie_a{float: left; width: 60px; height: 20px; margin-top: 4px;}
 .login_kuaijie_a a{ color:#FFFFFF; text-decoration:none}
 .login_kuaijie_a a:hover{ color:#CCCC33; text-decoration:none}
-/*��ҳ��¼���ʻ�����*/
+/*首页登录后帐户管理*/
 
 
-/*css flickr style pagination��Ϸ������ҳ*/
+/*css flickr style pagination游戏礼包分页*/
 div.flickr {
 	padding:0px;margin:0px; text-align:center; font-family:Verdana; font-size:12px;text-align:right;
 }
@@ -621,9 +623,9 @@ div.flickr span.current {
 div.flickr span.disabled {
 	padding-right: 6px; padding-left: 6px; padding-bottom: 2px; color: #adaaad; margin-right: 3px; padding-top: 2px
 }
-/*css scott style pagination��Ϸ������ҳ*/
+/*css flickr style pagination游戏礼包分页*/
 
-/*��Ϸ����ҳ�棨��һƪ����һƪ��*/
+/*游戏新闻页面（上一篇、下一篇）*/
 .page p {
 	font-weight: bold;
 	color: #FF6600;
@@ -643,23 +645,23 @@ div.flickr span.disabled {
 	border-top-color: #999999;
 	padding-top: 10px;
 }
-/*��Ϸ����ҳ�棨��һƪ����һƪ��*/
+/*游戏新闻页面（上一篇、下一篇）*/
 
-/*�û����ģ���Ϣ����������һƪ����һƪ��*/
+/*用户中心（消息管理）（上一篇、下一篇）*/
 .xiaoxi_con1{ width:727px; background-color:White; height:auto;border-bottom:1px dashed #bebebe; border-left:1px dashed #bebebe; border-right:1px dashed #bebebe; float:left; display:none;}
 .xiaoxi_con11{ margin-left:10px; margin-right:10px;}
-/*�û����ģ���Ϣ����������һƪ����һƪ��*/
+/*用户中心（消息管理）（上一篇、下一篇）*/
 
-/*�û����ģ��ܱ�����)�󶨳ɹ�˵��*/
+/*用户中心（密保设置)绑定成功说明*/
 .user_anquan_sfz_shuoming {padding-left:50px; line-height:40px; color:#fe6700; font-size:15px; font-weight:bold}
-/*�û����ģ��ܱ�����)�󶨳ɹ�˵��*/
+/*用户中心（密保设置)绑定成功说明*/
 
-/*�û����ģ���Ϸ����)�󶨳ɹ�˵��*/
+/*用户中心（游戏设置)绑定成功说明*/
 .user_anquan_sfz_input{ padding-top:30px; padding-left:30px;line-height:40px; font-size:15px}
 .user_anquan_sfz_input a{ font-weight:bold;color:#FF6600}
-/*�û����ģ���Ϸ����)�󶨳ɹ�˵��*/
+/*用户中心（游戏设置)绑定成功说明*/
 
-/*11��27���޸�����ҳ����������*/
+/*11月27日修改密码页面对齐表单*/
 #mimaxiugai form label{
     width: 180px;
     text-align: right;
@@ -672,10 +674,10 @@ div.flickr span.disabled {
     vertical-align: middle;
 }
 #mimaxiugai form input{line-height: 27px;}
-/*11��27���޸�����ҳ����������*/
+/*11月27日修改密码页面对齐表单*/
 
 
-/*�û�����(��Ϣ������ɾ����ȫѡ ��ť��)���а�ť��ʽ
+/*用户中心(消息管理（删除、全选 按钮）)所有按钮样式
 ===============================================*/
 .tools_box{ border:1px solid #EDECFF; border-bottom:0px; }
 	.tools_bar{ padding-left:5px; height:45px; background:url(../../admin/images/tools_bg.gif) left 0px repeat-x;overflow:hidden;}
@@ -706,10 +708,10 @@ div.flickr span.disabled {
 	.tools_btn span b.stop{background-position:50% -1080px}
 	.tools_btn span b.return{background-position:50% -1130px}
 	.tools_btn span b.recharge{background-position:50% -1180px}
-	/*���а�ť��ʽ
+	/*所有按钮样式
 ===============================================*/
 
-/*-----------12��2���޸ĳ�ֵ��¼ҳ��----------------------*/
+/*-----------12月2日修改充值记录页面----------------------*/
 
 .kuang7 .tab_body ul li{display: inline-block;text-align: center;color: #3a3a3a;line-height: 22px;height: 22px;}
 .kuang7 .tab_body .xfsj{width: 180px;}
@@ -722,11 +724,11 @@ div.flickr span.disabled {
 .kuang7 .tab_body .czdx{width: 180px;}
 .kuang7 .tab_body .czfs{width: 100px;}
 
-/*-----------12��2���޸ĳ�ֵ��¼ҳ��----------------------*/
+/*-----------12月2日修改充值记录页面----------------------*/
 
 
 
-/*yxlb_show.aspx�������㲿��*/
+/*yxlb_show.aspx弹出浮层部分*/
 #showno{display: none;}
 #shade{position: fixed;z-index: 10; display: none; left: 0; top:0; width: 100%; height: 100%; background: #000; opacity: 0.6; filter:alpha(opacity=60);}
 .pop-con{position: fixed;z-index: 11; background: #f8f7f4; box-shadow: 3px 3px 9px -7px #000; display: none;}
@@ -736,9 +738,9 @@ div.flickr span.disabled {
 .pop-con .close{position: absolute; width: 36px;height: 36px;top: 0px;right: 0px;background: url("../images/popclose.png") 12px 12px no-repeat;}
 .pop-con .close:hover{background-position: -20px -20px;}
 .con{ border-radius: 4px 4px 4px 4px; border: 1px solid #d6d6d6; background: #ffffff; margin-bottom: 10px; padding-bottom: 10px;}
-/*yxlb_show.aspx�������㲿��*/
+/*yxlb_show.aspx弹出浮层部分*/
 
-/*��������*/
+/*清除浮动*/
 .clearfix:after{
     content:'.';
     height:0;
@@ -769,3 +771,179 @@ div.flickr span.disabled {
     0%   {transform:scale(0.95,0.95);}
     100%  {transform:scale(1,1);}
   }
+  
+/*首页客服动画*/
+  .cus-float{
+    position: fixed;
+    top: 55%;
+    z-index: 4000;
+    /*top: 194px;*/
+  }
+  .cus-float .cartoon{
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    left: 125px;
+    top: -44px;
+  }
+  @-webkit-keyframes bubble
+  {
+    0%   {-webkit-transform:scale(0.1,0.1);}
+    9%  {-webkit-transform:scale(1.2,1.2);}
+    12%  {-webkit-transform:scale(1,1);}
+    90% {opacity: 1}
+    100% {opacity: 0;}
+  }@-moz-keyframes bubble
+  {
+    0%   {-moz-transform:scale(0.1,0.1);}
+    9%  {-moz-transform:scale(1.2,1.2);}
+    12%  {-moz-transform:scale(1,1);}
+    90% {opacity: 1}
+    100% {opacity: 0;}
+  }@-ms-keyframes bubble
+  {
+    0%   {-ms-transform:scale(0.1,0.1);}
+    9%  {-ms-transform:scale(1.2,1.2);}
+    12%  {-ms-transform:scale(1,1);}
+    90% {opacity: 1}
+    100% {opacity: 0;}
+  }@-o-keyframes bubble
+  {
+    0%   {-o-transform:scale(0.1,0.1);}
+    9%  {-o-transform:scale(1.2,1.2);}
+    12%  {-o-transform:scale(1,1);}
+    90% {opacity: 1}
+    100% {opacity: 0;}
+  }
+  @keyframes bubble
+  {
+    0%   {transform:scale(0.1,0.1);}
+    9%  {transform:scale(1.2,1.2);}
+    12%  {transform:scale(1,1);}
+    90% {opacity: 1}
+    100% {opacity: 0;}
+  }
+  .cus-float .cartoon .bubble{
+    position: absolute;
+    z-index: 5000;
+    width: 128px;
+    height: 108px;
+    top: -110px;
+  }
+  .cus-float .cartoon .bubble.normal{
+    /*动画*/
+    -webkit-animation:bubble 4.6s;
+    -moz-animation:bubble 4.6s;
+    -ms-animation:bubble 4.6s;
+    -o-animation:bubble 4.6s;
+    animation:bubble 4.6s;
+  }
+  .cus-float .cartoon .bubble-l{
+    background: url("4372/images/bubble-l.png");
+    left: -93px;
+  }
+  .cus-float .cartoon .bubble-r{
+    background: url("4372/images/bubble-r.png");
+    left: 16px;
+  }
+  .cus-float .cartoon .bubble p{margin:30px 18px auto 14px;line-height: 18px;text-indent: 25px;font-size: 12px;color: #ef7b3b;font-family: "微软雅黑";}
+  .cus-float .cartoon .bubble-close{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    z-index: 9999;
+    right: 2px;
+    top: 6px;
+    background-image: url("4372/images/bubble-close.gif");
+    background-position: -14px 0;
+    cursor: pointer;
+  }
+  .cus-float .cartoon .bubble-close:hover{
+    background-position: 0 0;
+  }
+  .cus-float .content{
+    overflow: hidden;
+    box-shadow:4px 4px 16px -8px #000000;
+    line-height: 1;
+  }
+  .cus-float .hd{
+    position: relative;
+    z-index: 2;
+    width: 184px;
+    height: 43px;
+    background: #fda20d;
+  }
+  .cus-float .hd a{
+    width: 184px;
+    display: block;
+  }
+  .cus-float .hd:hover{
+    background:#f3930b ;
+  }
+  .cus-float .bd{
+    width: 182px;
+    background: #fff;
+    border-width:0px 1px 1px;
+    border-color:#ccc;
+    border-style: solid;
+  }
+  .cus-float .bd ul{
+    font-family: "微软雅黑";
+    font-size: 12px;
+    color: #545454;
+    margin: 0;
+    padding:12px 0px;
+  }
+  .cus-float .bd ul li{
+    padding: 0 12px;
+    line-height:26px;
+  }
+  .cus-float .bd ul li:nth-child(odd){
+    background: #f3efe6;
+  }
+  .cus-float .panel{
+    position: relative;
+    width:43px;
+    height:18px;
+    background: #f3930b;
+    line-height: 18px;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .cus-float .panel span{
+    margin-left: 6px;
+    margin-right: 3px;
+    cursor: pointer;
+  }
+  .cus-float .panel b{
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    right: 6px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    border-width: 3px;
+    border-style: solid;
+    border-color:  transparent transparent #ffffff;
+    font-size: 0;
+    line-height: 0;
+  }
+  .cus-float .panel.panel-off b{
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform .2s ease-in;
+    -moz-transition: -moz-transform .2s ease-in;
+    -o-transition: -o-transform .2s ease-in;
+    transition: transform .2s ease-in;
+    -moz-transform: rotate(180deg);
+    -moz-transform-origin: 50% 70%;
+    -webkit-transform: rotate(180deg);
+    -webkit-transform-origin: 50% 70%;
+    -o-transform: rotate(180deg);
+    -o-transform-origin: 50% 70%;
+    transform: rotate(180deg);
+    transform-origin: 50% 70%;
+  }
+/*首页客服动画*/
