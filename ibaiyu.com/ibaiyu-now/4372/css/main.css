@@ -111,10 +111,11 @@ a img{cursor:pointer;}
 .kuang1 .bottom{height:20px;background:url(../images/kuang1_bottom_bg.png);}
 .kuang1 .list{height:260px;background:url(../images/kuang1_mid_bg.png) repeat-y;font-size:12px;}
 .kuang1 .list ul{}
-.kuang1 .list ul li{width:245px;height:23px;line-height:23px;text-align:center;}
-.kuang1 .list ul li .col1{float:left;width:55px;}
-.kuang1 .list ul li .col2{float:left;width:55px;}
-.kuang1 .list ul li .col3{float:left;width:90px;}
+.kuang1 .list ul li{width:241px;height:23px;line-height:23px;text-align:center;margin: 0 2px;}
+.kuang1 .list ul li:nth-child(even){background: #f3efe6;}
+.kuang1 .list ul li .col1{float:left;width:55px;margin-left:5px;}
+.kuang1 .list ul li .col2{float:left;width:50px;}
+.kuang1 .list ul li .col3{float:left;width:80px;}
 .kuang1 .list ul li .col3 a:hover{color:#FF6600;}
 .kuang1 .list ul li .col4{float:left;width:45px;}
 .kuang1 .list ul li .col4 .a1:hover{color:#FF6600;}
@@ -130,7 +131,7 @@ a img{cursor:pointer;}
 .kuang2 .tab_body .top{height:14px;}
 .kuang2 .tab_body .bottom{height:13px;}
 .kuang2 .tab_body .mid{height:319px;}
-.kuang2 .tab_body a{color:black;}
+.kuang2 .tab_body a{color:#414141;}
 .kuang2 .tab_body div.cur{display:block;}
 .kuang2 .newsitem{margin:0 auto;width:220px;height:28px;line-height:28px;overflow:hidden;border-bottom:1px dashed #c6c6c6;}
 .kuang2 .newsitem a{padding-left:12px;background:url(../images/biao.png) left no-repeat;}
@@ -157,26 +158,61 @@ a img{cursor:pointer;}
 .gitem .gotogame{margin-left:4px;display:block;width:31px;height:31px;background:url(../images/but_09.png);color:#fff !important;font-size:12px;font-weight:bold;text-align:center;padding:8px 4px;}
 .gitem .gotogame{text-decoration:none!important;}
 
-.gameinfo{width:245px;height:324px;overflow:hidden;background:transparent;}
-.gameinfo .kuang{margin:1px;width:241px;height:320px;overlow:hidden;background:transparent;border:1px solid transparent;}
-.gameinfo .kuang .pic{margin:0 auto;margin-top:7px;width:225px;height:140px;border:1px solid #a4a4a4;}
-.gameinfo .kuang .title{display:block;margin:0 auto;width:227px;height:29px;line-height:29px;overflow:hidden;font-size:16px;font-weight:bold;text-align:center;}
-.gameinfo .kuang .buts{display:none;margin:0 auto;width:227px;height:29px;overflow:hidden;}
-.gameinfo .kuang .buts a{display:block;width:70px;height:27px;line-height:27px;overflow:hidden;text-align:center;color:#ffffff;background:#3c5a9a;}
-.gameinfo .kuang .buts a.but1{float:left;}
-.gameinfo .kuang .buts a.but2{float:left;margin-left:8px;}
-.gameinfo .kuang .buts a.but3{float:right;}
-.gameinfo .kuang .infos{padding:10px;padding-top:0px;margin:0 auto;width:207px;height:70px;line-height:17px;overflow:hidden;font-size:12px;background:transparent;color:black;}
-.gameinfo .kuang .ingame{display:block;text-align:center;}
-.gameinfo .kuang .serverinfo{display:none;line-height:30px;text-align:center;color:#ffffff;}
-.gameinfo .kuang .serverinfo span{color:#e94f0c;}
+.gameinfo{width:245px;height:324px;margin-right:-1px;overflow:hidden;background:#fbf8f0;border:1px solid #ccc;position: relative;z-index: 1;}
+.gameinfo .kuang{}
+.gameinfo .kuang .pic{position: absolute;z-index:1;margin:0 auto;left:4%;top:8px;border:1px solid #a4a4a4;transform:scale(0.95,0.95);overflow: hidden;}
+.gameinfo .kuang .pic .tm-box{
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 53px;
+  bottom: -53px;
+  background: url("../images/black_60.png");
+}
+.gameinfo .kuang .title{position: absolute;top:155px;left:9px;color:#e94f0c;display:block;margin:0 auto;width:227px;height:29px;line-height:29px;overflow:hidden;font-size:16px;font-weight:bold;text-align:center;}
+.gameinfo .kuang .buts{margin:0 auto;width:227px;overflow:hidden;}
+.gameinfo .kuang .buts a{display: block;
+  width: 65px;
+  height: 20px;
+  float:left;
+  margin-left:8px;
+  line-height: 20px;
+  overflow: hidden;
+  text-align: center;
+  color: #ffffff;
+  background-image: url("../images/but-65-20.gif");
+  background-position: 0 0;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: "宋体";
+}
+.gameinfo .kuang .buts a:hover{
+  background-position: 0 -20px;
+  text-decoration: none;
+}
+.gameinfo .kuang .infos{position: absolute;top:186px;left:9px;text-indent:25px;padding:10px;padding-top:0px;margin:0 auto;width:207px;height:80px;line-height:17px;overflow:hidden;font-size:12px;background:transparent;color:#414141;}
+.gameinfo .kuang .ingame{position: absolute;left:78px;top:279px;display:block;text-align:center;}
+.gameinfo .kuang .serverinfo{display:none;line-height:26px;text-align:center;color:#ffffff;width: 100%;font-size: 12px;}
+.gameinfo .kuang .serverinfo span{color:#e94f0c;cursor: pointer;}
 
-.gameinfo:hover{background:#010101;}
-.gameinfo:hover .kuang{background:#434343;border-color:#999999;}
-.gameinfo:hover .kuang .title{display:none;}
+.gameinfo:hover{background:#fff;border-color: #ef7b3b;z-index: 2;}
+.gameinfo:hover .pic{
+  -webkit-animation:img 0.3s;
+  -moz-animation:img 0.3s;
+  -ms-animation:img 0.3s;
+  -o-animation:img 0.3s;
+  animation:img 0.3s;
+  transform:scale(1,1)
+}
+.gameinfo:hover .kuang .pic .tm-box{
+  bottom: 0;
+  transition:all ease-in 0.3s 0.3s;
+}
+.gameinfo:hover .kuang{}
+.gameinfo:hover .kuang .title{}
 .gameinfo:hover .kuang .buts{display:block;}
-.gameinfo:hover .kuang .infos{padding-top:10px;background:#222222;color:#999999;}
-.gameinfo:hover .kuang .ingame{display:none;}
+.gameinfo:hover .kuang .infos{}
+.gameinfo:hover .kuang .ingame{}
 .gameinfo:hover .kuang .serverinfo{display:block;text-align:center;}
 .gameinfo:hover .kuang .serverinfo a{color:#FF6600;}
 
@@ -710,3 +746,26 @@ div.flickr span.disabled {
     display:block;
     clear:both;
 }
+
+@-webkit-keyframes img
+{
+  0%   {-webkit-transform:scale(0.95,0.95);}
+  100%  {-webkit-transform:scale(1,1);}
+}@-moz-keyframes img
+ {
+   0%   {-moz-transform:scale(0.95,0.95);}
+   100%  {-moz-transform:scale(1,1);}
+ }@-ms-keyframes img
+  {
+     0%   {-ms-transform:scale(0.95,0.95);}
+     100%  {-ms-transform:scale(1,1);}
+  }@-o-keyframes img
+   {
+     0%   {-o-transform:scale(0.95,0.95);}
+     100%  {-o-transform:scale(1,1);}
+   }
+  @keyframes img
+  {
+    0%   {transform:scale(0.95,0.95);}
+    100%  {transform:scale(1,1);}
+  }
