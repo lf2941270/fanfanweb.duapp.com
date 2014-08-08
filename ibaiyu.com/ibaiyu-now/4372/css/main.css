@@ -63,7 +63,7 @@ a img{cursor:pointer;}
 .bannerbody{margin:0 auto;width:1000px;height:413px;overflow:hidden;position:relative;}
 
 .daohang{margin:0 auto;width:1000px;height:37px;line-height:37px;position:relative;text-align:center;}
-.daohang a{font-size:16px;display:inline-block;width:156px;height:37px;text-align:center;font-weight:bold;color:#ffffff;}
+.daohang a{font-size:16px;display:inline-block;width:156px;height:37px;margin-right:36px;text-align:center;font-weight:bold;color:#ffffff;}
 .daohang a.cur,.daohang a:hover{background:url(../images/daohang_linkbg.png) no-repeat;color:#eb551e!important;text-decoration:none;}
 
 .logo{width:250px;height:128px;overflow:hidden;background:url(../images/logo.png);position:relative;left:0px;top:0px;z-index:999;}
@@ -221,8 +221,9 @@ a img{cursor:pointer;}
 .kuang_link .links{line-height:28px;background:url(../images/links_bg.png);font-size:12px;color:#626262;}
 .kuang_link .links a{color:#626262;}
 
-.copyright{height:90px;text-align:center;font-size:12px;color:black;line-height:26px;}
-
+.copyright{height:90px;text-align:center;font-size:12px;color:black;line-height:26px;position: relative;padding: 20px 0;}
+.copyright .logo-bottom{width:150px;height: 53px;background:url("../images/logo-middle.png");position: absolute;left: 380px; }
+.copyright p{margin-left: 150px;}
 /*-------------------------------------------------------------------*/
 
 .topbg2{width:100%;height:222px;position:absolute;left:0;top:0;min-width:1000px;}
@@ -840,11 +841,11 @@ div.flickr span.disabled {
     animation:bubble 4.6s;
   }
   .cus-float .cartoon .bubble-l{
-    background: url("4372/images/bubble-l.png");
+    background: url("../images/bubble-l.png");
     left: -93px;
   }
   .cus-float .cartoon .bubble-r{
-    background: url("4372/images/bubble-r.png");
+    background: url("../images/bubble-r.png");
     left: 16px;
   }
   .cus-float .cartoon .bubble p{margin:30px 18px auto 14px;line-height: 18px;text-indent: 25px;font-size: 12px;color: #ef7b3b;font-family: "微软雅黑";}
@@ -855,7 +856,7 @@ div.flickr span.disabled {
     z-index: 9999;
     right: 2px;
     top: 6px;
-    background-image: url("4372/images/bubble-close.gif");
+    background-image: url("../images/bubble-close.gif");
     background-position: -14px 0;
     cursor: pointer;
   }
@@ -893,13 +894,15 @@ div.flickr span.disabled {
     font-size: 12px;
     color: #545454;
     margin: 0;
-    padding:12px 0px;
+
   }
   .cus-float .bd ul li{
+    background: #fff;
     padding: 0 12px;
     line-height:26px;
+    /*border-top: 1px dotted #ddd;*/
   }
-  .cus-float .bd ul li:nth-child(odd){
+  .cus-float .bd ul li:nth-child(even){
     background: #f3efe6;
   }
   .cus-float .panel{

@@ -188,7 +188,6 @@
     <a href="4372czzx.html">充值中心</a>
     <a href="4372yxlb.html">游戏礼包</a>
     <a href="4372new_list.html">新闻公告</a>
-    <a href="http://bbs.ibaiyu.cn/">游戏论坛</a>
 </div>
 <div class="clear h15"></div>
 <div class="pagebody">
@@ -1065,6 +1064,7 @@
 <div class="clear h10"></div>
 
 <div class="copyright">
+  <div class="logo-bottom"></div>
     <p><a href="../4372about.html">关于我们</a> | <a href="../4372about.html">联系我们</a> | <a
             href="../4372about.html">商务合作</a> | <a href="../4372about.html">服务条款</a> | <a
             href="../4372about.html">人才招聘</a> | <a href="../jzjk/1.html">家长监护</a></p>
@@ -1077,179 +1077,7 @@
 
 <!--增加悬浮客服中心-->
 <style>
-  .cus-float{
-    position: fixed;
-    top: 55%;
-    z-index: 4000;
-    /*top: 194px;*/
-  }
-  .cus-float .cartoon{
-    position: absolute;
-    z-index: 1;
-    width: 50px;
-    height: 50px;
-    left: 125px;
-    top: -44px;
-  }
-  @-webkit-keyframes bubble
-  {
-    0%   {-webkit-transform:scale(0.1,0.1);}
-    9%  {-webkit-transform:scale(1.2,1.2);}
-    12%  {-webkit-transform:scale(1,1);}
-    90% {opacity: 1}
-    100% {opacity: 0;}
-  }@-moz-keyframes bubble
-  {
-    0%   {-moz-transform:scale(0.1,0.1);}
-    9%  {-moz-transform:scale(1.2,1.2);}
-    12%  {-moz-transform:scale(1,1);}
-    90% {opacity: 1}
-    100% {opacity: 0;}
-  }@-ms-keyframes bubble
-  {
-    0%   {-ms-transform:scale(0.1,0.1);}
-    9%  {-ms-transform:scale(1.2,1.2);}
-    12%  {-ms-transform:scale(1,1);}
-    90% {opacity: 1}
-    100% {opacity: 0;}
-  }@-o-keyframes bubble
-  {
-    0%   {-o-transform:scale(0.1,0.1);}
-    9%  {-o-transform:scale(1.2,1.2);}
-    12%  {-o-transform:scale(1,1);}
-    90% {opacity: 1}
-    100% {opacity: 0;}
-  }
-  @keyframes bubble
-  {
-    0%   {transform:scale(0.1,0.1);}
-    9%  {transform:scale(1.2,1.2);}
-    12%  {transform:scale(1,1);}
-    90% {opacity: 1}
-    100% {opacity: 0;}
-  }
-  .cus-float .cartoon .bubble{
-    position: absolute;
-    z-index: 5000;
-    width: 128px;
-    height: 108px;
-    top: -110px;
-  }
-  .cus-float .cartoon .bubble.normal{
-    /*动画*/
-    -webkit-animation:bubble 4.6s;
-    -moz-animation:bubble 4.6s;
-    -ms-animation:bubble 4.6s;
-    -o-animation:bubble 4.6s;
-    animation:bubble 4.6s;
-  }
-  .cus-float .cartoon .bubble-l{
-    background: url("4372/images/bubble-l.png");
-    left: -93px;
-  }
-  .cus-float .cartoon .bubble-r{
-    background: url("4372/images/bubble-r.png");
-    left: 16px;
-  }
-  .cus-float .cartoon .bubble p{margin:30px 18px auto 14px;line-height: 18px;text-indent: 25px;font-size: 12px;color: #ef7b3b;font-family: "微软雅黑";}
-  .cus-float .cartoon .bubble-close{
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    z-index: 9999;
-    right: 2px;
-    top: 6px;
-    background-image: url("4372/images/bubble-close.gif");
-    background-position: -14px 0;
-    cursor: pointer;
-  }
-  .cus-float .cartoon .bubble-close:hover{
-    background-position: 0 0;
-  }
-  .cus-float .content{
-    overflow: hidden;
-    box-shadow:4px 4px 16px -8px #000000;
-    line-height: 1;
-  }
-  .cus-float .hd{
-    position: relative;
-    z-index: 2;
-    width: 184px;
-    height: 43px;
-    background: #fda20d;
-  }
-  .cus-float .hd a{
-    width: 184px;
-    display: block;
-  }
-  .cus-float .hd:hover{
-    background:#f3930b ;
-  }
-  .cus-float .bd{
-    width: 182px;
-    background: #fff;
-    border-width:0px 1px 1px;
-    border-color:#ccc;
-    border-style: solid;
-  }
-  .cus-float .bd ul{
-    font-family: "微软雅黑";
-    font-size: 12px;
-    color: #545454;
-    margin: 0;
-    padding:12px 0px;
-  }
-  .cus-float .bd ul li{
-    padding: 0 12px;
-    line-height:26px;
-  }
-  .cus-float .bd ul li:nth-child(odd){
-    background: #f3efe6;
-  }
-  .cus-float .panel{
-    position: relative;
-    width:43px;
-    height:18px;
-    background: #f3930b;
-    line-height: 18px;
-    color: #ffffff;
-    font-size: 12px;
-    cursor: pointer;
-  }
-  .cus-float .panel span{
-    margin-left: 6px;
-    margin-right: 3px;
-    cursor: pointer;
-  }
-  .cus-float .panel b{
-    cursor: pointer;
-    -webkit-backface-visibility: hidden;
-    position: absolute;
-    right: 6px;
-    top: 5px;
-    width: 0;
-    height: 0;
-    border-width: 3px;
-    border-style: solid;
-    border-color:  transparent transparent #ffffff;
-    font-size: 0;
-    line-height: 0;
-  }
-  .cus-float .panel.panel-off b{
-    -webkit-backface-visibility: hidden;
-    -webkit-transition: -webkit-transform .2s ease-in;
-    -moz-transition: -moz-transform .2s ease-in;
-    -o-transition: -o-transform .2s ease-in;
-    transition: transform .2s ease-in;
-    -moz-transform: rotate(180deg);
-    -moz-transform-origin: 50% 70%;
-    -webkit-transform: rotate(180deg);
-    -webkit-transform-origin: 50% 70%;
-    -o-transform: rotate(180deg);
-    -o-transform-origin: 50% 70%;
-    transform: rotate(180deg);
-    transform-origin: 50% 70%;
-  }
+
 </style>
 <div class="cus-float">
   <div class="cartoon">
