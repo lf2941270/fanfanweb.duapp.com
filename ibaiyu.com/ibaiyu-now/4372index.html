@@ -1105,7 +1105,8 @@
 <script src="4372/js/cus-float.js"></script>
 <script>
   var canvasSupported = !!document.createElement("canvas").getContext;
-  if (canvasSupported && !/msie/gi.test(navigator.userAgent)) {
+//  if (canvasSupported && !/msie/gi.test(navigator.userAgent)) {
+  if (canvasSupported) {
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
       setTimeout(callback, 1000 / 60);
     };
