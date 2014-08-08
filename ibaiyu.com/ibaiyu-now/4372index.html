@@ -1154,9 +1154,9 @@
       var snowcanvas = document.createElement("canvas");
       snowcanvas.id = "snowfall";
       snowcanvas.width = window.innerWidth;
-      snowcanvas.height = window.innerHeight;
-      snowcanvas.setAttribute("style", "position:fixed;top: 0px;left:0px;z-index: 100;pointer-events: none;");
-      document.getElementsByTagName("body")[0].appendChild(snowcanvas);
+      snowcanvas.height = 413;
+      snowcanvas.setAttribute("style", "position:absolute;top: 0px;left:0px;z-index: 100;pointer-events: none;");
+      $(".banner").append(snowcanvas);
       this.canvas = snowcanvas;
       this.ctx = snowcanvas.getContext("2d");
       window.onresize = function() {
