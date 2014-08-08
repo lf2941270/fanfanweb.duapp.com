@@ -1113,7 +1113,7 @@
     var snowFall = function(snow) {
       snow = snow || {};
       this.maxFlake = snow.maxFlake || 100;
-      this.flakeSize = snow.flakeSize || 8;
+      this.flakeSize = snow.flakeSize || 7;
       this.fallSpeed = snow.fallSpeed || 2;
       this.status = 0;
     };
@@ -1160,8 +1160,8 @@
       this.canvas = snowcanvas;
       this.ctx = snowcanvas.getContext("2d");
       window.onresize = function() {
-        snowcanvas.width = window.innerWidth - 140;
-        snowcanvas.height = window.innerHeight - 42;
+        snowcanvas.width = window.innerWidth;
+        snowcanvas.height =413;
       };
     }
     function flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed) {
