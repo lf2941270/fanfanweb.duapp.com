@@ -212,9 +212,9 @@
 <div class="clear h10"></div>
 <div class="kuang7 tabs">
 <div class="tab_head">
-    <div tag="1" class="cur">游戏服务器</div>
+    <div tag="1" class="">游戏服务器</div>
     <div tag="2" class="">游戏资料</div>
-    <div tag="3" class="">游戏画面</div>
+    <div tag="3" class="cur">游戏画面</div>
     <div tag="4" class="">客服中心</div>
 </div>
 <div class="tab_body">
@@ -569,37 +569,42 @@
           pauseTime,//移动一张图片后暂停的时间
           width,//图片宽度（包含边距）
           stepWidth;//每一步移动的距离
-      var time1,
-          tempWidth;
+      var time1;
       this.init=function(me,o){
         content=me;
         $content=$(content);
         options=o;
-        frameTime=options.frameTime||10;
-        speed=options.speed||1200;
+        frameTime=options.frameTime||20;
+        speed=options.speed||5000;
         pauseTime=options.pauseTime||500;
         width=options.width||230;
         stepWidth=width/speed*frameTime;
         setup();
+        return this;
       }
       function moveStep(){
         $content.css("left",(content.offsetLeft-stepWidth)+"px");
-        tempWidth+=stepWidth;
-        if(tempWidth>=width){
-          clearTimeout(time1);
-          setTimeout(move,pauseTime)
+        move();
+        if(-content.offsetLeft>=width){
+          $content.append($content.find("li").eq(1).clone());
+          $content.find("li").eq(0).remove();
+          $content.css("left",(width+content.offsetLeft)+"px");
+        }else{
+
         }
       }
       function setup(){
+        $content.append($content.find("li").eq(0).clone());
+        $content.hover(function(){
+          clearTimeout(time1);
+        },function(){
+          move();
+        })
         move();
       }
+
       function move(){
-        tempWidth=0;
-        timer()
-      }
-      function timer(){
         time1=setTimeout(function(){
-          timer();
           moveStep();
         },frameTime);
       }
