@@ -212,10 +212,10 @@
 <div class="clear h10"></div>
 <div class="kuang7 tabs">
 <div class="tab_head">
-    <div tag="1" class="">游戏服务器</div>
+    <div tag="1" class="cur">游戏服务器</div>
     <div tag="2" class="">游戏资料</div>
     <div tag="3" class="">游戏画面</div>
-    <div tag="4" class="cur">客服中心</div>
+    <div tag="4" class="">客服中心</div>
 </div>
 <div class="tab_body">
 <div tag="1" style="display: none;">
@@ -518,10 +518,10 @@
     <div class="clear h30"></div>
     <div class="gamepiclist">
         <ul>
-            <li><a href="#"><img src="/upload/201404/22/201404221118286671.png" width="220" height="180"></a></li>
-            <li><a href="#"><img src="/upload/201404/22/201404221118360562.png" width="220" height="180"></a></li>
-            <li><a href="#"><img src="/upload/201404/22/201404221118447036.png" width="220" height="180"></a></li>
-            <li><a href="#"><img src="/upload/201404/22/201404221118566850.png" width="220" height="180"></a></li>
+            <li><a href="#"><img src="upload/201401141721394123.png" width="220" height="180"></a></li>
+            <li><a href="#"><img src="upload/201401141721571483.png" width="220" height="180"></a></li>
+            <li><a href="#"><img src="upload/201401151038205370.png" width="220" height="180"></a></li>
+            <li><a href="#"><img src="upload/201401151038259326.png" width="220" height="180"></a></li>
         </ul>
     </div>
 </div>
@@ -548,6 +548,69 @@
     <p>Copyright ? 2012 All Rights Reserved</p>
   </div>
 </div>
+<script>
+  $(function(){
 
+    $(".kuang7").addClass("server-kuang7 clearfix").removeClass("kuang7")
+    $(".server-kuang7 .tab_head div").addClass(function(){
+      return 'tab tab-'+$(this).attr("tag");
+    }).text("");
+    $(".server-kuang7 .tab_body").find("div[tag]").addClass(function(){
+      return 'tab tab-'+$(this).attr("tag");
+    });
+    $(".serverlist li a").each(function(){
+      $(this).find("div").eq(1).addClass("state").text("");
+      $(this).append('<i class="rec r2"></i>');
+    });
+    function MoveLeft(){
+      var content,options;
+      var frameTime,//每帧间隔
+          speed,//移动一张图片的时间
+          pauseTime,//移动一张图片后暂停的时间
+          width,//图片宽度（包含边距）
+          stepWidth;//每一步移动的距离
+      var time1,
+          tempWidth;
+      this.init=function(me,o){
+        content=me;
+        $content=$(content);
+        options=o;
+        frameTime=options.frameTime||10;
+        speed=options.speed||1200;
+        pauseTime=options.pauseTime||500;
+        width=options.width||230;
+        stepWidth=width/speed*frameTime;
+        setup();
+      }
+      function moveStep(){
+        $content.css("left",(content.offsetLeft-stepWidth)+"px");
+        tempWidth+=stepWidth;
+        if(tempWidth>=width){
+          clearTimeout(time1);
+          setTimeout(move,pauseTime)
+        }
+      }
+      function setup(){
+        move();
+      }
+      function move(){
+        tempWidth=0;
+        timer()
+      }
+      function timer(){
+        time1=setTimeout(function(){
+          timer();
+          moveStep();
+        },frameTime);
+      }
+    }
+    $.prototype.moveLeft=function(o){
+      var ops=o||{}
+      new MoveLeft().init(this[0],ops);
+    }
+    $(".gamepiclist ul").css({"left":'0px',"width":"2000px"}).moveLeft();
+
+  })
+</script>
 </body>
 </html>
