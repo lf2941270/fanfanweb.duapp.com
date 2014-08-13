@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5烟火</title>
+  <meta charset="utf-8"/>
+  <script type="text/javascript" src="http://www.funnyjs.com/jspages/js/jquery-1.9.0.min.js"></script>
+  <script type="text/javascript" src="http://www.funnyjs.com/jspages/js/requestAnimationFrame.js"></script>
+  <script type="text/javascript">
+    //配置参数
+    var maxballcount = 300 //小球最大数量
+    var ballradius = 3//小球半径
+    var startspeedx = 5//横向初速度范围(-x到x)
+    var startspeedy = 10//纵向初速度范围(向上,-y到0)
+    var gravity = 0.2 //重力加速度
+    var colorweaken = 0.008//颜色衰减速度
+    var newballcount = 4//每轮补球最大数量
+    var tail = 0.2//小球拖尾效果(1为无，0为拖尾不消失）
+
+    //全局对象
+    var canvas //绘图对象
+    var context //绘图内容
+    var imgData //当前图形
+    var balls = new Array() //小球数组
+    var framestarttime//计算帧数开始时间
+    var framecount = 0//上次计数清空以来经过的帧数
+    var lastframecount = 0//上一秒的帧数
+
+    //页面加载
+    $(function () {
+      init()
+    })
+
+    //初始化
+    function init() {
+      canvas = document.getElementById("image")
+
+      if (!canvas.getContext) self.location = "/nohtml5.html"
+      else {
+        var container = $("#container")
+        container.width($(window).width())
+        container.height($(window).height())
+        canvas.width = container.width()
+        canvas.height = container.height()
+        context = canvas.getContext("2d")
+        context.font = "16px Arial"
+
+        framestarttime = new Date()
+        //开始动画
+        animeframe()
+      }
+    }
+
+    //运行动画
+    function animeframe() {
+      //绘制半透明遮罩，淡化上一帧的颜色以达到拖尾效果
+      context.fillStyle = "rgba(0,0,0," + tail + ")"
+      context.fillRect(0, 0, canvas.width, canvas.height)
+      var newballs = new Array()//下一帧小球数组
+      for (var i in balls) {
+        var ball = balls[i]
+        ball.speedy += gravity//重力
+        ball.x += ball.speedx
+        ball.y += ball.speedy
+        ball.alpha -= colorweaken
+        if (ball.x > 0 && ball.x < canvas.width && ball.y > 0 && ball.y < canvas.height && ball.alpha > 0) {
+          //只有小球在界内并尚未完全透明时才显示并保留到下一帧
+          newballs.push(ball)
+          drawball(ball)
+        }
+      }
+      //如果数量不足（初始，或有球出界），则补球，但不能超过最大数量
+      if (newballs.length < maxballcount) {
+        for (var i = 0; i < Math.min(newballcount, maxballcount - newballs.length); i++) {
+          newballs.push(generaterandomball())
+        }
+      }
+
+      //交换帧
+      balls = newballs
+      newballs = null
+
+      //计算并在左上角绘制帧数
+      var thisframetime = new Date()
+      if (thisframetime - framestarttime >= 1000) {
+        lastframecount = framecount
+        framecount = 0
+        framestarttime = thisframetime
+      }
+      framecount++
+      context.fillStyle = "#000"
+      context.fillRect(0, 0, 80, 40)
+      context.fillStyle = "#FF0"
+      context.fillText("FPS:" + lastframecount, 10, 20)
+
+      requestAnimationFrame(animeframe)
+    }
+
+    //绘制单个小球
+    function drawball(ball) {
+      if (!ball) return
+      context.beginPath()
+      context.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2, true)
+      context.closePath()
+      context.fillStyle = "rgba(" + ball.color + "," + ball.alpha + ")"
+      context.fill()
+    }
+
+    //生成随机颜色和速度的球
+    function generaterandomball() {
+      var ball = new Object()
+      //初始位置在中央区域
+      ball.x = Math.round(Math.random() * canvas.width / 10) + (canvas.width / 2 - canvas.width / 20)
+      ball.y = Math.round(Math.random() * canvas.height / 10) + (canvas.height / 2 - canvas.height / 20)
+      ball.r = ballradius
+      ball.color = randomcolor()
+      ball.alpha = 1
+      //小球初速度，横向随机，纵向默认向上
+      ball.speedx = Math.round(Math.random() * startspeedx * 2) - startspeedx
+      ball.speedy = -Math.round(Math.random() * startspeedy)
+      return ball
+    }
+
+    //生成RGB字符串格式的颜色
+    function randomcolor() {
+      var yellow = Math.round(Math.random() * 255)
+      return "255," + yellow + ",0"
+    }
+  </script>
+  <style type="text/css">
+    body {
+      margin: 0px;
+    }
+
+    #container {
+      width: 100%;
+      height: 100%;
+    }
+
+    #image {
+      background-color: #000;
+    }
+  </style>
+</head>
+<body>
+<div id="container">
+  <canvas id="image">
+  </canvas>
+</div>
+
+</body>
+</html>
