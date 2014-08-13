@@ -21,7 +21,7 @@
                 }
 
                 var isIe = isIE();
-                if (!isIe) {
+//                if (!isIe) {
                     $(".gg_content").mCustomScrollbar();
                     $(".infolist").mCustomScrollbar({
                         autoDraggerLength: true,
@@ -29,7 +29,7 @@
                             updateOnContentResize: true
                         }
                     });
-                }
+//                }
 
                 /*------------------------2014-4-25----改动游戏列表页及领取礼包页-------------------------------*/
                 $(".linklist2").find('a').each(function () {
@@ -583,12 +583,12 @@
         return this;
       }
       function moveStep(){
-        $content.css("left",Math.round(content.offsetLeft-stepWidth)+"px");
+        $content.css("left",Math.round($content.position().left-stepWidth)+"px");
         move();
-        if(-content.offsetLeft>=width){
+        if(-$content.position().left>=width){
           $content.append($content.find("li").eq(1).clone());
           $content.find("li").eq(0).remove();
-          $content.css("left",(width+content.offsetLeft)+"px");
+          $content.css("left",(width+$content.position().left)+"px");
         }else{
 
         }
