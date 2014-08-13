@@ -583,7 +583,7 @@
         return this;
       }
       function moveStep(){
-        $content.css("left",(content.offsetLeft-stepWidth)+"px");
+        $content.css("left",Math.round(content.offsetLeft-stepWidth)+"px");
         move();
         if(-content.offsetLeft>=width){
           $content.append($content.find("li").eq(1).clone());
