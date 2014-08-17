@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title></title>
+  <link href="css/css.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="js/pub.js"></script>
+  <script type="text/javascript" src="Servers/HazgDlq.js"></script>
+  <script type="text/javascript">
+    GetUser();
+    GetLastLogin();
+    GetTj();
+    getNews();
+    GetServer();
+  </script>
+</head>
+<body>
+<!--<div class="outframe">-->
+
+<!------------以下为内容。上面是外框，可无视---------------->
+<div class="content">
+<div class="qico alignC">
+  <!--显示登录的用户名-->
+  <p class="userName" id="ustr">lf2941270</p>
+  <!--注销后重新登录-->
+  <p class="other"><a href="Servers/HazgDlq.ashx?method=Logout" target="_self" class="hue_red">其他账号登录</a></p>
+  <!--<div>
+    <a href="#" target="_blank" class="btns btn_sina">新浪微博</a>
+    <a href="#" target="_blank" class="btns btn_tt">腾讯微博</a>
+    <a href="#" target="_blank" class="btns btn_wx">微信</a>
+  </div>-->
+</div>
+
+<div class="server_status">
+  <p>畅通<i class="btns ico_green"></i></p>
+  <p>维护<i class="btns ico_gray"></i></p>
+</div>
+
+<div class="btns btn_more">
+  <a class="showServer" style="display: none;"><span class="btns btn_moreserver">更多区服</span></a>
+  <a class="showMain" style=""><span class="btns btn_back">返回</span></a>
+</div>
+
+<div class="box2">
+  <div class="slideBox2" style="margin-left: -708px;">
+    <!--登录后-->
+    <div class="mainbox floatL">
+      <!--服务器人物卡片-->
+      <!--[if IE 6]>
+      <script type="text/javascript" src="js/iepng.js"></script>
+      <![endif]-->
+      <div class="cardbox">
+        <ul class="floatG">
+          <li id="GetLastLogin" class="stillShow">
+            <a href="http://ly.cy2009.com/pivot/307/224/login/?sid=34&amp;uid=603558&amp;time=1408276654&amp;fcm=n&amp;sign=2791445ee447925e70becf746cfee678&amp;back_url=http://www.ibaiyu.cn&amp;client=pc" id="LoginGame" data-type="0" class="triggerZone minienter">进入游戏</a>
+            <div class="btns tips">上次登录</div>
+            <div class="info">
+              <div class="tag">最新登录服务器</div>
+              <div class="title" id="LastLogin">双线34服<i class="btns ico_green"></i></div>
+              <div class="enter"><span class="btns btn_enter">进入游戏</span></div>
+            </div>
+            <div class="card_cover"></div>
+            <div class="btns shadow"></div>
+            <div class="card"><img src="images/card1.png" alt="" class="card1 pngfix"></div>
+          </li>
+          <li>
+            <a href="http://ly.cy2009.com/pivot/307/224/login/?sid=53&amp;uid=603558&amp;time=1408276656&amp;fcm=n&amp;sign=8d93b7981fd669e00f5b10b958de388c&amp;back_url=http://www.ibaiyu.cn&amp;client=pc" id="TjUrl" data-type="0" class="triggerZone minienter" outserverid="1527">进入游戏</a>
+            <div class="info">
+              <div class="tag recom"><i class="btns flag_recom"></i>推荐服务器</div>
+              <div class="title" id="TjName">双线53服<i class="btns ico_green"></i></div>
+              <div class="enter"><span href="#" class="btns btn_enter">进入游戏</span></div>
+            </div>
+            <div class="card_cover"></div>
+            <div class="btns shadow"></div>
+            <div class="card"><img src="images/card2.png" alt="" class="card2 pngfix"></div>
+          </li>
+          <li>
+
+          </li>
+          <li style="z-index: 0;">
+
+          </li>
+        </ul>
+      </div><!--服务器人物卡片 end-->
+
+      <!--新闻-->
+      <div class="btns newslist floatL">
+        <ul id="News">
+          <!--<li><a href="#" target="_blank"><i class="btns ico_icon"></i>[新闻]新闻新闻新闻新闻新闻新闻新闻新闻....</a></li>
+          <li><a href="#" target="_blank"><i class="btns ico_icon"></i>[新闻]新闻新闻新闻新闻新闻新闻新闻新闻....</a></li>
+          <li><a href="#" target="_blank"><i class="btns ico_icon"></i>[新闻]新闻新闻新闻新闻新闻新闻新闻新闻....</a></li>
+          <li><a href="#" target="_blank"><i class="btns ico_icon"></i>[新闻]新闻新闻新闻新闻新闻新闻新闻新闻....</a></li>
+          <li><a href="#" target="_blank"><i class="btns ico_icon"></i>[新闻]新闻新闻新闻新闻新闻新闻新闻新闻....</a></li>-->
+          <li><a href="../../news.aspx?id=8225" target="_blank" title="《黑暗之光》8月18日备战跨服全服额外活动"><i class="btns ico_icon"></i>《黑暗之光》8月18日备战跨服全服额外活动</a></li><li><a href="../../news.aspx?id=8224" target="_blank" title="《黑暗之光》8月18日每日首冲活动"><i class="btns ico_icon"></i>《黑暗之光》8月18日每日首冲活动</a></li><li><a href="../../news.aspx?id=8220" target="_blank" title="《黑暗之光》8月17日备战跨服全服额外活动"><i class="btns ico_icon"></i>《黑暗之光》8月17日备战跨服全服额外活动</a></li><li><a href="../../news.aspx?id=8219" target="_blank" title="《黑暗之光》8月17日每天首冲活动"><i class="btns ico_icon"></i>《黑暗之光》8月17日每天首冲活动</a></li><li><a href="../../news.aspx?id=8206" target="_blank" title="《黑暗之光》双线54区8月17日17：00震撼开启"><i class="btns ico_icon"></i>《黑暗之光》双线54区8月17日17：00震撼开启</a></li></ul>
+      </div><!--新闻 end-->
+
+      <!--轮换图-->
+      <div class="focus floatL">
+        <div id="focus" class="d1">
+
+          <ul>
+            <li><a target="_blank" title="图片标题"><img src="images/focus1.jpg" border="0"></a></li>
+            <li><a target="_blank" title="图片标题"><img src="images/focus1.jpg" border="0"></a></li>
+            <li><a target="_blank" title="图片标题"><img src="images/focus1.jpg" border="0"></a></li>
+          </ul>
+          <div class="d2" style="opacity: 0.2;"><a target="_blank" title="图片标题"><img src="images/focus1.jpg" border="0"></a></div><div class="num_list" style="opacity: 0.8;"><span style="margin-top: 65px;"></span></div><div class="button"><a class="b1">1</a><a class="b2">2</a><a class="b1">3</a></div></div>
+        <script type="text/javascript">focusFunc();</script>
+      </div><!--轮换图 end-->
+    </div>
+    <!--登录后 end-->
+
+    <!--服务器列表-->
+    <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" id="sourcecode">$(function(){$('.scroll-pane').jScrollPane();});</script>
+    <div class="floatL serverbox">
+      <div class="tabTag">
+        <ul class="floatG">
+          <li class="current">全部服务器</li>
+        </ul>
+      </div>
+      <div class="tabGroup">
+        <div class="tabUnit scroll-pane" style="overflow: hidden; padding: 0px; width: 535px;">
+
+          <div class="jspContainer" style="width: 535px; height: 426px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 535px;">
+            <ul class="floatG" id="AllServer">
+            <!--<li><a href="">双线1服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线2服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线3服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线4服</a><span class="btns ico_gray"></span></li>
+            <li><a href="">双线5服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线6服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线7服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线8服</a><span class="btns ico_gray"></span></li>
+            <li><a href="">双线9服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线10服</a><span class="btns ico_gray"></span></li>
+            <li><a href="">双线11服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线12服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线13服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线14服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线15服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线16服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线17服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线18服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线19服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线20服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线21服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线22服</a><span class="btns ico_gray"></span></li>
+            <li><a href="">双线23服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线24服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线25服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线26服</a><span class="btns ico_gray"></span></li>
+            <li><a href="">双线27服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线28服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线29服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线30服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线31服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线32服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线33服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线34服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线35服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线36服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线37服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线38服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线39服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线40服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线41服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线42服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线43服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线44服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线45服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线46服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线47服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线48服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线49服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线50服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线51服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线52服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线53服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线54服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线55服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线56服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线57服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线58服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线59服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线60服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线61服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线62服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线63服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线64服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线65服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线66服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线67服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线68服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线69服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线70服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线71服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线72服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线73服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线74服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线75服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线76服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线77服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线78服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线79服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线80服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线81服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线82服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线83服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线84服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线85服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线86服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线87服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线88服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线89服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线90服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线91服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线92服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线93服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线94服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线95服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线96服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线97服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线98服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线99服</a><span class="btns ico_green"></span></li>
+            <li><a href="">双线100服</a><span class="btns ico_green"></span></li>-->
+        </ul>
+      </div>
+    </div><!--服务器列表 end-->
+  </div>
+</div>
+
+<div class="footer alignC">
+  <p>抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活</p>
+  <!--<p>客服电话：4001557979  官方QQ：4001557979</p>-->
+</div>
+</div>
+<!------------以上为内容，下面是外框---------------->
+
+<!--</div>-->
+
+
+
+<div><object id="ClCache" click="sendMsg" host="" width="0" height="0"></object></div></body></html>
