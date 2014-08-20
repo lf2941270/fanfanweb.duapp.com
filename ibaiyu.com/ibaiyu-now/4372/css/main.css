@@ -276,7 +276,7 @@ a img{cursor:pointer;}
 .kuang5 .infos .info4{margin:0;}
 #ImageButton1{background: none;margin-top: -3px;cursor: pointer;}
 
-.kuang6{width:460px;}
+.kuang6{width:470px;}
 .kuang6 .gg_title{margin:10px auto 0;width:290px;height:36px;line-height:36px;font-size:18px;font-weight:bold;text-align:center;color:#ff6600;background:#f0f0f0;}
 /*====================进度条的改动开始=====================*/
 .kuang6 .gg_content{color: #696969;font-size: 14px;height: 100px;line-height: 1.5;overflow: auto;padding:0 15px 10px 20px;
@@ -294,7 +294,7 @@ a img{cursor:pointer;}
 
 
 /*====================游戏官网新闻=====================*/
-.kuang6 .list{padding:15px 20px 15px;width:420px;height:232px;background:#f7f7f7;}
+.kuang6 .list{padding:15px 20px 15px;width:430px;height:232px;background:#f7f7f7;}
 /*====================游戏官网新闻=====================*/
 .kuang6 .list ul{margin:0;padding:0;}
 .kuang6 .list ul li{height:32px;line-height:32px;font-size:12px;border-bottom:1px dotted #c6c6c6;}

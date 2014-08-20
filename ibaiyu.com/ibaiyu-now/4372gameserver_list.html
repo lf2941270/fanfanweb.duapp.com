@@ -575,7 +575,7 @@
         $content=$(content);
         options=o;
         frameTime=options.frameTime||20;
-        speed=options.speed||5000;
+        speed=options.speed||4000;
         pauseTime=options.pauseTime||500;
         width=options.width||230;
         stepWidth=width/speed*frameTime;
@@ -617,9 +617,8 @@
 
     //将游戏图片做成页面背景
     var src=$(".kuang5").find("img").eq(0).attr("src");
-    var bgDiv='<div id="bgDiv" filter="url(#blur)"><img/></div>';
-    $(bgDiv).appendTo($('body')).find("img").attr("src",src).attr("width",window.innerWidth).attr("height",$('body').height()-200);
-
+    var bgDiv='<div id="bgDiv""><img/></div>';
+    $(bgDiv).appendTo($('body')).find("img").attr("src",src).attr("width",$('body').width()).attr("height",$('body').height()-200);
     $(".pagebody").css({
       "background":""
     }).find(".clear").css({
@@ -634,8 +633,8 @@
       })
       $(this).css("position","relative").append(bg);
     }
-    $(".kuang6 ").setBg("#000000",0.3);
-    $(".kuang6 .list").setBg("#000000",0.15);
+    $(".kuang6 ").setBg("#000000",0.25);
+    $(".kuang6 .list").setBg("#000000",0.12);
   });
 
 </script>
@@ -651,9 +650,13 @@
     opacity:0.7;
     filter:alpha(opacity=70);
     -ms-filter: "progid:DXImageTransform.Microsoft.Blur(pixelradius=15)" !important;
+    filter:blur(15px);
+
   }
   body{
     background:#444;
+  }
+  .kuang6{
   }
   .kuang6 .list,.kuang6 .gg_title{
     background: none;
