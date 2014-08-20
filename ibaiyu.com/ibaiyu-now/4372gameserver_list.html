@@ -617,8 +617,9 @@
 
     //将游戏图片做成页面背景
     var src=$(".kuang5").find("img").eq(0).attr("src");
-    var bgDiv='<div id="bgDiv""><img/></div>';
-    $(bgDiv).appendTo($('body')).find("img").attr("src",src).attr("width",$('body').width()).attr("height",$('body').height()-200);
+    var bgDiv='<div id="bgDiv"><img src="'+src+'" width="'+$('body').width()+'" height="'+($('body').height()-200)+'"/></div>';
+    $('body').append(bgDiv)
+
     $(".pagebody").css({
       "background":""
     }).find(".clear").css({
