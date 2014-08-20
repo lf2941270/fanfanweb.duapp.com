@@ -2,6 +2,8 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <!--此处要改动-->
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>游戏列表</title>
     <link type="text/css" rel="stylesheet" href="4372/css/main.css">
@@ -101,7 +103,6 @@
     <a href="4372czzx.html" style="">充值中心</a>
     <a href="4372yxlb.html" style="">游戏礼包</a>
     <a href="4372new_list.html" style="">新闻公告</a>
-    <a href="http://bbs.ibaiyu.cn/">游戏论坛</a>
 </div>
 
 
@@ -550,7 +551,6 @@
 </div>
 <script>
   $(function(){
-
     $(".kuang7").addClass("server-kuang7 clearfix").removeClass("kuang7")
     $(".server-kuang7 .tab_head div").addClass(function(){
       return 'tab tab-'+$(this).attr("tag");
@@ -615,7 +615,62 @@
     }
     $(".gamepiclist ul").css({"left":'0px',"width":"2000px"}).moveLeft();
 
-  })
+    //将游戏图片做成页面背景
+    var src=$(".kuang5").find("img").eq(0).attr("src");
+    var bgDiv='<div id="bgDiv" filter="url(#blur)"><img/></div>';
+    $(bgDiv).appendTo($('body')).find("img").attr("src",src).attr("width",window.innerWidth).attr("height",$('body').height()-200);
+
+    $(".pagebody").css({
+      "background":""
+    }).find(".clear").css({
+          "background":""
+        });
+    $.prototype.setBg=function(color,opacity){
+      var bg=$('<div style="position: absolute;width: 100%;height: 100%;left: 0;top: 0;z-index: -1;"></div>');
+      bg.css({
+        "background":color,
+        "opacity":opacity,
+        "filter":"alpha(opacity="+opacity*100+")"
+      })
+      $(this).css("position","relative").append(bg);
+    }
+    $(".kuang6 ").setBg("#000000",0.3);
+    $(".kuang6 .list").setBg("#000000",0.15);
+  });
+
 </script>
+<style>
+  #bgDiv{
+    position:absolute;
+    top:200px;
+    left:0;
+    z-index:-2;
+    -webkit-filter:blur(15px);
+    -moz-filter:blur(15px);
+    -o-filter:blur(15px);
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Blur(pixelradius=15)" !important;
+  }
+  body{
+    background:#444;
+  }
+  .kuang6 .list,.kuang6 .gg_title{
+    background: none;
+  }
+  .kuang6 .gg_content{
+    color: #e0e0e0;
+  }
+  .kuang6 .list ul li a{
+    color: #e0e0e0 ;
+  }
+  .kuang6 .list ul li a:hover{
+    color: #ff6600 ;
+  }
+  .copyright,.copyright a{
+    color: #e0e0e0;
+  }
+</style>
+
 </body>
 </html>

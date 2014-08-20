@@ -96,9 +96,18 @@ function GetServer() {
         url: "./Servers/HazgDlq.ashx?method=GetServers",
         success: function (text) {
             var jsonObj = eval(text);
-            for (var i = 0; i < jsonObj.length; i++) {
-                LogonServers(jsonObj[i]._id, jsonObj[i]._state, jsonObj[i]._name)
-            }
+						var serversHTML="";
+
+						for (var i = 0; i < jsonObj.length; i++) {
+							if(jsonObj[i]._state==1||jsonObj[i]._state==2){
+								serversHTML="<li><a id=\"LogonServers\" onclick=\"return false;\" title=\"" + jsonObj[i]._name + "\" target=\"_blank\" class=\"s1\">" + jsonObj[i]._name + "</a><span class=\"btns ico_gray\"></span></li>";
+							}else{
+								serversHTML="<li><a outServerId=\"" + jsonObj[i]._id + "\" onclick=\"getId(this)\" title=\"" + jsonObj[i]._name + "\">" + jsonObj[i]._name + " </a><span class=\"btns ico_green\"></span></li>";
+							}
+							$("#AllServer").append(serversHTML);
+							LogonServers(jsonObj[i]._id, jsonObj[i]._state, jsonObj[i]._name);
+						}
+						$('.scroll-pane').jScrollPane();
         }
     })
 }
@@ -108,13 +117,7 @@ function LogonServers(server, state, servername) {
         type: "post",
         url: "./Servers/HazgDlq.ashx?method=LoginServers&number=" + server,
         success: function (text) {
-            if (state == 1 || state == 2) {
-                $("#AllServer").append("<li><a href=\"" + text + "\" id=\"LogonServers\" onclick=\"return false;\" title=\"" + servername + "\" target=\"_blank\" class=\"s1\">" + servername + "</a><span class=\"btns ico_gray\"></span></li>");
-                $(".s1").removeAttr("href");
-            } else {
-                $("#AllServer").append("<li><a outServerId=\"" + server + "\" onclick=\"getId(this)\" href=\"" + text + "\" title=\"" + servername + "\">" + servername + " </a><span class=\"btns ico_green\"></span></li>");
-
-            }
+            $("a[outServerId='"+server+"']").attr("href",text);
         }
     })
 }
