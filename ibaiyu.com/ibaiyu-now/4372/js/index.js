@@ -19,11 +19,31 @@ $(function(){
 	$(".phone_game .hd .tab_hd").tabs(".phone_game .bd",function(index){
 		$(".tab_cur_bg").stop().animate({"left":(-1+154*index)+"px"},600,'easeOutBounce');
 	});
+	$(".phone_game .hovercur").hover(function(){
+		$(this).find("a>img").stop().animate({
+			width:"92px",
+			height:"92px",
+			left:"-5px",
+			top:"-5px"
+		})
+	},function(){
+		$(this).find("a>img").stop().animate({
+			width:"82px",
+			height:"82px",
+			left:"0px",
+			top:"0px"
+		})
+	});
+	$(".phone_game .btn").hover(function(){
+		$(this).parent(".hovercur").find(".ewm").addClass("cur");
+	},function(){
+		$(this).parent(".hovercur").find(".ewm").removeClass("cur");
+	})
 })
 
 
 //首屏轮播上的雪花
-/*(function(){
+//(function(window){
 	var canvasSupported = !!document.createElement("canvas").getContext;
 //  if (canvasSupported && !/msie/gi.test(navigator.userAgent)) {
 	if (canvasSupported) {
@@ -153,5 +173,5 @@ $(function(){
 			snow.start();
 		};
 	}
-})();*/
+//})(window);
 
