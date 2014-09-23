@@ -1,63 +1,63 @@
-<html>
-<head>
+<div style="width: 683px; height: 30px; margin-top: 5px; margin-left: 20px;">
 
-</head>
-<body>
-<iframe id="a" style="display: none">
-  <form action="http://192.168.1.1" method="post" id="form">
+  <div style="background-image: url(images/fsxz001bg.jpg); background-repeat: no-repeat;
+                            text-align: center; width: 60px; height: 20px; float: left; margin-left: 5px;">
+    <a href="javascript:;" onclick="showfwq(10,0)" style="text-decoration: none;
+                                float: left; margin-top: 3px; margin-left: 10px;">
+      1-20</a></div>
 
-  </form>
-</iframe>
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js">
-</script>
+  <div style="background-image: url(images/fsxz001bg.jpg); background-repeat: no-repeat;
+                            text-align: center; width: 60px; height: 20px; float: left; margin-left: 5px;">
+    <a href="javascript:;" onclick="showfwq(10,20)" style="text-decoration: none;
+                                float: left; margin-top: 3px; margin-left: 10px;">
+      21-40</a></div>
 
-<html>
-<body>
-<div id="demo" style="position:absolute; left:0px; top:100px;width:100px; height:100px; background:#cc0;"></div>
-<div id="time"></div>
-<script>
-  var timeDiv = document.getElementById('time'),
-      count = 0;
-  requestAnimationFrame = window.requestAnimationFrame
-      || window.mozRequestAnimationFrame
-      || window.webkitRequestAnimationFrame
-      || window.msRequestAnimationFrame
-      || window.oRequestAnimationFrame
-      || function(callback) {
-    setTimeout(callback, 1000 / 60);
-  };
-  function animate(element, name, from, to, time) {
-    time = time || 800; // 默认0.8秒
-    var style = element.style,
-        startTime = (new Date()).getTime();
+  <div style="background-image: url(images/fsxz001bg.jpg); background-repeat: no-repeat;
+                            text-align: center; width: 60px; height: 20px; float: left; margin-left: 5px;">
+    <a href="javascript:;" onclick="showfwq(10,40)" style="text-decoration: none;
+                                float: left; margin-top: 3px; margin-left: 10px;">
+      41-60</a></div>
 
-    function go(timestamp) {
-      timestamp =(new Date()).getTime();
-      var progress = timestamp - startTime;
-      timeDiv.innerHTML += progress + '\t\t';
-      count++;
-      if (progress >= time) {
-        style[name] = to + 'px';
-        timeDiv.innerHTML += '<br>have do  ' + count + ' setting';
-        return;
-      }
+  <div style="background-image: url(images/fsxz001bg.jpg); background-repeat: no-repeat;
+                            text-align: center; width: 60px; height: 20px; float: left; margin-left: 5px;">
+    <a href="javascript:;" onclick="showfwq(10,60)" style="text-decoration: none;
+                                float: left; margin-top: 3px; margin-left: 10px;">
+      61-80</a></div>
 
-      var now = (to - from) * (progress / time);
-      style[name] = now.toFixed() + 'px';
-      requestAnimationFrame(go);
-    }
+  <div style="background-image: url(images/fsxz001bg.jpg); background-repeat: no-repeat;
+                            text-align: center; width: 60px; height: 20px; float: left; margin-left: 5px;">
+    <a href="javascript:;" onclick="showfwq(10,80)" style="text-decoration: none;
+                                float: left; margin-top: 3px; margin-left: 10px;">
+      81-100</a></div>
 
-    style[name] = from + 'px';
+  <div style="background-image: url(images/fsxz001bg.jpg); background-repeat: no-repeat;
+                            text-align: center; width: 60px; height: 20px; float: left; margin-left: 5px;">
+    <a href="javascript:;" onclick="showfwq(10,100)" style="text-decoration: none;
+                                float: left; margin-top: 3px; margin-left: 10px;">
+      101-120</a></div>
 
-    requestAnimationFrame(go);
-  }
-  animate(document.getElementById('demo'), 'left', 0, 400, 1000);
-</script>
-</body>
-</html>
+  <div style="background-image: url(images/fsxz001bg.jpg); background-repeat: no-repeat;
+                            text-align: center; width: 60px; height: 20px; float: left; margin-left: 5px;">
+    <a href="javascript:;" onclick="showfwq(10,120)" style="text-decoration: none;
+                                float: left; margin-top: 3px; margin-left: 10px;">
+      121-140</a></div>
 
-<script>
+  <div style="background-image: url(images/fsxz001bg.jpg); background-repeat: no-repeat;
+                            text-align: center; width: 60px; height: 20px; float: left; margin-left: 5px;">
+    <a href="javascript:;" onclick="showfwq(10,140)" style="text-decoration: none;
+                                float: left; margin-top: 3px; margin-left: 10px;">
+      141-160</a></div>
 
-</script>
-</body>
-</html>
+  <div style="background-image: url(images/fsxz001bg.jpg); background-repeat: no-repeat;
+                            text-align: center; width: 60px; height: 20px; float: left; margin-left: 5px;">
+    <a href="javascript:;" onclick="showfwq(10,160)" style="text-decoration: none;
+                                float: left; margin-top: 3px; margin-left: 10px;">
+      161-180</a></div>
+
+  <div style="background-image: url(images/fsxz001bg.jpg); background-repeat: no-repeat;
+                            text-align: center; width: 60px; height: 20px; float: left; margin-left: 5px;">
+    <a href="javascript:;" onclick="showfwq(10,180)" style="text-decoration: none;
+                                float: left; margin-top: 3px; margin-left: 10px;">
+      181-200</a></div>
+
+</div>

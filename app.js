@@ -81,4 +81,4 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 routes(app);//额外加上
 
-//require('./qzone/app');
+require('./qzone');

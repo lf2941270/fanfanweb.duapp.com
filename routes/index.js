@@ -7,9 +7,8 @@ var queryString=require("querystring");
 //var BufferHelper = require('bufferhelper');
 var Buffer=require('buffer');
 var ipWhiteList=['192.168.1.104','127.0.0.1','192.168.1.109'];
-var Browser=require("../qzone/browser");
-var browser=new Browser();
-
+var request=require('request');
+var qzone=require('../qzone');
 module.exports = function(app) {
 //    app.get('/test',function(req,res){
 //        res.end(util.inspect(process.env));
@@ -26,7 +25,12 @@ module.exports = function(app) {
             });
         });
     });
-
+	app.get('/qzone',function(req,res){
+		qzone.init(function(err,response,body){
+			console.log(util.inspect(response))
+			res.end(body);
+		});
+	})
   /*ibaiyu请求代理*/
   app.all(/\/ibaiyu\/([^?]+)/,function(req,res){
     var baseUrl="http://www.ibaiyu.cn/";
@@ -37,20 +41,20 @@ module.exports = function(app) {
     }else{
       search="";
     }
-    console.log(req.headers)
-    browser.init({
-      "Content-Type":req.headers["content-type"],
-      "Referer":req.headers["referer"]
-       }
-      );
-    browser[req.method.toLowerCase()](baseUrl+path+search,queryString.stringify(req.body),function(headers,body){
-      console.log(body)
-      console.log(body.length);
-      delete headers["content-length"];
-
-      res.set(headers);
-      res.send(body);
-    });
+    console.log(req.headers);
+		var options={
+			url:baseUrl+path+search,
+			method:req.method,
+			headers:{
+				"Content-Type":req.headers["content-type"],
+				"Referer":req.headers["referer"]
+			},
+			body:queryString.stringify(req.body)
+		}
+		request(options,function(error, response, body){
+			res.set(response.headers);
+			res.send(body);
+		});
   });
   /*将表单请求内容显示在页面上调试*/
   app.all('/form',function(req,res){
@@ -64,7 +68,7 @@ module.exports = function(app) {
     });
     app.post('/reg', checkNotLogin);
     app.post('/reg', function(req, res) {
-//检验用户两次输入的口令是否一致
+				//检验用户两次输入的口令是否一致
         if (req.body['password-repeat'] != req.body['password']) {
             req.session.error= '两次输入的口令不一致';
             return res.redirect('/reg');

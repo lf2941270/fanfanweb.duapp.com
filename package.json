@@ -16,7 +16,9 @@
     "eventproxy": "0.2.6",
     "bae-message":"*",
     "weibo":"*",
-    "nodemailer":"*"
+    "nodemailer":"*",
+		"request":"*",
+		"phantom":"*"
   },
   "window": {
     "toolbar": false,
