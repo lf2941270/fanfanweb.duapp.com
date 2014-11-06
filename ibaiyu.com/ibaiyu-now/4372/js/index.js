@@ -175,3 +175,65 @@ $(function(){
 	}
 //})(window);
 
+/*顶部模块*/
+(function(){
+	$(document).ready(function(){
+		$(".top_banner .content").css({marginLeft:($(window).width()-1920)/2+'px'});
+		var banner = $(".top_banner");
+		var closeBtn = $(".close_btn");
+		var paper = $(".paper");
+		var hasClosed = false;
+		function closeBanner(){
+			$(".time").hide();
+			banner.css({
+				overflow:'hidden'
+			}).animate({
+				width:'72px',
+				height:'72px'
+			});
+			paper.fadeIn();
+			hasClosed = true;
+		}
+		function showBanner(){
+			paper.fadeOut();
+			banner.css({
+				overflow:'visible'
+			}).animate({
+				width:$(window).width() + 'px',
+				height:'120px'
+			});
+			hasClosed = false;
+		}
+		closeBtn.click(function(){
+			if(!hasClosed){
+				closeBanner();
+			}
+		});
+		paper.click(function(){
+			if(hasClosed){
+				showBanner();
+			}
+		});
+		function autoClose(){
+			$(".time").show();
+			var time = 5000;
+			var timer;
+			function updateTime(){
+				$(".time span").text(time/1000);
+				timer = setTimeout(function(){
+					time -= 1000;
+					if(time > 0){
+						updateTime();
+					}else{
+						clearTimeout(timer)
+						closeBanner();
+					}
+				},1000)
+			}
+			updateTime();
+		}
+		autoClose();
+	});
+
+})();
+

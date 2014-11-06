@@ -1,29 +1,30 @@
 @-webkit-keyframes ewm
 {
   0%   {-webkit-transform:scale(0.1,0.1)rotate(0deg);}
-  100% {-webkit-transform:scale(1,1)rotate(360deg);left: 7px;top: 7px;}
+  100% {-webkit-transform:scale(1,1)rotate(360deg);left: -7px;top: -7px;}
 }
 @-moz-keyframes ewm
 {
   0%   {-moz-transform:scale(0.1,0.1)rotate(0deg);}
-  100% {-moz-transform:scale(1,1)rotate(360deg);left: 7px;top: 7px;}
+  100% {-moz-transform:scale(1,1)rotate(360deg);left: -7px;top: -7px;}
 }
 @-ms-keyframes ewm
 {
   0%   {-ms-transform:scale(0.1,0.1)rotate(0deg);}
-  100% {-ms-transform:scale(1,1)rotate(360deg);left: 7px;top: 7px;}
+  100% {-ms-transform:scale(1,1)rotate(360deg);left: -7px;top: -7px;}
 }
 @-o-keyframes ewm
 {
   0%   {-o-transform:scale(0.1,0.1)rotate(0deg);}
-  100% {-o-transform:scale(1,1)rotate(360deg);left: 7px;top: 7px;}
+  100% {-o-transform:scale(1,1)rotate(360deg);left: -7px;top: -7px;}
 }
 @keyframes ewm
 {
   0%   {transform:scale(0.1,0.1)rotate(0deg);}
-  100% {transform:scale(1,1)rotate(360deg);left: 7px;top: 7px;}
+  100% {transform:scale(1,1)rotate(360deg);left: -7px;top: -7px;}
 }
 .phone_game{position: relative;width: 998px;height:240px;margin-bottom:20px;border:1px solid #d1d1d1;}
+.phone_game a:hover{text-decoration: none;}
 .phone_game .hd{position:relative;z-index:0;height:33px;background-image: url("../images/phone-game-sprites.png"); background-repeat:repeat-x; background-position: 0 -163px;border-bottom: 1px solid #d1d1d1; }
 .phone_game .hd .tab_hd{position:relative;z-index:2;width: 154px;height: 24px; padding: 5px 0 4px;cursor: pointer;float: left;}
 .phone_game .hd .tab_hd i{display:block;width: 22px;height: 24px;margin:0 6px 0 21px;float: left;background-image: url("../images/phone-game-sprites.png");cursor: pointer;}
@@ -48,9 +49,8 @@
 .phone_game .bd .tab li.hovercur .img {
   width: 82px;
   height: 82px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   margin: 0 auto 10px;
-  overflow: hidden;
   position: relative;
   display: block;
   border-radius: 15px;
@@ -60,16 +60,16 @@
   left: 0;
 }
 .phone_game .bd .tab li.hovercur .ewm {
-  z-index: 2;
+  z-index: 12;
   position: absolute;
   display: none;
-  width: 67px;
-  height: 67px;
+  width: 96px;
+  height: 96px;
 }
 .phone_game .bd .tab li.hovercur .ewm.cur{
   display: block;
-  left: 7px;
-  top: 7px;
+  left: -7px;
+  top: -7px;
   -webkit-animation:ewm 0.4s;
   -moz-animation:ewm 0.4s;
   -ms-animation:ewm 0.4s;
@@ -92,7 +92,7 @@
   margin: 0 auto
 }
 .phone_game .bd .tab li.hovercur .btn:hover {
-  background-position: 0px -137px
+  background-position: 0px -137px;
 }
 .phone_game .bd .tab li.hovercur a{
   color: #777777;
@@ -111,4 +111,68 @@
 }
 .phone_game .bd li.more a:hover{
   color: #ff7a02;
+}
+
+/*top banner*/
+.top_banner{position: fixed;width:100%; bottom: 0;right:0;z-index: 9999;}
+.top_banner .time{
+  position: absolute;
+  display: none;
+  z-index: 10000;
+  right: 26px;
+  top: -18px;
+  width: 100px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  border: 1px solid #a8a8a8;
+  font-size: 12px;
+  color: #888;
+  border-radius: 2px;
+}
+.top_banner .close_btn{
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  background: url("../images/close_btn_hover.png");
+  right: 0;
+  top: -26px;
+  z-index: 10000;
+}
+.top_banner .close_btn:hover{
+  background: url("../images/close_btn.png");
+}
+.top_banner .content{
+  width: 1920px;
+  height: 120px;
+  position: relative;
+  top: 0;
+  background-position: center top;
+}
+.top_banner .content .contact_qq{
+  display: block;
+  position: absolute;
+  left: 1157px;
+  top: 29px;
+  width: 216px;
+  height: 78px;
+  background: url("../images/qq_05.jpg");
+}
+.top_banner .content .contact_qq:hover{
+  background: url("../images/qq_hover_05.jpg");
+}
+.paper{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: none;
+  width: 72px;
+  height: 72px;
+  z-index: 10001;
+  background: url("../images/paper.png");
+  cursor: pointer;
+}
+.paper:hover{
+  background: url("../images/paper_hover.png");
 }
