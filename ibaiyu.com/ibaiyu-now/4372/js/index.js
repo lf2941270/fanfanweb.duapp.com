@@ -178,11 +178,18 @@ $(function(){
 /*顶部模块*/
 (function(){
 	$(document).ready(function(){
-		$(".top_banner .content").css({marginLeft:($(window).width()-1920)/2+'px'});
 		var banner = $(".top_banner");
 		var closeBtn = $(".close_btn");
 		var paper = $(".paper");
 		var hasClosed = false;
+		function initPos(){
+			if(!hasClosed){
+				$(".top_banner").css({width:$(window).width()});
+			}
+			$(".top_banner .content").css({marginLeft:($(window).width()-1920)/2+'px'});
+		}
+		initPos();
+		$(window).resize(initPos)
 		function closeBanner(){
 			$(".time").hide();
 			banner.css({
