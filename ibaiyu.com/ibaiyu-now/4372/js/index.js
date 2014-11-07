@@ -175,7 +175,7 @@ $(function(){
 	}
 //})(window);
 
-/*顶部模块*/
+/*公会招募模块*/
 (function(){
 	$(document).ready(function(){
 		var banner = $(".top_banner");

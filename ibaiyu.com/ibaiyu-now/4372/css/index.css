@@ -113,7 +113,7 @@
   color: #ff7a02;
 }
 
-/*top banner*/
+/*公会招募模块*/
 .top_banner{position: fixed;width:100%; bottom: 0;right:0;z-index: 9999;}
 .top_banner .time{
   position: absolute;
