@@ -133,16 +133,17 @@
 }
 .top_banner .close_btn{
   position: absolute;
-  width: 26px;
-  height: 26px;
+  width: 14px;
+  height: 14px;
   cursor: pointer;
-  background: url("../images/close_btn_hover.png");
+  background-image: url("../images/bubble-close.gif");
+  background-position: 0px 0;
   right: 0;
-  top: -26px;
+  top: -14px;
   z-index: 10000;
 }
 .top_banner .close_btn:hover{
-  background: url("../images/close_btn.png");
+  background-position: -14px 0;
 }
 .top_banner .content{
   width: 1920px;

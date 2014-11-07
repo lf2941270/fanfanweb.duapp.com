@@ -182,6 +182,7 @@ $(function(){
 		var closeBtn = $(".close_btn");
 		var paper = $(".paper");
 		var hasClosed = false;
+		var timer;
 		function initPos(){
 			if(!hasClosed){
 				$(".top_banner").css({width:$(window).width()});
@@ -198,6 +199,7 @@ $(function(){
 				width:'72px',
 				height:'72px'
 			});
+			clearTimeout(timer);
 			paper.fadeIn();
 			hasClosed = true;
 		}
@@ -224,7 +226,6 @@ $(function(){
 		function autoClose(){
 			$(".time").show();
 			var time = 8000;
-			var timer;
 			function updateTime(){
 				$(".time span").text(time/1000);
 				timer = setTimeout(function(){
