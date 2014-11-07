@@ -223,7 +223,7 @@ $(function(){
 		});
 		function autoClose(){
 			$(".time").show();
-			var time = 5000;
+			var time = 8000;
 			var timer;
 			function updateTime(){
 				$(".time span").text(time/1000);
